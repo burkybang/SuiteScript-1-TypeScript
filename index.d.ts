@@ -4125,7 +4125,7 @@ declare interface nlobjSearchColumn {
     setFunction(functionId: 'percentOfTotal' | 'absoluteValue' | 'ageInDays' | 'ageInHours' | 'ageInMonths' | 'ageInWeeks' | 'ageInYears' | 'calendarWeek' | 'day' | 'month' | 'negate' | 'numberAsTime' | 'quarter' | 'rank' | 'round' | 'roundToHundredths' | 'roundToTenths' | 'weekOfYear' | 'year'): nlobjSearchColumn;
 
     /**
-     * return nlobjSearchColumn with special function set.
+     * return nlobjSearchColumn for which the minimal or maximal value should be found when returning the nlobjSearchColumn value.
      * @return {nlobjSearchColumn}
      * @param {string} The name of the search column for which the minimal or maximal value should be found.
      * @param {string} The join id for this search column.
