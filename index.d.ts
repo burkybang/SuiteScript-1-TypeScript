@@ -4001,6 +4001,8 @@ declare interface nlobjSearchColumn {
      * @memberOf nlobjSearchColumn
      * @since 2008.1
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118808
      */
     getName(): string;
 
@@ -4012,6 +4014,8 @@ declare interface nlobjSearchColumn {
      * @memberOf nlobjSearchColumn
      * @since 2008.1
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118607
      */
     getJoin(): string;
 
@@ -4024,6 +4028,8 @@ declare interface nlobjSearchColumn {
      *
      * @since 2009.1
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118693
      */
     getLabel(): string;
 
@@ -4035,6 +4041,8 @@ declare interface nlobjSearchColumn {
      * @memberOf nlobjSearchColumn
      * @since 2008.1
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118977
      */
     getSummary(): string;
 
@@ -4047,6 +4055,8 @@ declare interface nlobjSearchColumn {
      *
      * @since 2009.2
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118195
      */
     getFormula(): string;
 
@@ -4061,6 +4071,8 @@ declare interface nlobjSearchColumn {
      * @since 2009.2
      * @param formula
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119081
      */
     setFormula(formula: string): string;
 
@@ -4075,11 +4087,15 @@ declare interface nlobjSearchColumn {
      * @since 2010.1
      * @param order
      * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120366
      */
     setSort(order: any): (name: string, join: string, summary: string) => void;
 
+    // https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120259
     setLabel(label: string): nlobjSearchColumn;
 
+    // https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119209
     setFunction(label: 'percentOfTotal' | 'absoluteValue' | 'ageInDays' | 'ageInHours' | 'ageInMonths' | 'ageInWeeks' | 'ageInYears' | 'calendarWeek' | 'day' | 'month' | 'negate' | 'numberAsTime' | 'quarter' | 'rank' | 'round' | 'roundToHundredths' | 'roundToTenths' | 'weekOfYear' | 'year'): nlobjSearchColumn;
 }
 
