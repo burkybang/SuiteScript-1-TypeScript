@@ -4053,7 +4053,7 @@ declare interface nlobjSearchColumn {
      * @method
      * @memberOf nlobjSearchColumn
      *
-     * @since 2009.2
+     * @since 2009.1
      * @return
      *
      * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118195
@@ -4068,13 +4068,13 @@ declare interface nlobjSearchColumn {
      * @method
      * @memberOf nlobjSearchColumn
      *
-     * @since 2009.2
+     * @since 2011.1
      * @param formula
      * @return
      *
      * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119081
      */
-    setFormula(formula: string): string;
+    setFormula(formula: string): nlobjSearchColumn;
 
     /**
      * return nlobjSearchColumn sorted in either ascending or descending order.
@@ -4090,13 +4090,57 @@ declare interface nlobjSearchColumn {
      *
      * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120366
      */
-    setSort(order: any): (name: string, join: string, summary: string) => void;
+    setSort(order: any): (name: string, join: string, summary: string) => nlobjSearchColumn;
 
-    // https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120259
+    /**
+     * return nlobjSearchColumn with label set.
+     * @return {nlobjSearchColumn}
+     * @param {string} label.
+     *
+     * @method
+     * @memberOf nlobjSearchColumn
+     *
+     * @since 2011.1
+     * @param label
+     * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120259
+     */
     setLabel(label: string): nlobjSearchColumn;
 
-    // https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119209
+    /**
+     * return nlobjSearchColumn with special function set.
+     * @return {nlobjSearchColumn}
+     * @param {string} special function ID.
+     *
+     * @method
+     * @memberOf nlobjSearchColumn
+     *
+     * @since 2011.1
+     * @param functionId
+     * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119209
+     */
     setFunction(functionId: 'percentOfTotal' | 'absoluteValue' | 'ageInDays' | 'ageInHours' | 'ageInMonths' | 'ageInWeeks' | 'ageInYears' | 'calendarWeek' | 'day' | 'month' | 'negate' | 'numberAsTime' | 'quarter' | 'rank' | 'round' | 'roundToHundredths' | 'roundToTenths' | 'weekOfYear' | 'year'): nlobjSearchColumn;
+
+    /**
+     * return nlobjSearchColumn with special function set.
+     * @return {nlobjSearchColumn}
+     * @param {string} The name of the search column for which the minimal or maximal value should be found.
+     * @param {string} The join id for this search column.
+     *
+     * @method
+     * @memberOf nlobjSearchColumn
+     *
+     * @since 2012.1
+     * @param name
+     * @param join
+     * @return
+     *
+     * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120540
+     */
+    setWhenOrderedBy(name: string, join: string): nlobjSearchColumn;
 }
 
 declare class nlobjSearchColumn {
