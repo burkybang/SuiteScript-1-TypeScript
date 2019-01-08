@@ -4096,7 +4096,7 @@ declare interface nlobjSearchColumn {
     setLabel(label: string): nlobjSearchColumn;
 
     // https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119209
-    setFunction(label: 'percentOfTotal' | 'absoluteValue' | 'ageInDays' | 'ageInHours' | 'ageInMonths' | 'ageInWeeks' | 'ageInYears' | 'calendarWeek' | 'day' | 'month' | 'negate' | 'numberAsTime' | 'quarter' | 'rank' | 'round' | 'roundToHundredths' | 'roundToTenths' | 'weekOfYear' | 'year'): nlobjSearchColumn;
+    setFunction(functionId: 'percentOfTotal' | 'absoluteValue' | 'ageInDays' | 'ageInHours' | 'ageInMonths' | 'ageInWeeks' | 'ageInYears' | 'calendarWeek' | 'day' | 'month' | 'negate' | 'numberAsTime' | 'quarter' | 'rank' | 'round' | 'roundToHundredths' | 'roundToTenths' | 'weekOfYear' | 'year'): nlobjSearchColumn;
 }
 
 declare class nlobjSearchColumn {
