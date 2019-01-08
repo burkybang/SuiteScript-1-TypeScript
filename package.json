@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/suitescript",
+        "scope": "@types",
+        "escapedName": "@types%2fsuitescript",
+        "name": "@types/suitescript",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\Adam\\.WebStorm2017.3\\config\\javascript\\extLibs\\global-types"
+    ]
+  ],
+  "_from": "@types/suitescript@latest",
+  "_id": "@types/suitescript@0.0.4",
+  "_inCache": true,
+  "_location": "/@types/suitescript",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/suitescript-0.0.4.tgz_1474308866556_0.856513058533892"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/suitescript",
+    "scope": "@types",
+    "escapedName": "@types%2fsuitescript",
+    "name": "@types/suitescript",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/suitescript/-/suitescript-0.0.4.tgz",
+  "_shasum": "7527402449951d8eaca372fee190f184ec442e89",
+  "_shrinkwrap": null,
+  "_spec": "@types/suitescript",
+  "_where": "C:\\Users\\Adam\\.WebStorm2017.3\\config\\javascript\\extLibs\\global-types",
+  "author": {
+    "name": "Darren Hill",
+    "email": "https://github.com/darrenhillconsulting"
+  },
+  "dependencies": {},
+  "description": "TypeScript definitions for Suite Script",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7527402449951d8eaca372fee190f184ec442e89",
+    "tarball": "https://registry.npmjs.org/@types/suitescript/-/suitescript-0.0.4.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/suitescript",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typesPublisherContentHash": "f589032405175d3d84f647b19eb7efc59afef453cdb8a2eb00288b6103dcd8ec",
+  "typings": "index.d.ts",
+  "version": "0.0.4"
+}
