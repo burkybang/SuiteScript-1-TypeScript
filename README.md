@@ -1,8 +1,10 @@
+<!--
 # Installation
 > `npm install --save @types/suitescript`
+-->
 
 # Summary
-This package contains type definitions for SuiteScript (http://www.netsuite.com).
+This package contains type definitions for SuiteScript 1.0 (http://www.netsuite.com).
 
 # Details
 Files were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/types-2.0/suitescript
