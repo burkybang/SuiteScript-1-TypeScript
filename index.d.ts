@@ -482,6 +482,8 @@ declare function nlapiCreateRecord(type: string, initializeValues?: any): nlobjR
  * @param doSourcing?
  * @param ignoreMandatoryFields?
  * @return
+ *
+ * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3031704
  */
 declare function nlapiSubmitRecord(record: any, doSourcing?: boolean, ignoreMandatoryFields?: boolean): any;
 
@@ -622,8 +624,9 @@ declare function nlapiVoidTransaction(type: string, id: string): string;
  * @param fields
  * @param text?
  */
-declare function nlapiLookupField(type: string, id: number, fields: string, text?: boolean): string;
-declare function nlapiLookupField(type: string, id: number, fields: string[], text?: boolean): any;
+declare function nlapiLookupField(type: string, id: number, fields: string | string[], text?: boolean): any;
+
+// declare function nlapiLookupField(type: string, id: number, fields: string[], text?: boolean): any;
 
 /**
  * Submit the values of a field or set of fields for an existing record.
@@ -7158,7 +7161,7 @@ declare interface nlobjSelectOption {
 declare function nlapiGetLogin(): void;
 
 /**
- * @param {string} Job Type
+ * @param {string} jobType - Job Type
  * @return {nlobjJobManager}
  *
  * @since 2013.1
@@ -7166,3 +7169,39 @@ declare function nlapiGetLogin(): void;
  * @return
  */
 declare function nlapiGetJobManager(jobType: any): any;
+
+
+/**
+ * Create native NetSuite modal window with HTML
+ *
+ * @param {string} windowId - Added as a class to the modal window
+ * @param {number} width - Width of the modal window
+ * @param {number} height - Height of the modal window
+ * @param {undefined} unknown1
+ * @param {undefined} unknown2
+ * @param {string} windowTitle - Displays in the top bar of the modal window
+ * @param {undefined} unknown3
+ * @param {string} html - HTML to display in the body of the modal window
+ * @return {void}
+ *
+ * Usage
+ * nlExtOpenDivWindow('my-test-window', 500, 400, undefined, undefined, 'My Test Window', undefined, '<strong>This is a test body</strong>');
+ */
+declare function nlExtOpenDivWindow(windowId, width, height, unknown1, unknown2, windowTitle, unknown3, html): void;
+
+/**
+ * Create native NetSuite modal window with URL
+ *
+ * @param {string} url - Value for src of the iframe in the body of the modal window - It's best to always add ifrmcntnr=T as a parameter if using a NetSuite URL
+ * @param {string} windowId - Added as a class to the modal window
+ * @param {number} width - Width of the modal window
+ * @param {number} height - Height of the modal window
+ * @param {undefined} unknown1
+ * @param {undefined} unknown2
+ * @param {string} windowTitle - Displays in the top bar of the modal window
+ * @return {void}
+ *
+ * Usage
+ * nlExtOpenWindow('https://netsuite.com', 'my-test-window', 500, 400, undefined, undefined, 'My Test Window');
+ */
+declare function nlExtOpenWindow(url, windowId, width, height, unknown1, unknown2, windowTitle): void;
