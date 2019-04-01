@@ -1940,7 +1940,7 @@ declare function nlapiCreateEmailMerger(id: any): any;
 /**
  * Create an entry in the script execution log (note that execution log entries are automatically purged after 30 days).
  *
- * @param {debug'|'audit'|'error'|'emergency'|'DEBUG'|'AUDIT'|'ERROR'|'EMERGENCY} type [required] - One of the following log types: debug|audit|error|emergency
+ * @param {'debug'|'audit'|'error'|'emergency'|'DEBUG'|'AUDIT'|'ERROR'|'EMERGENCY'} type [required] - One of the following log types: debug|audit|error|emergency
  * @param {string} title log title (up to 90 characters supported)
  * @param {string} [details] log details (up to 3000 characters supported)
  * @return {void}
@@ -7188,7 +7188,7 @@ declare function nlapiGetJobManager(jobType: any): any;
  * Usage
  * nlExtOpenDivWindow('my-test-window', 500, 400, undefined, undefined, 'My Test Window', undefined, '<strong>This is a test body</strong>');
  */
-declare function nlExtOpenDivWindow(windowId, width, height, unknown1, unknown2, windowTitle, unknown3, html): void;
+declare function nlExtOpenDivWindow(windowId: string, width: number, height: number, unknown1: undefined, unknown2: undefined, windowTitle: string, unknown3: undefined, html: string): void;
 
 /**
  * Create native NetSuite modal window with URL
@@ -7206,4 +7206,4 @@ declare function nlExtOpenDivWindow(windowId, width, height, unknown1, unknown2,
  * Usage
  * nlExtOpenWindow('https://netsuite.com', 'my-test-window', 500, 400, undefined, undefined, 'My Test Window');
  */
-declare function nlExtOpenWindow(url, windowId, width, height, unknown1, unknown2, windowTitle): void;
+declare function nlExtOpenWindow(url: string, windowId: string, width: number, height: number, unknown1: undefined, unknown2: undefined, windowTitle: string): void;
