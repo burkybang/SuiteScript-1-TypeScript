@@ -7173,6 +7173,7 @@ declare function nlapiGetJobManager(jobType: any): any;
 
 /**
  * Create native NetSuite modal window with HTML
+ * Only available in browser context
  *
  * @param {string} windowId - Added as a class to the modal window
  * @param {number} width - Width of the modal window
@@ -7191,6 +7192,7 @@ declare function nlExtOpenDivWindow(windowId, width, height, unknown1, unknown2,
 
 /**
  * Create native NetSuite modal window with URL
+ * Only available in browser context
  *
  * @param {string} url - Value for src of the iframe in the body of the modal window - It's best to always add ifrmcntnr=T as a parameter if using a NetSuite URL
  * @param {string} windowId - Added as a class to the modal window
