@@ -4201,7 +4201,7 @@ declare interface nlobjSearchResult {
      * return the value for a return column specified by name, join ID, and summary type.
      * @param {string} name the name of the search column
      * @param {string} join the join ID for the search column
-     * @param {string} summary summary type specified for this column
+     * @param {string} [summary] summary type specified for this column
      * @return {string}
      *
      * @method
@@ -4213,7 +4213,7 @@ declare interface nlobjSearchResult {
      * @param summary
      * @return
      */
-    getValue(name: string, join: string, summary: string): string;
+    getValue(name: string, join: string, summary?: string): string;
 
     /**
      * return the text value of this return column if it's a select field.
@@ -4941,7 +4941,7 @@ declare interface nlobjResponse {
      *
      * @param {string} type the file type i.e. plainText, word, pdf, htmldoc (see list of media item types)
      * @param {string} filename the file name
-     * @param {string} disposition Content Disposition used for streaming attachments: inline|attachment
+     * @param {string} [disposition] Content Disposition used for streaming attachments: inline|attachment
      * @return {void}
      * @method
      * @memberOf nlobjResponse
