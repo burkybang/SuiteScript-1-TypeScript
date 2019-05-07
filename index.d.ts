@@ -4233,7 +4233,7 @@ declare interface nlobjSearchResult {
      * return the text value of this return column if it's a select field.
      * @param {string} name the name of the search column
      * @param {string} join the join ID for the search column
-     * @param {string} summary summary type specified for this column
+     * @param {string} [summary] summary type specified for this column
      * @return {string}
      *
      * @method
@@ -4245,7 +4245,7 @@ declare interface nlobjSearchResult {
      * @param summary
      * @return
      */
-    getText(name: string, join: string, summary: string): string;
+    getText(name: string, join: string, summary?: string): string;
 
     /**
      * return an array of all nlobjSearchColumn objects returned in this search.
