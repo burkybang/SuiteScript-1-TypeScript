@@ -10,7 +10,6 @@ This package contains type definitions for SuiteScript 1.0 (http://www.netsuite.
 Files were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/types-2.0/suitescript
 
 Additional Details
- * Last updated: 8/01/2019 1:42:31 PM AEDT
  * File structure: Global
  * Library Dependencies: none
  * Module Dependencies: none
