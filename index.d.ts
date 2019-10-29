@@ -2081,32 +2081,48 @@ declare function nlapiAddMonths(d: any, months: any): any;
 declare function nlapiFormatCurrency(str: string): string;
 
 /**
- * Encrypt a String using a SHA-1 hash function
+ * Encrypt a String using a SHA-1 or AES hash function
  *
- * @param {string} s string to encrypt
+ * @param {string} string - String to encrypt
+ * @param {'aes'} [algorithm] - Algorithm to use
+ * @param {string} [key] - Secret key to use
  * @return {string}
  *
  * @since 2009.2
- * @param s
+ * @param string
+ * @param [algorithm]
+ * @param [key]
  * @return
  */
-declare function nlapiEncrypt(s: string, algotithm: string, key?: string): string;
+declare function nlapiEncrypt(string: string, algorithm?: 'aes', key?: string): string;
 
 /**
- * Decrypt an encrypted text String using an AES hash function.
+ * Encrypt a String using a SHA-1 hash function
  *
- * @param {string} encryptedString [required] - Emcrypted string being decrypted
- * @param {string} algotithm [required] - algorithm to use
- * @param {string} key [required] - secret key to use
+ * @param {string} string - String to encrypt
+ * @return {string}
+ *
+ * @since 2009.2
+ * @param string
+ * @return
+ */
+// declare function nlapiEncrypt(string: string): string;
+
+/**
+ * Decrypt an encrypted String using an AES hash function.
+ *
+ * @param {string} encryptedString - Encrypted string being decrypted
+ * @param {'aes'} algorithm - Algorithm to use
+ * @param {string} key - Secret key to use
  * @return {string}
  *
  * @since 2009.2
  * @param encryptedString
- * @param algotithm
+ * @param algorithm
  * @param key
  * @return
  */
-declare function nlapiDecrypt(encryptedString: string, algotithm: string, key: string): string;
+declare function nlapiDecrypt(encryptedString: string, algorithm: 'aes', key: string): string;
 
 /**
  * Escape a String for use in an XML document.
@@ -3086,7 +3102,7 @@ declare interface nlobjRecord {
      * @since 2008.2
      * @param group
      */
-    getAllLineItemFields(group: string): void;
+    getAllLineItemFields(group: string): string[];
 
     /**
      * Set the value of a sublist field.
@@ -4597,11 +4613,11 @@ declare interface nlobjContext {
      * @param {string} type
      * @param {string} name
      * @since 2007.0
-     * @deprecated
      * @param type
      * @param name
+     * @return
      */
-    getSetting(type: string, name: string): void;
+    getSetting(type: string, name: string): any;
 
     /**
      * set a system/script setting. Only supported type is SESSION
@@ -4610,7 +4626,6 @@ declare interface nlobjContext {
      * @param {string} name
      * @param {string} value
      * @since 2007.0
-     * @deprecated
      * @param type
      * @param name
      * @param value
