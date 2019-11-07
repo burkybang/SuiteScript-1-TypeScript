@@ -1,6 +1,8 @@
-// Type definitions for Suite Script
+// Type definitions for SuiteScript
 // Project: http://www.netsuite.com
-// Definitions by: Darren Hill <https://github.com/darrenhillconsulting>
+// Definitions by:
+//      Darren Hill <https://github.com/darrenhillconsulting>
+//      Adam Smith <https://github.com/burkybang>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace nlobjRecord.prototype {
@@ -404,7 +406,7 @@ declare namespace nlobjForm.prototype {
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
- * @param {int}    id The internal ID for the record.
+ * @param {number}    id The internal ID for the record.
  * @param {Object}    initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
  * @return {nlobjRecord}  Returns an nlobjRecord object of a copied record.
  *
@@ -429,7 +431,7 @@ declare function nlapiCreateSearch(type: string, filters: nlobjSearchFilter | nl
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
- * @param {int}    id The internal ID for the record.
+ * @param {number}    id The internal ID for the record.
  * @param {Object}    initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
  * @return {nlobjRecord}  Returns an nlobjRecord object of an existing NetSuite record.
  *
@@ -492,7 +494,7 @@ declare function nlapiSubmitRecord(record: any, doSourcing?: boolean, ignoreMand
  * @governance 20 units for transactions, 4 for custom records, 8 for all other records
  *
  * @param {string}    type The record type name.
- * @param {int}    id The internal ID for the record.
+ * @param {number}    id The internal ID for the record.
  * @return {void}
  *
  * @exception {SSS_INVALID_RECORD_TYPE}
@@ -555,7 +557,7 @@ declare function nlapiSearchGlobal(keywords: string): nlobjSearchResult[];
  *
  * @param {string}        type The recordType you are checking duplicates for (for example, customer|lead|prospect|partner|vendor|contact).
  * @param {string[]}    [fields] array of field names used to detect duplicate (for example, companyname|email|name|phone|address1|city|state|zipcode).
- * @param {int}        [id] internal ID of existing record. Depending on the use case, id may or may not be a required argument.
+ * @param {number}        [id] internal ID of existing record. Depending on the use case, id may or may not be a required argument.
  * @return {nlobjSearchResult[]} Returns an Array of nlobjSearchResult objects corresponding to the duplicate records.
  *
  * @since    2008.1
@@ -570,7 +572,7 @@ declare function nlapiSearchDuplicate(type: string, fields: any, id?: any): nlob
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
- * @param {int}    id The internal ID for the record.
+ * @param {number}    id The internal ID for the record.
  * @param {string}    transformType The recordType you are transforming the existing record into.
  * @param {Object}    [transformValues] An object containing transform default option/value pairs used to pre-configure transformed record
  * @return {nlobjRecord}
@@ -613,7 +615,7 @@ declare function nlapiVoidTransaction(type: string, id: string): string;
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
- * @param {int}    id The internal ID for the record.
+ * @param {number}    id The internal ID for the record.
  * @param {string, string[]} fields - field or fields to look up.
  * @param {boolean} [text] If set then the display value is returned instead for select fields.
  * @return {string, Object} single value or an Object of field name/value pairs depending on the fields argument.
@@ -634,7 +636,7 @@ declare function nlapiLookupField(type: string, id: number, fields: string | str
  * @restriction only supported for records and fields where DLE (Direct List Editing) is supported
  *
  * @param {string}        type The record type name.
- * @param {int}        id The internal ID for the record.
+ * @param {number}        id The internal ID for the record.
  * @param {string, string[]} fields field or fields being updated.
  * @param {string, string[]} values field value or field values used for updating.
  * @param {boolean}    [doSourcing] If not set, this argument defaults to false and field sourcing does not occur.
@@ -655,9 +657,9 @@ declare function nlapiSubmitField(type: string, id: any, fields: any, values: an
  * @governance 10 units
  *
  * @param {string}    type1 The record type name being attached
- * @param {int}    id1 The internal ID for the record being attached
+ * @param {number}    id1 The internal ID for the record being attached
  * @param {string}    type2 The record type name being attached to
- * @param {int}    id2 The internal ID for the record being attached to
+ * @param {number}    id2 The internal ID for the record being attached to
  * @param {Object}    [properties] Object containing name/value pairs used to configure attach operation
  * @return {void}
  *
@@ -676,9 +678,9 @@ declare function nlapiAttachRecord(type1: string, id1: any, type2: string, id2: 
  * @governance 10 units
  *
  * @param {string}    type1 The record type name being attached
- * @param {int}    id1 The internal ID for the record being attached
+ * @param {number}    id1 The internal ID for the record being attached
  * @param {string}    type2 The record type name being attached to
- * @param {int}    id2 The internal ID for the record being attached to
+ * @param {number}    id2 The internal ID for the record being attached to
  * @param {Object}    [properties] Object containing name/value pairs used to configure detach operation
  * @return {void}
  *
@@ -768,7 +770,7 @@ declare function nlapiGetContext(): any;
 /**
  * Return the internal ID for the currently logged in user. Returns -4 when called from online forms or "Available without Login" Suitelets.
  *
- * @return {int}
+ * @return {number}
  *
  * @since    2005.0
  * @return
@@ -778,7 +780,7 @@ declare function nlapiGetUser(): any;
 /**
  * Return the internal ID for the current user's role. Returns 31 (Online Form User) when called from online forms or "Available without Login" Suitelets.
  *
- * @return {int}
+ * @return {number}
  *
  * @since    2005.0
  * @return
@@ -788,7 +790,7 @@ declare function nlapiGetRole(): any;
 /**
  * Return the internal ID for the current user's department.
  *
- * @return {int}
+ * @return {number}
  *
  * @since    2005.0
  * @return
@@ -798,7 +800,7 @@ declare function nlapiGetDepartment(): any;
 /**
  * Return the internal ID for the current user's location.
  *
- * @return {int}
+ * @return {number}
  *
  * @since    2005.0
  * @return
@@ -808,7 +810,7 @@ declare function nlapiGetLocation(): any;
 /**
  * Return the internal ID for the current user's subsidiary.
  *
- * @return {int}
+ * @return {number}
  *
  * @since    2008.1
  * @return
@@ -828,7 +830,7 @@ declare function nlapiGetRecordType(): string;
 /**
  * Return the internal ID corresponding to the current page or userevent script.
  *
- *  @return {int}
+ *  @return {number}
  *
  * @since    2007.0
  * @return
@@ -841,7 +843,7 @@ declare function nlapiGetRecordId(): any;
  * @governance 10 units
  * @restriction all outbound emails subject to email Anti-SPAM policies
  *
- * @param {int}        from internal ID for employee user on behalf of whom this email is sent
+ * @param {number}        from internal ID for employee user on behalf of whom this email is sent
  * @param {string, int} to email address or internal ID of user that this email is being sent to
  * @param {string}        subject email subject
  * @param {string}        body email body
@@ -875,9 +877,9 @@ declare function nlapiSendEmail(author: number, recipient: string | number, subj
  * @governance 10 units
  * @restriction works in conjunction with the Lead Nurturing (campaigndrip) sublist only
  *
- * @param {int} campaigneventid internal ID of the campaign event
- * @param {int} recipientid internal ID of the recipient - the recipient must have an email
- * @return {int}
+ * @param {number} campaigneventid internal ID of the campaign event
+ * @param {number} recipientid internal ID of the recipient - the recipient must have an email
+ * @return {number}
  *
  * @since    2010.1
  * @param campaigneventid
@@ -891,7 +893,7 @@ declare function nlapiSendCampaignEmail(campaigneventid: any, recipientid: any):
  * Supported base types are entity for entities, transaction for transactions, activity for activities and cases, record|recordtype for custom records
  * @governance 10 units
  *
- * @param {int}        from internal ID for employee user on behalf of whom this fax is sent
+ * @param {number}        from internal ID for employee user on behalf of whom this fax is sent
  * @param {string, int} to fax address or internal ID of user that this fax is being sent to
  * @param {string}        subject fax subject
  * @param {string}        body fax body
@@ -927,7 +929,7 @@ declare function nlapiGetField(fldnam: string): any;
  *
  * @param {string}    type    matrix sublist name
  * @param {string}    fldnam matrix field name
- * @param {int}    column matrix field column index (1-based)
+ * @param {number}    column matrix field column index (1-based)
  * @return {nlobjField}
  *
  * @since    2009.2
@@ -943,7 +945,7 @@ declare function nlapiGetMatrixField(type: string, fldnam: string, column: any):
  *
  * @param {string}    type    sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    [linenum] line number for sublist field (1-based) and only valid for sublists of type staticlist and list
+ * @param {number}    [linenum] line number for sublist field (1-based) and only valid for sublists of type staticlist and list
  * @return {nlobjField}
  *
  * @since    2009.1
@@ -959,8 +961,8 @@ declare function nlapiGetLineItemField(type: string, fldnam: string, linenum?: a
  *
  * @param {string}    type    matrix sublist name
  * @param {string}    fldnam matrix field name
- * @param {int}    linenum line number (1-based)
- * @param {int}    column matrix column index (1-based)
+ * @param {number}    linenum line number (1-based)
+ * @param {number}    column matrix column index (1-based)
  * @return {nlobjField}
  *
  * @since    2009.2
@@ -1102,7 +1104,7 @@ declare function nlapiSetFieldTexts(fldnam: string, texts: any, firefieldchanged
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    column matrix column index (1-based)
+ * @param {number}    column matrix column index (1-based)
  * @return {string}
  *
  * @since    2009.2
@@ -1119,7 +1121,7 @@ declare function nlapiGetMatrixValue(type: string, fldnam: string, column: any):
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    column matrix column index (1-based)
+ * @param {number}    column matrix column index (1-based)
  * @param {string}    value field value for matrix field
  * @param {boolean} [firefieldchanged]    if false then the field change event is suppressed (defaults to true)
  * @param {boolean} [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
@@ -1141,7 +1143,7 @@ declare function nlapiSetMatrixValue(type: string, fldnam: string, column: any, 
  * @restriction supported in client and user event scripts only.
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    column matrix column index (1-based)
+ * @param {number}    column matrix column index (1-based)
  * @return {string} value
  *
  * @since    2009.2
@@ -1159,7 +1161,7 @@ declare function nlapiGetCurrentLineItemMatrixValue(type: string, fldnam: string
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    column matrix column index (1-based)
+ * @param {number}    column matrix column index (1-based)
  * @param {string}    value matrix field value
  * @param {boolean} [firefieldchanged] if false then the field change event is suppressed (defaults to true)
  * @param {boolean} [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
@@ -1181,8 +1183,8 @@ declare function nlapiSetCurrentLineItemMatrixValue(type: string, fldnam: string
  * @restriction supported in client and user event scripts only.
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    linenum line number (1-based)
- * @param {int}    column column index (1-based)
+ * @param {number}    linenum line number (1-based)
+ * @param {number}    column column index (1-based)
  * @param {string} value
  *
  * @since    2009.2
@@ -1198,7 +1200,7 @@ declare function nlapiGetLineItemMatrixValue(type: string, fldnam: string, linen
  * @restriction supported in client and user event scripts only.
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    linenum line number (1-based)
+ * @param {number}    linenum line number (1-based)
  * @return {string}
  *
  * @since 2005.0
@@ -1214,7 +1216,7 @@ declare function nlapiGetLineItemValue(type: string, fldnam: string, linenum: an
  * @restriction supported in client and user event scripts only.
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    linenum line number (1-based)
+ * @param {number}    linenum line number (1-based)
  * @param {string}    timezone value
  * @return {string}
  *
@@ -1232,7 +1234,7 @@ declare function nlapiGetLineItemDateTimeValue(type: string, fldnam: string, lin
  * @restriction supported in client and user event scripts only.
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    linenum line number (1-based)
+ * @param {number}    linenum line number (1-based)
  * @param {string} value
  * @retun {void}
  *
@@ -1249,7 +1251,7 @@ declare function nlapiSetLineItemValue(type: string, fldnam: string, linenum: an
  * @restriction supported in client and user event scripts only.
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    linenum line number (1-based)
+ * @param {number}    linenum line number (1-based)
  * @param {string} datetime value
  * @param {string} timezone value
  * @retun {void}
@@ -1268,7 +1270,7 @@ declare function nlapiSetLineItemDateTimeValue(type: string, fldnam: string, lin
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {int}    linenum line number (1-based)
+ * @param {number}    linenum line number (1-based)
  * @return {string}
  *
  * @since 2005.0
@@ -1285,7 +1287,7 @@ declare function nlapiGetLineItemText(type: string, fldnam: string, linenum: any
  * @param {string} type sublist name
  * @param {string} fldnam sublist field name
  * @param {string} val the value being queried for in a sublist field
- * @return {int}
+ * @return {number}
  *
  * @since 2009.2
  * @param type
@@ -1300,9 +1302,9 @@ declare function nlapiFindLineItemValue(type: string, fldnam: string, val: strin
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam matrix field name
- * @param {int}    column matrix column index (1-based)
+ * @param {number}    column matrix column index (1-based)
  * @param {string}    val the value being queried for in a matrix field
- * @return {int}
+ * @return {number}
  *
  * @since 2009.2
  * @param type
@@ -1318,7 +1320,7 @@ declare function nlapiFindLineItemMatrixValue(type: string, fldnam: string, colu
  *
  * @param {string} type sublist name
  * @param {string} fldnam matrix field name
- * @return {int}
+ * @return {number}
  *
  * @since 2009.2
  * @param type
@@ -1331,7 +1333,7 @@ declare function nlapiGetMatrixCount(type: string, fldnam: string): any;
  * Return the number of sublists in a sublist on the current record on a page.
  * @restriction supported in client and user event scripts only.
  * @param {string} type sublist name
- * @return {int}
+ * @return {number}
  *
  * @since 2005.0
  * @param type
@@ -1343,7 +1345,7 @@ declare function nlapiGetLineItemCount(type: string): string | number;
  * Insert and select a new line into the sublist on a page or userevent.
  *
  * @param {string} type sublist name
- * @param {int} [line] line number at which to insert a new line.
+ * @param {number} [line] line number at which to insert a new line.
  * @return{void}
  *
  * @since 2005.0
@@ -1356,7 +1358,7 @@ declare function nlapiInsertLineItem(type: string, line?: any): void;
  * Remove the currently selected line from the sublist on a page or userevent.
  *
  * @param {string} type sublist name
- * @param {int} [line]    line number to remove.
+ * @param {number} [line]    line number to remove.
  * @return {void}
  *
  * @since 2005.0
@@ -1475,7 +1477,7 @@ declare function nlapiGetCurrentLineItemText(type: string, fldnam: string): stri
  * Return the line number for the currently selected line.
  *
  * @param {string} type sublist name
- * @return {int}
+ * @return {number}
  *
  * @since 2005.0
  * @param type
@@ -1490,7 +1492,7 @@ declare function nlapiGetCurrentLineItemIndex(type: string): any;
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {boolean} disable if true then field is disabled
- * @param {int} linenum line number for sublist field (1-based) and only valid for sublists of type list
+ * @param {number} linenum line number for sublist field (1-based) and only valid for sublists of type list
  * @return {void}
  *
  * @since 2009.1
@@ -1564,7 +1566,7 @@ declare function nlapiSetLineItemMandatory(type: string, fldnam: string, mandato
  * Select an existing line in a sublist.
  *
  * @param {string} type sublist name
- * @param {int} linenum line number to select
+ * @param {number} linenum line number to select
  * @return {void}
  *
  * @since 2005.0
@@ -1813,20 +1815,20 @@ declare function nlapiLoadFile(id: string | number): any;
  * @restriction Server SuiteScript only
  *
  * @param {nlobjFile} file a file object to submit
- * @return {int} return internal ID of file
+ * @return {number} return internal ID of file
  *
  * @since 2009.1
  * @param file
  * @return
  */
-declare function nlapiSubmitFile(file: nlobjFile): any;
+declare function nlapiSubmitFile(file: nlobjFile): number;
 
 /**
  * Delete a file from the file cabinet.
  * @governance 20 units
  * @restriction Server SuiteScript only
  *
- * @param {int} id internal ID of file to be deleted
+ * @param {number} id internal ID of file to be deleted
  * @return {id}
  *
  * @since 2009.1
@@ -1858,11 +1860,11 @@ declare function nlapiCreateFile(name: string, type: string, contents: string): 
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
- * @param {int}    id internal ID of template
+ * @param {number}    id internal ID of template
  * @param {string}    baseType primary record type
- * @param {int}    baseId internal ID of primary record
+ * @param {number}    baseId internal ID of primary record
  * @param {string}    [altType] secondary record type
- * @param {int}    [altId] internal ID of secondary record
+ * @param {number}    [altId] internal ID of secondary record
  * @param {Object}    [fields] Object of merge field values to use in the mail merge (by default all field values are obtained from records) which overrides those from the record.
  * @return {nlobjFile}
  *
@@ -1883,7 +1885,7 @@ declare function nlapiMergeRecord(id: any, baseType: string, baseId: any, altTyp
  * @governance 10 units
  *
  * @param {string}    type print output type: transaction|statement|packingslip|pickingticket
- * @param {int}    id internal ID of record to print
+ * @param {number}    id internal ID of record to print
  * @param {string}    [format] output format: html|pdf|default
  * @param {Object}    [properties] Object of properties used to configure print
  * @return {nlobjFile}
@@ -1928,7 +1930,7 @@ declare function nlapiCreateTemplateRenderer(): any;
  * FreeMarker template and a set of associated records.
  * @restriction Server SuiteScript only
  *
- * @param {int} templateId    internal ID of the template
+ * @param {number} templateId    internal ID of the template
  * @return {nlobjEmailMerger}
  *
  * @since 2015.1
@@ -2044,7 +2046,7 @@ declare function nlapiDateToString(d: Date, formattype?: string): string;
  * Add days to a Date object and returns a new Date
  *
  * @param {date} d date object used to calculate the new date
- * @param {int}    days the number of days to add to this date object.
+ * @param {number}    days the number of days to add to this date object.
  * @return {date}
  *
  * @since 2008.1
@@ -2058,7 +2060,7 @@ declare function nlapiAddDays(d: any, days: any): any;
  * Add months to a Date object and returns a new Date.
  *
  * @param {date} d date object used to calculate the new date
- * @param {int} months the number of months to add to this date object.
+ * @param {number} months the number of months to add to this date object.
  * @return {date}
  *
  * @since 2008.1
@@ -2256,9 +2258,9 @@ declare function nlapiExchangeRate(fromCurrency: any, toCurrency: any, date?: st
  * @governance 20 units
  *
  * @param {string} recordtype record type ID of the workflow base record
- * @param {int} id internal ID of the base record
+ * @param {number} id internal ID of the base record
  * @param {string, int} workflowid internal ID or script ID for the workflow definition
- * @return {int}
+ * @return {number}
  *
  * @since 2010.1
  * @param recordtype
@@ -2291,11 +2293,11 @@ declare function nlapiInitiateWorkflowAsync(recordType: any, id: any, workflowId
  * @governance 20 units
  *
  * @param {string} recordtype record type ID of the workflow base record
- * @param {int} id internal ID of the base record
+ * @param {number} id internal ID of the base record
  * @param {string, int} workflowid internal ID or script ID for the workflow definition
  * @param {string, int} actionid internal ID or script ID of the action script
  * @param {string, int} stateid internal ID or script ID of the state contains the referenced add button action
- * @return {int}
+ * @return {number}
  *
  * @since 2010.1
  * @param recordtype
@@ -2798,7 +2800,7 @@ declare interface nlobjRecord {
     /**
      * Return the internalId of the record or NULL for new records.
      *
-     * @return {int} Return the integer value of the record ID.
+     * @return {number} Return the integer value of the record ID.
      *
      * @method
      * @memberOf nlobjRecord
@@ -2875,7 +2877,7 @@ declare interface nlobjRecord {
      *
      * @param {string} type sublist name
      * @param {string} fldnam sublist field name
-     * @param {int} [linenum] line number (1-based). If empty, the current sublist field is returned. only settable for sublists of type list
+     * @param {number} [linenum] line number (1-based). If empty, the current sublist field is returned. only settable for sublists of type list
      * @return {nlobjField}
      *
      * @method
@@ -2894,7 +2896,7 @@ declare interface nlobjRecord {
      *
      * @param {string} type matrix sublist name
      * @param {string} fldnam matrix field name
-     * @param {int} linenum line number
+     * @param {number} linenum line number
      * @param {column} linenum matrix column (1-based)
      * @return {nlobjField}
      *
@@ -3043,7 +3045,7 @@ declare interface nlobjRecord {
      *
      * @param {string} type matrix sublist name
      * @param {string} name    matrix field name
-     * @param {int} column matrix column index (1-based)
+     * @param {number} column matrix column index (1-based)
      * @return {string}
      *
      * @method
@@ -3062,7 +3064,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    type matrix sublist name
      * @param {string}    name    matrix field name
-     * @param {int}    column matrix column index (1-based)
+     * @param {number}    column matrix column index (1-based)
      * @param {string}    value field value
      * @return {void}
      *
@@ -3109,7 +3111,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group sublist name
      * @param {string}    name sublist field name
-     * @param {int}    line line number (1-based)
+     * @param {number}    line line number (1-based)
      * @param {string}    value sublist field value
      *
      * @method
@@ -3128,7 +3130,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group sublist name
      * @param {string}    name sublist field name
-     * @param {int}    line line number (1-based)
+     * @param {number}    line line number (1-based)
      * @param {string}    datetime value
      * @param {string}    timezone value
      *
@@ -3149,7 +3151,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group sublist name
      * @param {string}    name sublist field name
-     * @param {int}    line line number (1-based)
+     * @param {number}    line line number (1-based)
      *
      * @method
      * @memberOf nlobjRecord
@@ -3166,7 +3168,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group sublist name
      * @param {string}    name sublist field name
-     * @param {int}    line line number (1-based)
+     * @param {number}    line line number (1-based)
      * @param {string}    timezone value
      *
      * @method
@@ -3185,7 +3187,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group sublist name
      * @param {string}    name sublist field name
-     * @param {int}    line line number (1-based)
+     * @param {number}    line line number (1-based)
      * @return {string}
      *
      * @method
@@ -3297,7 +3299,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group matrix sublist name
      * @param {string}    name matrix field name
-     * @param {int}    column matrix field column index (1-based)
+     * @param {number}    column matrix field column index (1-based)
      * @param {string}    value matrix field value
      * @return {void}
      *
@@ -3318,7 +3320,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group matrix sublist name
      * @param {string}    name matrix field name
-     * @param {int}    column matrix field column index (1-based)
+     * @param {number}    column matrix field column index (1-based)
      * @return {string}
      *
      * @method
@@ -3337,7 +3339,7 @@ declare interface nlobjRecord {
      *
      * @param {string}    group matrix sublist name
      * @param {string}    name matrix field name
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjRecord
@@ -3368,7 +3370,7 @@ declare interface nlobjRecord {
      * @param {string} group    sublist name
      * @param {string} fldnam    sublist field name
      * @param {string} value    sublist field value
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjRecord
@@ -3386,9 +3388,9 @@ declare interface nlobjRecord {
      *
      * @param {string}    group    sublist name
      * @param {string}    fldnam    sublist field name
-     * @param {int}    column  matrix column index (1-based)
+     * @param {number}    column  matrix column index (1-based)
      * @param {string}    value    matrix field value
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjRecord
@@ -3406,7 +3408,7 @@ declare interface nlobjRecord {
      * Insert a new line into a sublist.
      *
      * @param {string}    group sublist name
-     * @param {int}    [line] line index at which to insert line
+     * @param {number}    [line] line index at which to insert line
      *
      * @method
      * @memberOf nlobjRecord
@@ -3421,7 +3423,7 @@ declare interface nlobjRecord {
      * Remove an existing line from a sublist.
      *
      * @param {string}    group sublist name
-     * @param {int}    [line] line number to remove
+     * @param {number}    [line] line number to remove
      *
      * @method
      * @memberOf nlobjRecord
@@ -3451,7 +3453,7 @@ declare interface nlobjRecord {
      * Select an existing line in a sublist.
      *
      * @param {string}    group sublist name
-     * @param {int}    line  line number to select
+     * @param {number}    line  line number to select
      * @return {void}
      *
      * @method
@@ -3744,7 +3746,7 @@ declare interface nlobjFile {
 
     /**
      * return the internal ID of the folder that this file is in.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjFile
@@ -3756,7 +3758,7 @@ declare interface nlobjFile {
 
     /**
      * sets the internal ID of the folder that this file is in.
-     * @param {int} folder
+     * @param {number} folder
      * @return {void}
      *
      * @method
@@ -3862,7 +3864,7 @@ declare interface nlobjFile {
 
     /**
      * Return the id of the file (if stored in the FC).
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjFile
@@ -3874,7 +3876,7 @@ declare interface nlobjFile {
 
     /**
      * Return the size of the file in bytes.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjFile
@@ -4098,18 +4100,17 @@ declare interface nlobjSearchColumn {
     /**
      * return nlobjSearchColumn sorted in either ascending or descending order.
      * @return {nlobjSearchColumn}
-     * @param {boolean} sort if not set, defaults to false, which returns column data in ascending order.
+     * @param {boolean} [descending] - if not set, defaults to false, which returns column data in ascending order.
      *
      * @method
      * @memberOf nlobjSearchColumn
      *
      * @since 2010.1
-     * @param order
      * @return
      *
      * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120366
      */
-    setSort(order: any): (name: string, join: string, summary: string) => nlobjSearchColumn;
+    setSort(descending?: boolean): (name: string, join: string, summary: string) => nlobjSearchColumn;
 
     /**
      * return nlobjSearchColumn with label set.
@@ -4185,7 +4186,7 @@ declare interface nlobjSearchResult {
      * return the internalId for the record returned in this row.
      * @method
      * @memberOf nlobjSearchResult
-     * @return {int}
+     * @return {number}
      * @return
      */
     getId(): any;
@@ -4368,7 +4369,7 @@ declare interface nlobjContext {
 
     /**
      * return the internal ID of the contact logged in on behalf of a customer, vendor, or partner. It returns -1 for non-contact logins
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4392,7 +4393,7 @@ declare interface nlobjContext {
 
     /**
      * return the internalId of the current user's department.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4404,7 +4405,7 @@ declare interface nlobjContext {
 
     /**
      * return the internalId of the current user's location.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4416,7 +4417,7 @@ declare interface nlobjContext {
 
     /**
      * return the internalId of the current user's subsidiary.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4440,7 +4441,7 @@ declare interface nlobjContext {
 
     /**
      * return the amount of usage units remaining for this script.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4467,7 +4468,7 @@ declare interface nlobjContext {
     /**
      * return current user's permission level (0-4) for this permission
      * @param {string} name
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4583,7 +4584,7 @@ declare interface nlobjContext {
 
     /**
      * return the % complete specified for the current scheduled script execution
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjContext
@@ -4733,7 +4734,7 @@ declare interface nlobjError {
 
     /**
      * return the internalid of the record if this error was thrown in an aftersubmit script.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjError
@@ -4817,7 +4818,7 @@ declare interface nlobjServerResponse {
 
     /**
      * return the response code returned.
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjServerResponse
@@ -5107,7 +5108,7 @@ declare interface nlobjRequest {
      * return the value of a sublist value.
      * @param {string}    group sublist name
      * @param {string}    name  sublist field name
-     * @param {int}    line  sublist line number
+     * @param {number}    line  sublist line number
      * @return {string}
      *
      * @method
@@ -5124,7 +5125,7 @@ declare interface nlobjRequest {
     /**
      * return the number of lines in a sublist.
      * @param {string} group sublist name
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjRequest
@@ -5337,7 +5338,7 @@ declare interface nlobjPortlet {
      *
      * @param {string}    text data to output to line
      * @param {string}    [url] URL if this line should be clickable (if NULL then line will not be clickable)
-     * @param {int}    indent # of indents to insert before text
+     * @param {number}    indent # of indents to insert before text
      * @since 2008.2
      * @param text
      * @param url?
@@ -6254,7 +6255,7 @@ declare interface nlobjAssistant {
 
     /**
      * return the total number of steps in the assistant
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjAssistant
@@ -6438,7 +6439,7 @@ declare interface nlobjField {
      * set the maxlength for this field (only valid for certain field types).
      *  This method is only supported on scripted fields via the UI Object API
      *
-     * @param {int} maxlength maximum length for this field
+     * @param {number} maxlength maximum length for this field
      * @return {nlobjField}
      *
      * @since 2008.2
@@ -6507,8 +6508,8 @@ declare interface nlobjField {
      * set the width and height for this field.
      * This method is only supported on scripted fields via the UI Object API
      *
-     * @param {int} width
-     * @param {int} height
+     * @param {number} width
+     * @param {number} height
      * @return {nlobjField}
      *
      * @since 2008.2
@@ -6522,7 +6523,7 @@ declare interface nlobjField {
      * set the amount of emppty vertical space (rows) between this field and the previous field.
      * This method is only supported on scripted fields via the UI Object API
      *
-     * @param {int} padding # of empty rows to display above field
+     * @param {number} padding # of empty rows to display above field
      * @return {nlobjField}
      *
      * @since 2008.2
@@ -6614,7 +6615,7 @@ declare interface nlobjSubList {
      * set the value of a cell in this sublist.
      *
      * @param {string}    field sublist field name
-     * @param {int}    line  line number (1-based)
+     * @param {number}    line  line number (1-based)
      * @param {string}    value sublist value
      *
      * @method
@@ -6630,8 +6631,8 @@ declare interface nlobjSubList {
     /**
      * set the value of a matrix cell in this sublist.
      * @param {string}    field    matrix field name
-     * @param {int}    line    line number (1-based)
-     * @param {int}    column  matrix column index (1-based)
+     * @param {number}    line    line number (1-based)
+     * @param {number}    column  matrix column index (1-based)
      * @param {string}    value   matrix field value
      * @return {void}
      *
@@ -6894,7 +6895,7 @@ declare interface nlobjAssistantStep {
 
     /**
      * return the index of this step in the assistant page (1-based)
-     * @return  {int} the index of this step in the assistant (1-based) based on the order in which the steps were added.
+     * @return  {number} the index of this step in the assistant (1-based) based on the order in which the steps were added.
      *
      * @method
      * @memberOf nlobjAssistantStep
@@ -6934,7 +6935,7 @@ declare interface nlobjAssistantStep {
     /**
      * return the number of lines previously entered by the user in this step (or -1 if the sublist does not exist).
      * @param {string} group sublist name
-     * @return {int}
+     * @return {number}
      *
      * @method
      * @memberOf nlobjAssistantStep
@@ -6949,7 +6950,7 @@ declare interface nlobjAssistantStep {
      * return the value of a sublist field entered by the user during this step.
      * @param {string}    group sublist name
      * @param {string}    name sublist field name
-     * @param {int}    line sublist (1-based)
+     * @param {number}    line sublist (1-based)
      * @return  {string}
      *
      * @method
