@@ -1,188 +1,189 @@
 // Type definitions for SuiteScript
 // Project: http://www.netsuite.com
-// Definitions by:
-//      Darren Hill <https://github.com/darrenhillconsulting>
-//      Adam Smith <https://github.com/burkybang>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+// Definitions by: Adam Smith <https://github.com/burkybang>
+
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=chapter_N3164298.html
+ */
 
 declare namespace nlobjRecord.prototype {
   // nlobjRecord.prototype.getSubList.!ret
-
+  
   interface GetSubListRet {
-
+    
     prototype: {
-
+      
       addButton: /*no type*/{};
-
+      
       setLabel: /* nlobjSubList.prototype.setLabel */ any;
-
+      
       setHelpText: /* nlobjSubList.prototype.setHelpText */ any;
-
+      
       setDisplayType: /* nlobjSubList.prototype.setDisplayType */ any;
-
+      
       setLineItemValue: /* nlobjSubList.prototype.setLineItemValue */ any;
-
+      
       setLineItemMatrixValue: /* nlobjSubList.prototype.setLineItemMatrixValue */ any;
-
+      
       setLineItemValues: /* nlobjSubList.prototype.setLineItemValues */ any;
-
+      
       getLineItemCount: /* nlobjSubList.prototype.getLineItemCount */ string | number;
-
+      
       addField: /* nlobjSubList.prototype.addField */ any;
-
+      
       setUniqueField: /* nlobjSubList.prototype.setUniqueField */ any;
-
+      
       addRefreshButton: /* nlobjSubList.prototype.addRefreshButton */ any;
-
+      
       addMarkAllButtons: /* nlobjSubList.prototype.addMarkAllButtons */ any;
     }
   }
 }
 declare namespace nlobjRecord.prototype.GetSubListRet.prototype {
   // nlobjRecord.prototype.getSubList.!ret.prototype.addButton.!ret
-
+  
   interface AddButtonRet {
-
+    
     prototype: {
-
+      
       setLabel: /* nlobjButton.prototype.setLabel */ any;
-
+      
       setDisabled: /* nlobjButton.prototype.setDisabled */ any;
     }
   }
 }
 declare namespace nlobjRecord.prototype {
   // nlobjRecord.prototype.getField.!ret
-
+  
   interface GetFieldRet {
-
+    
     prototype: {
-
+      
       getName: /* nlobjField.prototype.getName */ any;
-
+      
       getLabel: /* nlobjField.prototype.getLabel */ any;
-
+      
       getType: /* nlobjField.prototype.getType */ any;
-
+      
       isHidden: /* nlobjField.prototype.isHidden */ any;
-
+      
       isMandatory: /* nlobjField.prototype.isMandatory */ any;
-
+      
       isDisabled: /* nlobjField.prototype.isDisabled */ any;
-
+      
       setLabel: /* nlobjField.prototype.setLabel */ any;
-
+      
       setAlias: /* nlobjField.prototype.setAlias */ any;
-
+      
       setDefaultValue: /* nlobjField.prototype.setDefaultValue */ any;
-
+      
       setDisabled: /* nlobjField.prototype.setDisabled */ any;
-
+      
       setMandatory: /* nlobjField.prototype.setMandatory */ any;
-
+      
       setMaxLength: /* nlobjField.prototype.setMaxLength */ any;
-
+      
       setDisplayType: /* nlobjField.prototype.setDisplayType */ any;
-
+      
       setBreakType: /* nlobjField.prototype.setBreakType */ any;
-
+      
       setLayoutType: /* nlobjField.prototype.setLayoutType */ any;
-
+      
       setLinkText: /* nlobjField.prototype.setLinkText */ any;
-
+      
       setDisplaySize: /* nlobjField.prototype.setDisplaySize */ any;
-
+      
       setPadding: /* nlobjField.prototype.setPadding */ any;
-
+      
       setHelpText: /* nlobjField.prototype.setHelpText */ any;
-
+      
       addSelectOption: /* nlobjField.prototype.addSelectOption */ any;
     }
   }
 }
 declare namespace nlobjPortlet.prototype {
   // nlobjPortlet.prototype.addEditColumn.!0
-
+  
   interface AddEditColumn0 {
-
+    
     prototype: {
-
+      
       setLabel: /* nlobjColumn.prototype.setLabel */ any;
-
+      
       setURL: /* nlobjColumn.prototype.setURL */ any;
-
+      
       addParamToURL: /* nlobjColumn.prototype.addParamToURL */ any;
     }
   }
 }
 declare namespace nlobjForm.prototype {
   // nlobjForm.prototype.addTab.!ret
-
+  
   interface AddTabRet {
-
+    
     prototype: {
-
+      
       setLabel: /* nlobjTab.prototype.setLabel */ any;
-
+      
       setHelpText: /* nlobjTab.prototype.setHelpText */ any;
     }
   }
 }
 declare namespace nlobjAssistant.prototype {
   // nlobjAssistant.prototype.setCurrentStep.!0
-
+  
   interface SetCurrentStep0 {
-
+    
     prototype: {
-
+      
       setLabel: /* nlobjAssistantStep.prototype.setLabel */ any;
-
+      
       setHelpText: /* nlobjAssistantStep.prototype.setHelpText */ any;
-
+      
       getStepNumber: /* nlobjAssistantStep.prototype.getStepNumber */ any;
-
+      
       getFieldValue: /* nlobjAssistantStep.prototype.getFieldValue */ any;
-
+      
       getFieldValues: /* nlobjAssistantStep.prototype.getFieldValues */ string[];
-
+      
       getLineItemCount: /* nlobjAssistantStep.prototype.getLineItemCount */ string | number;
-
+      
       getLineItemValue: /* nlobjAssistantStep.prototype.getLineItemValue */ string;
-
+      
       getAllFields: /* nlobjAssistantStep.prototype.getAllFields */ string[];
-
+      
       getAllLineItems: /* nlobjAssistantStep.prototype.getAllLineItems */ any;
-
+      
       getAllLineItemFields: /* nlobjAssistantStep.prototype.getAllLineItemFields */ any;
     }
   }
 }
 declare namespace nlobjForm.prototype {
   // nlobjForm.prototype.addFieldGroup.!ret
-
+  
   interface AddFieldGroupRet {
-
+    
     prototype: {
-
+      
       setLabel: /* nlobjFieldGroup.prototype.setLabel */ any;
-
+      
       setCollapsible: /* nlobjFieldGroup.prototype.setCollapsible */ any;
-
+      
       setSingleColumn: /* nlobjFieldGroup.prototype.setSingleColumn */ any;
-
+      
       setShowBorder: /* nlobjFieldGroup.prototype.setShowBorder */ any;
     }
   }
 }
 declare namespace nlobjForm.prototype {
   // nlobjForm.prototype.addButton.!ret
-
+  
   interface AddButtonRet {
-
+    
     prototype: {
-
+      
       setLabel: /* nlobjButton.prototype.setLabel */ any;
-
+      
       setDisabled: /* nlobjButton.prototype.setDisabled */ any;
     }
   }
@@ -190,35 +191,74 @@ declare namespace nlobjForm.prototype {
 
 /**
  * Return a new record using values from an existing record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3028087
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
- * @param {number}    id The internal ID for the record.
+ * @param {number|string}    id The internal ID for the record.
  * @param {Object}    initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
  * @return {nlobjRecord}  Returns an nlobjRecord object of a copied record.
  *
  * @since    2007.0
- * @param type
- * @param id
- * @param initializeValues
- * @return
  */
-declare function nlapiCopyRecord(type: string, id: number, initializeValues?: Object): nlobjRecord;
+declare function nlapiCopyRecord(type: string, id: number | string, initializeValues?: Object): nlobjRecord;
 
-declare function nlapiDisableLineItemField(type: string, name: string, val: boolean): void;
+/**
+ * Sets the line item field of a sublist to disabled or enabled based on the value (true or false).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043335
+ * @restriction supported in client scripts only
+ *
+ * @param {string}    type - sublist internal ID
+ * @param {string}    fldnam - name of the line item field to enable/disable
+ * @param {boolean}   value - If set to true the field is disabled. If set to false it is enabled.
+ * @return {void}
+ */
+declare function nlapiDisableLineItemField(type: string, fldnam: string, value: boolean): void;
 
-declare function nlapiDisableField(name: string, value: boolean): void;
+/**
+ * Sets the field to disabled or enabled based on the value (true or false).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039396
+ * @restriction supported in client scripts only
+ *
+ * @param {string}    fldnam - name of the line item field to enable/disable
+ * @param {boolean}   value - If set to true the field is disabled. If set to false it is enabled.
+ * @return {void}
+ */
+declare function nlapiDisableField(fldnam: string, value: boolean): void;
 
+/**
+ * Loads an existing saved search. The saved search could have been created using the UI or created using nlapiCreateSearch(type, filters, columns) in conjunction with nlobjSearch.saveSearch(title, scriptId).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3051062.html#bridgehead_N3051604
+ * @governance 5 units
+ *
+ * @param {string}    [type] - record internal ID of the record type you are searching (for example, customer|lead|prospect|partner|vendor|contact). This parameter is case-insensitive.
+ * @param {string}   id - internal ID or script ID of the saved search. The script ID of the saved search is required, regardless of whether you specify the search type. If you do not specify the search type, you must set type to null and then set the script/search ID.
+ * @return {nlobjSearch}
+ *
+ * @since 2012.1
+ */
 declare function nlapiLoadSearch(type: string, id: string): nlobjSearch;
 
-declare function nlapiCreateSearch(type: string, filters: nlobjSearchFilter | nlobjSearchFilter[] | string[] | string[][], columns: nlobjSearchColumn | nlobjSearchColumn[]): nlobjSearch;
+/**
+ * Creates a new search. The search can be modified and run as an on demand search, without saving it. Alternatively, calling nlobjSearch.saveSearch(title, scriptId) will save the search to the database, so it can be resused later in the UI or using nlapiLoadSearch(type, id).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3051062.html#bridgehead_N3051237
+ *
+ * @param {string}    type - record internal ID of the record type you are searching (for example, customer|lead|prospect|partner|vendor|contact). This parameter is case-insensitive.
+ * @param {nlobjSearchFilter|nlobjSearchFilter[]|(string|number|(string|number|(string|number)[])[])[]}   filters
+ * @param {nlobjSearchColumn|nlobjSearchColumn[]}   columns
+ * @return {nlobjSearch}
+ *
+ * @since 2012.1
+ */
+declare function nlapiCreateSearch(type: string, filters: nlobjSearchFilter | nlobjSearchFilter[] | (string | number | (string | number | (string | number)[])[])[], columns: nlobjSearchColumn | nlobjSearchColumn[]): nlobjSearch;
 
 /**
  * Load an existing record from the system.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030703
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
- * @param {number}    id The internal ID for the record.
+ * @param {number|string}    id The internal ID for the record.
  * @param {Object}    initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
  * @return {nlobjRecord}  Returns an nlobjRecord object of an existing NetSuite record.
  *
@@ -229,10 +269,11 @@ declare function nlapiCreateSearch(type: string, filters: nlobjSearchFilter | nl
  *
  * @since    2007.0
  */
-declare function nlapiLoadRecord(type: string, id: number, initializeValues?: Object): nlobjRecord;
+declare function nlapiLoadRecord(type: string, id: number | string, initializeValues?: Object): nlobjRecord;
 
 /**
  * Instantiate a new nlobjRecord object containing all the default field data for that record type.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3028483
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string} type record type ID.
@@ -248,12 +289,13 @@ declare function nlapiCreateRecord(type: string, initializeValues?: Object): nlo
 
 /**
  * Submit a record to the system for creation or update.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3031704
  * @governance 20 units for transactions, 4 for custom records, 8 for all other records
  *
  * @param {nlobjRecord} record nlobjRecord object containing the data record.
  * @param {boolean}    [doSourcing] If not set, this argument defaults to false.
  * @param {boolean}    [ignoreMandatoryFields] Disables mandatory field validation for this submit operation.
- * @return {string} internal ID for committed record.
+ * @return {number} internal ID for committed record.
  *
  * @exception {SSS_INVALID_RECORD_OBJ}
  * @exception {SSS_RECORD_OBJ_REQD}
@@ -261,12 +303,13 @@ declare function nlapiCreateRecord(type: string, initializeValues?: Object): nlo
  *
  * @since    2007.0
  *
- * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3031704
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3031704
  */
-declare function nlapiSubmitRecord(record: nlobjRecord, doSourcing?: boolean, ignoreMandatoryFields?: boolean): string;
+declare function nlapiSubmitRecord(record: nlobjRecord, doSourcing?: boolean, ignoreMandatoryFields?: boolean): number;
 
 /**
  * Delete a record from the system.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3028788
  * @governance 20 units for transactions, 4 for custom records, 8 for all other records
  *
  * @param {string}    type The record type name.
@@ -279,21 +322,19 @@ declare function nlapiSubmitRecord(record: nlobjRecord, doSourcing?: boolean, ig
  * @exception {SSS_ID_ARG_REQD}
  *
  * @since    2007.0
- * @param type
- * @param id
- * @return
  */
 declare function nlapiDeleteRecord(type: string, id: number): void;
 
 /**
  * Perform a record search using an existing search or filters and columns.
  * @governance 10 units
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3051062.html#bridgehead_N3052418
  * @restriction returns the first 1000 rows in the search
  *
  * @param {string}        type record type ID.
  * @param {number|string} [id] The internal ID or script ID for the saved search to use for search.
- * @param {nlobjSearchFilter|nlobjSearchFilter[]} [filters] [optional] A single nlobjSearchFilter object - or - an array of nlobjSearchFilter objects.
- * @param {nlobjSearchColumn|nlobjSearchColumn[]} [columns] [optional] A single nlobjSearchColumn object - or - an array of nlobjSearchColumn objects.
+ * @param {nlobjSearchFilter|nlobjSearchFilter[]|(string|number|(string|number|(string|number)[])[])[]} [filters]
+ * @param {nlobjSearchColumn|nlobjSearchColumn[]} [columns]
  * @return {nlobjSearchResult[]} Returns an array of nlobjSearchResult objects corresponding to the searched records.
  *
  * @exception {SSS_INVALID_RECORD_TYPE}
@@ -306,15 +347,12 @@ declare function nlapiDeleteRecord(type: string, id: number): void;
  * @exception {SSS_INVALID_SRCH_COL_JOIN}
  *
  * @since    2007.0
- * @param type
- * @param id
- * @param filters
- * @param columns
  */
-declare function nlapiSearchRecord(type: string, id: number | string, filters: nlobjSearchFilter | nlobjSearchFilter[], columns: nlobjSearchColumn | nlobjSearchColumn[]): nlobjSearchResult[];
+declare function nlapiSearchRecord(type: string, id: number | string, filters: nlobjSearchFilter | nlobjSearchFilter[] | (string | number | (string | number | (string | number)[])[])[], columns: nlobjSearchColumn | nlobjSearchColumn[]): nlobjSearchResult[];
 
 /**
  * Perform a global record search across the system.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3051062.html#bridgehead_N3052216
  * @governance 10 units
  * @restriction returns the first 1000 rows in the search
  *
@@ -322,12 +360,12 @@ declare function nlapiSearchRecord(type: string, id: number | string, filters: n
  * @return {nlobjSearchResult[]} Returns an Array of nlobjSearchResult objects containing the following four columns: name, type (as shown in the UI), info1, and info2.
  *
  * @since    2008.1
- * @param keywords
  */
 declare function nlapiSearchGlobal(keywords: string): nlobjSearchResult[];
 
 /**
  * Perform a duplicate record search using Duplicate Detection criteria.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3051062.html#bridgehead_N3052026
  * @governance 10 units
  * @restriction returns the first 1000 rows in the search
  *
@@ -337,14 +375,12 @@ declare function nlapiSearchGlobal(keywords: string): nlobjSearchResult[];
  * @return {nlobjSearchResult[]} Returns an Array of nlobjSearchResult objects corresponding to the duplicate records.
  *
  * @since    2008.1
- * @param type
- * @param fields
- * @param id?
  */
 declare function nlapiSearchDuplicate(type: string, fields: string[], id?: number): nlobjSearchResult[];
 
 /**
  * Create a new record using values from an existing record of a different type.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3032124
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
@@ -365,7 +401,8 @@ declare function nlapiSearchDuplicate(type: string, fields: string[], id?: numbe
 declare function nlapiTransformRecord(type: string, id: number | string, transformType: string, transformValues?: Object): nlobjRecord;
 
 /**
- * void a transaction based on type and id .
+ * void a transaction based on type and id.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_3784149312
  * @governance 10 units for transactions
  *
  * @param {string}    type The transaction type name.
@@ -380,20 +417,22 @@ declare function nlapiVoidTransaction(type: string, id: number | string): string
 /**
  * Fetch the value of one or more fields on a record. This API uses search to look up the fields and is much
  * faster than loading the record in order to get the field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040351
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
  * @param {string}    type The record type name.
  * @param {number|string}    id The internal ID for the record.
  * @param {string|string[]} fields - field or fields to look up.
  * @param {boolean} [text] If set then the display value is returned instead for select fields.
- * @return {string|Object} single value or an Object of field name/value pairs depending on the fields argument.
+ * @return {string|Object<string, string>} single value or an Object of field name/value pairs depending on the fields argument.
  *
  * @since    2008.1
  */
-declare function nlapiLookupField(type: string, id: number | string, fields: string | string[], text?: boolean): string | Object;
+declare function nlapiLookupField(type: string, id: number | string, fields: string | string[], text?: boolean): string | { [key: string]: string };
 
 /**
  * Submit the values of a field or set of fields for an existing record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3042189
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  * @restriction only supported for records and fields where DLE (Direct List Editing) is supported
  *
@@ -410,6 +449,7 @@ declare function nlapiSubmitField(type: string, id: number | string, fields: str
 
 /**
  * Attach a single record to another with optional properties.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3027757
  * @governance 10 units
  *
  * @param {string}    type1 - The record type name being attached
@@ -425,6 +465,7 @@ declare function nlapiAttachRecord(type1: string, id1: number | string, type2: s
 
 /**
  * Detach a single record from another with optional properties.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030101
  * @governance 10 units
  *
  * @param {string}    type1 - The record type name being attached
@@ -440,6 +481,7 @@ declare function nlapiDetachRecord(type1: string, id1: number | string, type2: s
 
 /**
  * Resolve a URL to a resource or object in the system.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3059898
  *
  * @param {string} type type specifier for URL: suitelet|tasklink|record|mediaitem
  * @param {string} subtype subtype specifier for URL (corresponding to type): scriptid|taskid|recordtype|mediaid
@@ -453,6 +495,7 @@ declare function nlapiResolveURL(type: string, subtype: string, id?: number | st
 
 /**
  * Redirect the user to a page. Only valid in the UI on Suitelets and User Events. In Client scripts this will initialize the redirect URL used upon submit.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3060274
  *
  * @param {'RECORD'|'TASKLINK'|'SUITELET'|'EXTERNAL'|'record'|'tasklink'|'suitelet'|'external'} type type specifier for URL: suitelet|tasklink|record|mediaitem
  * @param {string} subtype subtype specifier for URL (corresponding to type): scriptid|taskid|recordtype|mediaid
@@ -467,6 +510,7 @@ declare function nlapiSetRedirectURL(type: 'RECORD' | 'TASKLINK' | 'SUITELET' | 
 
 /**
  * Request a URL to an external or internal resource.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3059142
  * @restriction NetSuite maintains a white list of CAs that are allowed for https requests. Please see the online documentation for the complete list.
  * @governance 10 units
  *
@@ -487,6 +531,7 @@ declare function nlapiRequestURL(url: string, postdata?: string | Object, header
 
 /**
  * Return context information about the current user/script.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3055647
  *
  * @return {nlobjContext}
  *
@@ -496,6 +541,7 @@ declare function nlapiGetContext(): nlobjContext;
 
 /**
  * Return the internal ID for the currently logged in user. Returns -4 when called from online forms or "Available without Login" Suitelets.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3056076
  *
  * @return {number}
  *
@@ -505,6 +551,7 @@ declare function nlapiGetUser(): number;
 
 /**
  * Return the internal ID for the current user's role. Returns 31 (Online Form User) when called from online forms or "Available without Login" Suitelets.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3055936
  *
  * @return {number}
  *
@@ -514,6 +561,7 @@ declare function nlapiGetRole(): number;
 
 /**
  * Return the internal ID for the current user's department.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3055799
  *
  * @return {number}
  *
@@ -523,6 +571,7 @@ declare function nlapiGetDepartment(): number;
 
 /**
  * Return the internal ID for the current user's location.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3055865
  *
  * @return {number}
  *
@@ -532,6 +581,7 @@ declare function nlapiGetLocation(): number;
 
 /**
  * Return the internal ID for the current user's subsidiary.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3056010
  *
  * @return {number}
  *
@@ -541,6 +591,7 @@ declare function nlapiGetSubsidiary(): number;
 
 /**
  * Return the recordtype corresponding to the current page or userevent script.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030601
  *
  * @return {string}
  *
@@ -550,8 +601,9 @@ declare function nlapiGetRecordType(): string;
 
 /**
  * Return the internal ID corresponding to the current page or userevent script.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030530
  *
- *  @return {number}
+ * @return {number}
  *
  * @since    2007.0
  */
@@ -560,6 +612,7 @@ declare function nlapiGetRecordId(): number;
 /**
  * Send out an email and associate it with records in the system.
  * Supported base types are entity for entities, transaction for transactions, activity for activities and cases, record|recordtype for custom records
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3068135.html#bridgehead_N3068387
  * @governance 10 units
  * @restriction all outbound emails subject to email Anti-SPAM policies
  *
@@ -582,6 +635,7 @@ declare function nlapiSendEmail(author: number, recipient: string | number, subj
 
 /**
  * Sends a single on-demand campaign email to a specified recipient and returns a campaign response ID to track the email.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3068135.html#bridgehead_N3068234
  * @governance 10 units
  * @restriction works in conjunction with the Lead Nurturing (campaigndrip) sublist only
  *
@@ -596,6 +650,7 @@ declare function nlapiSendCampaignEmail(campaignEventId: number, recipientId: nu
 /**
  * Send out a fax and associate it with records in the system. This requires fax preferences to be configured.
  * Supported base types are entity for entities, transaction for transactions, activity for activities and cases, record|recordtype for custom records
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3068135.html#bridgehead_N3070553
  * @governance 10 units
  *
  * @param {number}        from internal ID for employee user on behalf of whom this fax is sent
@@ -612,6 +667,7 @@ declare function nlapiSendFax(from: number, to: string | number, subject: string
 
 /**
  * Return field definition for a field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039511
  *
  * @param {string} name the name of the field
  * @return {nlobjField}
@@ -622,6 +678,7 @@ declare function nlapiGetField(name: string): nlobjField;
 
 /**
  * Return field definition for a matrix field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3047553
  *
  * @param {string}    type    matrix sublist name
  * @param {string}    name matrix field name
@@ -634,6 +691,7 @@ declare function nlapiGetMatrixField(type: string, name: string, column: number)
 
 /**
  * Return field definition for a sublist field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044648
  *
  * @param {string}    type    sublist name
  * @param {string}    fldnam sublist field name
@@ -646,6 +704,7 @@ declare function nlapiGetLineItemField(type: string, fldnam: string, linenum?: n
 
 /**
  * Return an nlobjField containing sublist field metadata.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044836
  *
  * @param {string}    type    matrix sublist name
  * @param {string}    fldnam matrix field name
@@ -659,7 +718,9 @@ declare function nlapiGetLineItemMatrixField(type: string, fldnam: string, linen
 
 /**
  * Return the value of a field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039936
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string} fldnam the field name
  * @return {string}
  *
@@ -669,6 +730,7 @@ declare function nlapiGetFieldValue(fldnam: string): string;
 
 /**
  * Set the value of a field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3041626
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
@@ -684,7 +746,9 @@ declare function nlapiSetFieldValue(fldnam: string, value: string, firefieldchan
 
 /**
  * Return the display value of a select field's current selection on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039686
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string} fldnam the field name
  * @return {string}
  *
@@ -694,6 +758,7 @@ declare function nlapiGetFieldText(fldnam: string): string;
 
 /**
  * Set the value of a field on the current record on a page using it's label.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3041236
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param {string}    fldnam the field name
@@ -709,7 +774,9 @@ declare function nlapiSetFieldText(fldnam: string, txt: string, firefieldchanged
 
 /**
  * Return the values of a multiselect field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040092
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string} fldnam the field name
  * @return {string[]}
  *
@@ -719,6 +786,7 @@ declare function nlapiGetFieldValues(fldnam: string): string[];
 
 /**
  * Set the values of a multiselect field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3041926
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
@@ -734,7 +802,9 @@ declare function nlapiSetFieldValues(fldnam: string, values: string[], firefield
 
 /**
  * Return the values (via display text) of a multiselect field on the current record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039830
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string} fldnam field name
  * @return {string[]}
  *
@@ -744,6 +814,7 @@ declare function nlapiGetFieldTexts(fldnam: string): void;
 
 /**
  * Set the values (via display text) of a multiselect field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3041422
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
@@ -759,6 +830,7 @@ declare function nlapiSetFieldTexts(fldnam: string, texts: string[], firefieldch
 
 /**
  * Get the value of a matrix header field
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3047782
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
@@ -771,14 +843,15 @@ declare function nlapiGetMatrixValue(type: string, fldnam: string, column: numbe
 
 /**
  * Set the value of a matrix header field
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3050444
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    column matrix column index (1-based)
  * @param {string}    value field value for matrix field
- * @param {boolean} [firefieldchanged]    if false then the field change event is suppressed (defaults to true)
- * @param {boolean} [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
+ * @param {boolean}   [firefieldchanged]    if false then the field change event is suppressed (defaults to true)
+ * @param {boolean}   [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
  * @return {void}
  *
  * @since    2009.2
@@ -787,11 +860,13 @@ declare function nlapiSetMatrixValue(type: string, fldnam: string, column: numbe
 
 /**
  * Get the current value of a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043926
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    column matrix column index (1-based)
- * @return {string} value
+ * @return {string}
  *
  * @since    2009.2
  */
@@ -799,6 +874,7 @@ declare function nlapiGetCurrentLineItemMatrixValue(type: string, fldnam: string
 
 /**
  * Set the current value of a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3049008
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in Client SuiteScript
  *
@@ -806,8 +882,8 @@ declare function nlapiGetCurrentLineItemMatrixValue(type: string, fldnam: string
  * @param {string}    fldnam sublist field name
  * @param {number}    column matrix column index (1-based)
  * @param {string}    value matrix field value
- * @param {boolean} [firefieldchanged] if false then the field change event is suppressed (defaults to true)
- * @param {boolean} [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
+ * @param {boolean}   [firefieldchanged] if false then the field change event is suppressed (defaults to true)
+ * @param {boolean}   [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
  * @return {void}
  *
  * @since    2009.2
@@ -816,7 +892,9 @@ declare function nlapiSetCurrentLineItemMatrixValue(type: string, fldnam: string
 
 /**
  * Return the value of a sublist matrix field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3045070
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    linenum line number (1-based)
@@ -829,7 +907,9 @@ declare function nlapiGetLineItemMatrixValue(type: string, fldnam: string, linen
 
 /**
  * Return the value of a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3045409
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    linenum line number (1-based)
@@ -840,8 +920,24 @@ declare function nlapiGetLineItemMatrixValue(type: string, fldnam: string, linen
 declare function nlapiGetLineItemValue(type: string, fldnam: string, linenum: number): string;
 
 /**
- * Return the value of a sublist field on the current record on a page.
+ * Return the values of a multiselect sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3045558
  * @restriction supported in client and user event scripts only.
+ *
+ * @param {string}    type sublist name
+ * @param {string}    fldnam sublist field name
+ * @param {number}    linenum line number (1-based)
+ * @return {string[]}
+ *
+ * @since 2005.0
+ */
+declare function nlapiGetLineItemValues(type: string, fldnam: string, linenum: number): string[];
+
+/**
+ * Return the value of a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_3745066611.html#bridgehead_3745076438
+ * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    linenum line number (1-based)
@@ -854,7 +950,9 @@ declare function nlapiGetLineItemDateTimeValue(type: string, fldnam: string, lin
 
 /**
  * Set the value of a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3050265
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    linenum line number (1-based)
@@ -867,7 +965,9 @@ declare function nlapiSetLineItemValue(type: string, fldnam: string, linenum: nu
 
 /**
  * Set the value of a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_3745066611.html#bridgehead_3745077739
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    linenum line number (1-based)
@@ -881,6 +981,7 @@ declare function nlapiSetLineItemDateTimeValue(type: string, fldnam: string, lin
 
 /**
  * Return the label of a select field's current selection for a particular line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3045265
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
@@ -893,6 +994,7 @@ declare function nlapiGetLineItemText(type: string, fldnam: string, linenum: num
 
 /**
  * Return the 1st line number that a sublist field value appears in
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043659
  *
  * @param {string} type sublist name
  * @param {string} fldnam sublist field name
@@ -905,6 +1007,7 @@ declare function nlapiFindLineItemValue(type: string, fldnam: string, val: strin
 
 /**
  * Return the 1st line number that a matrix field value appears in
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043473
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam matrix field name
@@ -918,6 +1021,7 @@ declare function nlapiFindLineItemMatrixValue(type: string, fldnam: string, colu
 
 /**
  * Return the number of columns for a matrix field
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3047377
  *
  * @param {string} type sublist name
  * @param {string} fldnam matrix field name
@@ -929,6 +1033,8 @@ declare function nlapiGetMatrixCount(type: string, fldnam: string): number;
 
 /**
  * Return the number of sublists in a sublist on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044506
+ *
  * @restriction supported in client and user event scripts only.
  * @param {string} type sublist name
  * @return {number}
@@ -939,10 +1045,11 @@ declare function nlapiGetLineItemCount(type: string): number;
 
 /**
  * Insert and select a new line into the sublist on a page or userevent.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048032
  *
  * @param {string} type sublist name
  * @param {number} [linenum] line number at which to insert a new line.
- * @return{void}
+ * @return {void}
  *
  * @since 2005.0
  */
@@ -950,6 +1057,7 @@ declare function nlapiInsertLineItem(type: string, linenum?: number): void;
 
 /**
  * Remove the currently selected line from the sublist on a page or userevent.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048524
  *
  * @param {string} type sublist name
  * @param {number} [linenum]    line number to remove.
@@ -961,6 +1069,7 @@ declare function nlapiRemoveLineItem(type: string, linenum?: number): void;
 
 /**
  * Set the value of a field on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3049789
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param {string} type sublist name
@@ -976,6 +1085,23 @@ declare function nlapiSetCurrentLineItemValue(type: string, fldnam: string, valu
 
 /**
  * Set the value of a field on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3050019
+ * @restriction synchronous arg is only supported in client SuiteScript
+ *
+ * @param {string} type sublist name
+ * @param {string} fldnam sublist field name
+ * @param {string[]} values field value
+ * @param {boolean} [firefieldchanged]    if false then the field change event is suppressed (defaults to true)
+ * @param {boolean} [synchronous] if true then sourcing and field change execution happens synchronously (defaults to false).
+ * @return {void}
+ *
+ * @since 2012.1
+ */
+declare function nlapiSetCurrentLineItemValues(type: string, fldnam: string, values: string | number, firefieldchanged?: boolean, synchronous?: boolean): void;
+
+/**
+ * Set the value of a field on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_3745066611.html#bridgehead_3745076969
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param {string} type sublist name
@@ -990,6 +1116,7 @@ declare function nlapiSetCurrentLineItemDateTimeValue(type: string, fldnam: stri
 
 /**
  * Set the value of a field on the currently selected line using it's label.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3049285
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param {string} type sublist name
@@ -1005,6 +1132,7 @@ declare function nlapiSetCurrentLineItemText(type: string, fldnam: string, txt: 
 
 /**
  * Return the value of a field on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044247
  *
  * @param {string} type sublist name
  * @param {string} fldnam sublist field name
@@ -1016,6 +1144,19 @@ declare function nlapiGetCurrentLineItemValue(type: string, fldnam: string): str
 
 /**
  * Return the value of a field on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044377
+ *
+ * @param {string} type sublist name
+ * @param {string} fldnam sublist field name
+ * @return {string[]}
+ *
+ * @since 2012.1
+ */
+declare function nlapiGetCurrentLineItemValue(type: string, fldnam: string): string[];
+
+/**
+ * Return the value of a field on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_3745066611.html#bridgehead_3745074470
  *
  * @param {string} type sublist name
  * @param {string} fldnam sublist field name
@@ -1028,6 +1169,7 @@ declare function nlapiGetCurrentLineItemDateTimeValue(type: string, fldnam: stri
 
 /**
  * Return the label of a select field's current selection on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044128
  *
  * @param {string} type sublist name
  * @param {string} fldnam sublist field name
@@ -1039,6 +1181,7 @@ declare function nlapiGetCurrentLineItemText(type: string, fldnam: string): stri
 
 /**
  * Return the line number for the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043814
  *
  * @param {string} type sublist name
  * @return {number}
@@ -1049,6 +1192,7 @@ declare function nlapiGetCurrentLineItemIndex(type: string): number;
 
 /**
  * Disable a sublist field.
+ * @see unknown
  * @restriction Only supported on sublists of type inlineeditor, editor and list (current field only)
  *
  * @param {string}    type sublist name
@@ -1063,6 +1207,7 @@ declare function nlapiSetLineItemDisabled(type: string, fldnam: string, disable:
 
 /**
  * Return field mandatoriness.
+ * @see unknown
  *
  * @param {string} fldnam field name
  * @return {boolean}
@@ -1073,6 +1218,7 @@ declare function nlapiGetFieldMandatory(fldnam: string): boolean;
 
 /**
  * Return sublist field mandatoriness.
+ * @see unknown
  * @restriction Only supported on sublists of type inlineeditor or editor (current field only)
  *
  * @param {string}    type sublist name
@@ -1085,9 +1231,10 @@ declare function nlapiGetLineItemMandatory(type: string, fldnam: string): boolea
 
 /**
  * Make a field mandatory.
+ * @see unknown
  *
  * @param {string}    fldnam field name
- * @param {boolean} mandatory if true then field is made mandatory
+ * @param {boolean}   mandatory if true then field is made mandatory
  * @return {void}
  *
  * @since 2009.1
@@ -1096,11 +1243,12 @@ declare function nlapiSetFieldMandatory(fldnam: string, mandatory: boolean): voi
 
 /**
  * Make a sublist field mandatory.
+ * @see unknown
  * @restriction Only supported on sublists of type inlineeditor or editor (current field only)
  *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
- * @param {boolean} mandatory if true then field is made mandatory
+ * @param {boolean}   mandatory if true then field is made mandatory
  * @return {void}
  *
  * @since 2009.2
@@ -1109,6 +1257,7 @@ declare function nlapiSetLineItemMandatory(type: string, fldnam: string, mandato
 
 /**
  * Select an existing line in a sublist.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048782
  *
  * @param {string} type sublist name
  * @param {number} linenum line number to select
@@ -1120,6 +1269,7 @@ declare function nlapiSelectLineItem(type: string, linenum: number): void;
 
 /**
  * Save changes made on the currently selected line to the sublist.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043223
  *
  * @param {string} type sublist name
  * @return {void}
@@ -1130,6 +1280,7 @@ declare function nlapiCommitLineItem(type: string): void;
 
 /**
  * Cancel any changes made on the currently selected line.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043122
  * @restriction Only supported for sublists of type inlineeditor and editor
  *
  * @param {string} type sublist name
@@ -1141,6 +1292,7 @@ declare function nlapiCancelLineItem(type: string): void;
 
 /**
  * Select a new line in a sublist.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048896
  * @restriction Only supported for sublists of type inlineeditor and editor
  *
  * @param {string} type sublist name
@@ -1152,6 +1304,7 @@ declare function nlapiSelectNewLineItem(type: string): void;
 
 /**
  * Refresh the sublist table.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048417
  * @restriction Only supported for sublists of type inlineeditor, editor, and staticlist
  * @restriction Client SuiteScript only.
  *
@@ -1164,12 +1317,13 @@ declare function nlapiRefreshLineItems(type: string): void;
 
 /**
  * Adds a select option to a scripted select or multiselect field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040209
  * @restriction Client SuiteScript only
  *
- * @param {string} fldnam field name
- * @param {string} value internal ID for select option
- * @param {string} text display text for select option
- * @param {boolean} [selected] if true then option will be selected by default
+ * @param {string} fldnam - field name
+ * @param {string} value - internal ID for select option
+ * @param {string} text - display text for select option
+ * @param {boolean} [selected] If set to true, the selected option will become the default selection. If not set, this argument defaults to false.
  * @return {void}
  *
  * @since 2008.2
@@ -1178,6 +1332,7 @@ declare function nlapiInsertSelectOption(fldnam: string, value: string, text: st
 
 /**
  * Removes a select option (or all if value is null) from a scripted select or multiselect field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040585
  * @restriction Client SuiteScript only
  *
  * @param {string} fldnam field name
@@ -1190,13 +1345,14 @@ declare function nlapiRemoveSelectOption(fldnam: string, value: string): void;
 
 /**
  * Adds a select option to a scripted select or multiselect sublist field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048142
  * @restriction Client SuiteScript only
  *
- * @param {string} type    sublist name
- * @param {string} fldnam sublist field name
- * @param {string} value internal ID for select option
- * @param {string} text display text for select option
- * @param {boolean} [selected] if true then option will be selected by default
+ * @param {string} type - sublist name
+ * @param {string} fldnam - sublist field name
+ * @param {string} value - internal ID for select option
+ * @param {string} text - display text for select option
+ * @param {boolean} [selected] If set to true, the selected option will become the default selection. If not set, this argument defaults to false.
  * @return {void}
  *
  * @since 2008.2
@@ -1205,6 +1361,7 @@ declare function nlapiInsertLineItemOption(type: string, fldnam: string, value: 
 
 /**
  * Removes a select option (or all if value is null) from a scripted select or multiselect sublist field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048656
  * @restriction Client SuiteScript only
  *
  * @param {string} type    sublist name
@@ -1218,6 +1375,7 @@ declare function nlapiRemoveLineItemOption(type: string, fldnam: string, value: 
 
 /**
  * Returns true if any changes have been made to a sublist.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3048312
  * @restriction Client SuiteScript only
  *
  * @param {string} type sublist name
@@ -1229,6 +1387,7 @@ declare function nlapiIsLineItemChanged(type: string): boolean;
 
 /**
  * Return an record object containing the data being submitted to the system for the currenr record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030372
  * @restriction User Event scripts only
  *
  * @return {nlobjRecord}
@@ -1239,6 +1398,7 @@ declare function nlapiGetNewRecord(): nlobjRecord;
 
 /**
  * Return an record object containing the current record's data prior to the write operation.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030453
  * @restriction beforeSubmit|afterSubmit User Event scripts only
  *
  * @return {nlobjRecord}
@@ -1249,10 +1409,11 @@ declare function nlapiGetOldRecord(): nlobjRecord;
 
 /**
  * Create an nlobjError object that can be used to abort script execution and configure error notification
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3067865.html#bridgehead_N3067925
  *
  * @param {string}    code error code
  * @param {string}    details error description
- * @param {boolean} [suppressEmail] if true then suppress the error notification emails from being sent out (false by default).
+ * @param {boolean}   [suppressEmail] if true then suppress the error notification emails from being sent out (false by default).
  * @return {nlobjError}
  *
  * @since 2008.2
@@ -1261,10 +1422,11 @@ declare function nlapiCreateError(code: string, details: string, suppressEmail?:
 
 /**
  * Return a new entry form page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3056572.html#bridgehead_N3057076
  * @restriction Suitelets only
  *
  * @param {string}    title page title
- * @param {boolean} [hideHeader] true to hide the page header (false by default)
+ * @param {boolean}   [hideHeader] true to hide the page header (false by default)
  * @return {nlobjForm}
  *
  * @since 2008.2
@@ -1273,10 +1435,11 @@ declare function nlapiCreateForm(title: string, hideHeader?: boolean): nlobjForm
 
 /**
  * Return a new list page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3056572.html#bridgehead_N3057216
  * @restriction Suitelets only
  *
  * @param {string}    title page title
- * @param {boolean} [hideHeader] true to hide the page header (false by default)
+ * @param {boolean}   [hideHeader] true to hide the page header (false by default)
  * @return {nlobjList}
  *
  * @since 2008.2
@@ -1285,10 +1448,11 @@ declare function nlapiCreateList(title: string, hideHeader?: boolean): nlobjList
 
 /**
  * Return a new assistant page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3056572.html#bridgehead_N3056901
  * @restriction Suitelets only
  *
  * @param {string}    title page title
- * @param {boolean} [hideHeader] true to hide the page header (false by default)
+ * @param {boolean}   [hideHeader] true to hide the page header (false by default)
  * @return {nlobjAssistant}
  *
  * @since 2009.2
@@ -1297,10 +1461,11 @@ declare function nlapiCreateAssistant(title: string, hideHeader?: boolean): nlob
 
 /**
  * Load a file from the file cabinet (via its internal ID or path).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3066995.html#bridgehead_N3067506
  * @governance 10 units
  * @restriction Server SuiteScript only
  *
- * @param {string, int} id internal ID or relative path to file in the file cabinet (i.e. /SuiteScript/foo.js)
+ * @param {string|number} id internal ID or relative path to file in the file cabinet (i.e. /SuiteScript/foo.js)
  * @return {nlobjFile}
  *
  * @since 2008.2
@@ -1309,6 +1474,7 @@ declare function nlapiLoadFile(id: string | number): nlobjFile;
 
 /**
  * Add/update a file in the file cabinet.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3066995.html#bridgehead_N3067647
  * @governance 20 units
  * @restriction Server SuiteScript only
  *
@@ -1321,6 +1487,7 @@ declare function nlapiSubmitFile(file: nlobjFile): number;
 
 /**
  * Delete a file from the file cabinet.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3066995.html#bridgehead_N3067403
  * @governance 20 units
  * @restriction Server SuiteScript only
  *
@@ -1333,6 +1500,7 @@ declare function nlapiDeleteFile(id: number): number;
 
 /**
  * Instantiate a file object (specifying the name, type, and contents which are base-64 encoded for binary types.)
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3066995.html#bridgehead_N3067099
  * @restriction Server SuiteScript only
  *
  * @param {string} name file name
@@ -1346,6 +1514,7 @@ declare function nlapiCreateFile(name: string, type: string, contents: string): 
 
 /**
  * Perform a mail merge operation using any template and up to 2 records and returns an nlobjFile with the results.
+ * @see unknown
  * @restriction only supported for record types that are available in mail merge: transactions, entities, custom records, and cases
  * @restriction Server SuiteScript only
  * @governance 10 units
@@ -1362,6 +1531,7 @@ declare function nlapiMergeRecord(id: number, baseType: string, baseId: number, 
 
 /**
  * Print a record (transaction) gievn its type, id, and output format.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3035342
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
@@ -1377,6 +1547,7 @@ declare function nlapiPrintRecord(type: string, id: number, format?: string, pro
 
 /**
  * Generate a PDF from XML using the BFO report writer (see http://big.faceless.org/products/report/).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3066595
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
@@ -1389,18 +1560,17 @@ declare function nlapiXMLToPDF(input: string): nlobjFile;
 
 /**
  * Create a template renderer used to generate various outputs based on a template.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3056572.html#bridgehead_N3057362
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
- * @param {string} type    media type: pdf|html
- * @param {string} [engineType] [optional]: default is freemarker/html
  * @return {nlobjTemplateRenderer}
  */
 declare function nlapiCreateTemplateRenderer(): nlobjTemplateRenderer;
 
 /**
- * Create an email merger used to assemble subject and body text of an email from a given
- * FreeMarker template and a set of associated records.
+ * Create an email merger used to assemble subject and body text of an email from a given FreeMarker template and a set of associated records.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_4183390688
  * @restriction Server SuiteScript only
  *
  * @param {number} templateId    internal ID of the template
@@ -1412,10 +1582,11 @@ declare function nlapiCreateEmailMerger(id: number): nlobjEmailMerger;
 
 /**
  * Create an entry in the script execution log (note that execution log entries are automatically purged after 30 days).
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3055475.html#bridgehead_N3056214
  *
- * @param {'DEBUG'|'AUDIT'|'ERROR'|'EMERGENCY'|'debug'|'audit'|'error'|'emergency'} type [required] - One of the following log types: debug|audit|error|emergency
- * @param {string|number} title log title (up to 90 characters supported)
- * @param {string|number} [details] log details (up to 3000 characters supported)
+ * @param {'DEBUG'|'AUDIT'|'ERROR'|'EMERGENCY'|'debug'|'audit'|'error'|'emergency'} type - One of the following log types: debug|audit|error|emergency
+ * @param {string|number} title - log title (up to 90 characters supported)
+ * @param {string|number} [details] - log details (up to 3000 characters supported)
  * @return {void}
  *
  * @since 2008.1
@@ -1424,11 +1595,12 @@ declare function nlapiLogExecution(type: 'DEBUG' | 'AUDIT' | 'ERROR' | 'EMERGENC
 
 /**
  * Queue a scheduled script for immediate execution and return the status QUEUED if successfull.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3053136.html#bridgehead_N3053226
  * @restriction Server SuiteScript only
  * @governance 20 units
  *
- * @param {string, int}    script script ID or internal ID of scheduled script
- * @param {string, int} [deployment] script ID or internal ID of scheduled script deployment. If empty, the first "free" deployment (i.e. status = Not Scheduled or Completed) will be used
+ * @param {string|number}    script script ID or internal ID of scheduled script
+ * @param {string|number} [deployment] script ID or internal ID of scheduled script deployment. If empty, the first "free" deployment (i.e. status = Not Scheduled or Completed) will be used
  * @param {Object}        parameters Object of parameter name->values used in this scheduled script instance
  * @return {string}    QUEUED or null if no available deployments were found or the current status of the deployment specified if it was not available.
  *
@@ -1437,7 +1609,30 @@ declare function nlapiLogExecution(type: 'DEBUG' | 'AUDIT' | 'ERROR' | 'EMERGENC
 declare function nlapiScheduleScript(script: string | number, deployment?: string | number, parameters?: Object): string;
 
 /**
+ * Creates a recovery point saving the state of the script's execution. When NetSuite resumes execution of the script, it resumes the script at the specified recovery point. Also note that when the script is resumed, its governance units are reset. Be aware, however, all scheduled scripts have a 50 MB memory limit.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3053136.html#bridgehead_N3053603
+ * @restriction Scheduled Scripts only
+ *
+ * @return {{status: 'SUCCESS'|'FAILURE'|'RESUME', reason: 'SS_NLAPIYIELDSCRIPT'|'SS_ABORT'|'SS_MAJOR_RELEASE'|'SS_EXCESSIVE_MEMORY_FOOTPRINT'|'SS_CANCELLED'|'SS_DISALLOWED_OBJECT_REFERENCE'|'SSS_FILE_OBJECT_NOT_SERIALIZABLE'|'SSS_SCRIPT_DESERIALIZATION_FAILURE', size: number, information: string}}
+ *
+ * @since 2008.1
+ */
+declare function nlapiSetRecoveryPoint(): { status: 'SUCCESS' | 'FAILURE' | 'RESUME', reason: 'SS_NLAPIYIELDSCRIPT' | 'SS_ABORT' | 'SS_MAJOR_RELEASE' | 'SS_EXCESSIVE_MEMORY_FOOTPRINT' | 'SS_CANCELLED' | 'SS_DISALLOWED_OBJECT_REFERENCE' | 'SSS_FILE_OBJECT_NOT_SERIALIZABLE' | 'SSS_SCRIPT_DESERIALIZATION_FAILURE', size: number, information: string };
+
+/**
+ * Creates a recovery point and, when executed, continues from the recovery point. The newly resubmitted script has its governance units reset.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3053136.html#bridgehead_N3053967
+ * @restriction Scheduled Scripts only
+ *
+ * @return {{status: 'FAILURE'|'RESUME', reason: 'SS_NLAPIYIELDSCRIPT'|'SS_ABORT'|'SS_MAJOR_RELEASE'|'SS_EXCESSIVE_MEMORY_FOOTPRINT'|'SS_CANCELLED'|'SS_DISALLOWED_OBJECT_REFERENCE'|'SSS_FILE_OBJECT_NOT_SERIALIZABLE'|'SSS_SCRIPT_DESERIALIZATION_FAILURE', size: number, information: string}}
+ *
+ * @since 2008.2
+ */
+declare function nlapiYieldScript(): { status: 'FAILURE' | 'RESUME', reason: 'SS_NLAPIYIELDSCRIPT' | 'SS_ABORT' | 'SS_MAJOR_RELEASE' | 'SS_EXCESSIVE_MEMORY_FOOTPRINT' | 'SS_CANCELLED' | 'SS_DISALLOWED_OBJECT_REFERENCE' | 'SSS_FILE_OBJECT_NOT_SERIALIZABLE' | 'SSS_SCRIPT_DESERIALIZATION_FAILURE', size: number, information: string };
+
+/**
  * Return a URL with a generated OAuth token.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3068135.html#bridgehead_N3070781
  * @restriction Suitelets and Portlets only
  * @governance 20 units
  *
@@ -1450,6 +1645,7 @@ declare function nlapiOutboundSSO(ssoAppKey: string): string;
 
 /**
  * Loads a configuration record
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3071027.html#bridgehead_N3071117
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
@@ -1462,6 +1658,7 @@ declare function nlapiLoadConfiguration(type: string): nlobjConfiguration;
 
 /**
  * Commits all changes to a configuration record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3071027.html#bridgehead_N3071374
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
@@ -1474,6 +1671,7 @@ declare function nlapiSubmitConfiguration(setup: nlobjConfiguration): void;
 
 /**
  * Convert a String into a Date object.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3061128.html#bridgehead_N3061544
  *
  * @param {string} str date string in the user's date format, timeofday format, or datetime format
  * @param {'date'|'datetime'|'datetimetz'|'timeofday'} format format type to use with "date" being the default
@@ -1485,6 +1683,7 @@ declare function nlapiStringToDate(str: string, format?: 'date' | 'datetime' | '
 
 /**
  * Convert a Date object into a String
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3061128.html#bridgehead_N3061413
  *
  * @param {Date}    date date object being converted to a string
  * @param {'date'|'datetime'|'datetimetz'|'timeofday'} [formattype] format type to use with "date" being the default
@@ -1496,6 +1695,7 @@ declare function nlapiDateToString(date: Date, formattype?: 'date' | 'datetime' 
 
 /**
  * Add days to a Date object and returns a new Date
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3061128.html#bridgehead_N3061216
  *
  * @param {Date} date date object used to calculate the new date
  * @param {number}    days the number of days to add to this date object.
@@ -1507,6 +1707,7 @@ declare function nlapiAddDays(date: Date, days: number): Date;
 
 /**
  * Add months to a Date object and returns a new Date.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3061128.html#bridgehead_N3061315
  *
  * @param {date} date date object used to calculate the new date
  * @param {number} months the number of months to add to this date object.
@@ -1518,6 +1719,7 @@ declare function nlapiAddMonths(date: Date, months: number): Date;
 
 /**
  * Format a number for data entry into a currency field.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3061682.html#bridgehead_N3062001
  *
  * @param {string} str numeric string used to format for display as currency using user's locale
  * @return {string}
@@ -1527,30 +1729,34 @@ declare function nlapiAddMonths(date: Date, months: number): Date;
 declare function nlapiFormatCurrency(str: string): string;
 
 /**
- * Encrypt a String using a SHA-1 or AES hash function
+ * Encrypt a String using a AES hash function.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062090.html#bridgehead_N3062113
  *
  * @param {string} string - String to encrypt
- * @param {'aes'} [algorithm] - Algorithm to use
- * @param {string} [key] - Secret key to use
+ * @param {'aes'} algorithm - aes
+ * @param {string} key - Secret key to use only for AES
  * @return {string}
  *
  * @since 2009.2
  */
-declare function nlapiEncrypt(string: string, algorithm?: 'aes', key?: string): string;
+declare function nlapiEncrypt(string: string, algorithm: 'aes', key: string): string;
 
 /**
- * Encrypt a String using a SHA-1 hash function
+ * Encode a String using base64.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062090.html#bridgehead_N3062113
  *
- * @param {string} string - String to encrypt
+ * @param {string} string - String to encode
+ * @param {'base64'} [algorithm] - base64
  * @return {string}
  *
  * @since 2009.2
  */
-
-// declare function nlapiEncrypt(string: string): string;
+declare function nlapiEncrypt(string: string, algorithm?: 'base64'): string;
 
 /**
  * Decrypt an encrypted String using an AES hash function.
+ * @see unknown
+ * @restriction This function is no longer officially supported by NetSuite, but it still works.
  *
  * @param {string} encryptedString - Encrypted string being decrypted
  * @param {'aes'} algorithm - Algorithm to use
@@ -1562,18 +1768,21 @@ declare function nlapiEncrypt(string: string, algorithm?: 'aes', key?: string): 
 declare function nlapiDecrypt(encryptedString: string, algorithm: 'aes', key: string): string;
 
 /**
- * Decrypt an encrypted String using an AES hash function.
+ * Decode an encoded String using base64.
+ * @see unknown
+ * @restriction This function is no longer officially supported by NetSuite, but it still works.
  *
- * @param {string} encryptedString - Encrypted string being decrypted
- * @param {'base64'} algorithm - Algorithm to use
+ * @param {string} encodedString - Encoded string being decoded
+ * @param {'base64'} algorithm - base64
  * @return {string}
  *
  * @since 2009.2
  */
-declare function nlapiDecrypt(encryptedString: string, algorithm: 'base64'): string;
+declare function nlapiDecrypt(encodedString: string, algorithm: 'base64'): string;
 
 /**
  * Escape a String for use in an XML document.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3062641
  *
  * @param {string} text string to escape
  * @return {string}
@@ -1585,6 +1794,7 @@ declare function nlapiEscapeXML(text: string): string;
 /**
  * Convert a String into an XML document. Note that in Server SuiteScript XML is supported natively by the JS runtime using the e4x standard (http://en.wikipedia.org/wiki/E4X)
  * This makes scripting XML simpler and more efficient
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3066421
  *
  * @param {string} str string being parsed into an XML document
  * @return {Document}
@@ -1596,6 +1806,7 @@ declare function nlapiStringToXML(str: string): Document;
 /**
  * Convert an XML document into a String.  Note that in Server SuiteScript XML is supported natively by the JS runtime using the e4x standard (http://en.wikipedia.org/wiki/E4X)
  * This makes scripting XML data simpler and more efficient
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3066507
  *
  * @param {Document} xml document being serialized into a string
  * @return {string}
@@ -1606,6 +1817,7 @@ declare function nlapiXMLToString(xml: Document): string;
 
 /**
  * Validate that a given XML document conforms to a given XML schema. XML Schema Definition (XSD) is the expected schema format.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_3866114154
  *
  * @param {Document} xmlDocument xml to validate
  * @param {Document} schemaDocument schema to enforce
@@ -1620,22 +1832,22 @@ declare function nlapiValidateXML(xmlDocument: Document, schemaDocument: Documen
 
 /**
  * select a value from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3062948
  *
- * @param {Node} node node being queried
- * @param {string} xpath string containing XPath expression.
+ * @param {Node}     node node being queried
+ * @param {string}   xpath string containing XPath expression.
  * @return {string}
  *
  * @since 2008.2
  */
 declare function nlapiSelectValue(node: Node, xpath: string): string;
 
-declare function nlapiYieldScript(): void;
-
 /**
  * Select an array of values from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3066324
  *
- * @param {Node}    node node being queried
- * @param {string}    xpath string containing XPath expression.
+ * @param {Node}     node node being queried
+ * @param {string}   xpath string containing XPath expression.
  * @return {string[]}
  *
  * @since 2008.1
@@ -1644,9 +1856,10 @@ declare function nlapiSelectValues(node: Node, xpath: string): string[];
 
 /**
  * Select a node from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3062752
  *
- * @param {Node}    node node being queried
- * @param {string}    xpath string containing XPath expression.
+ * @param {Node}     node node being queried
+ * @param {string}   xpath string containing XPath expression.
  * @return {Node}
  *
  * @since 2008.1
@@ -1655,9 +1868,10 @@ declare function nlapiSelectNode(node: Node, xpath: string): Node;
 
 /**
  * Select an array of nodes from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3062490.html#bridgehead_N3062851
  *
- * @param {Node}    node node being queried
- * @param {string}    xpath string containing XPath expression.
+ * @param {Node}     node node being queried
+ * @param {string}   xpath string containing XPath expression.
  * @return {node[]}
  *
  * @since 2008.1
@@ -1666,6 +1880,7 @@ declare function nlapiSelectNodes(node: Node, xpath: string): Node[];
 
 /**
  * Calculate exchange rate between two currencies as of today or an optional effective date.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3061682.html#bridgehead_N3061743
  * @governance 10 units
  *
  * @param {string|number} fromCurrency internal ID or currency code of currency we are converting from
@@ -1679,6 +1894,7 @@ declare function nlapiExchangeRate(fromCurrency: string | number, toCurrency: st
 
 /**
  * Initiates a workflow on-demand and returns the workflow instance ID for the workflow-record combination.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3071596.html#bridgehead_N3071662
  * @governance 20 units
  *
  * @param {string} recordtype record type ID of the workflow base record
@@ -1692,6 +1908,7 @@ declare function nlapiInitiateWorkflow(recordtype: string, id: number, workflowi
 
 /**
  * Initiates a workflow on-demand and returns the workflow instance ID for the workflow-record combination.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3071596.html#bridgehead_3935223900
  * @governance 20 units
  *
  * @param {string} recordtype record type ID of the workflow base record
@@ -1706,6 +1923,7 @@ declare function nlapiInitiateWorkflowAsync(recordType: string, id: number, work
 
 /**
  * Triggers a workflow on a record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3071596.html#bridgehead_N3071827
  * @governance 20 units
  *
  * @param {string} recordtype record type ID of the workflow base record
@@ -1721,7 +1939,10 @@ declare function nlapiTriggerWorkflow(recordtype: string, id: number, workflowid
 
 /**
  * Create a subrecord on a sublist field on the current record on a page.
+ * @see unknown
+ * @deprecated
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @retun {nlobjSubrecord}
@@ -1732,7 +1953,9 @@ declare function nlapiCreateCurrentLineSubrecord(type: string, fldnam: string): 
 
 /**
  * edit a subrecord on a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036495
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @retun {nlobjSubrecord}
@@ -1743,7 +1966,9 @@ declare function nlapiEditCurrentLineItemSubrecord(type: string, fldnam: string)
 
 /**
  * remove a subrecord on a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036832
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @retun {void}
@@ -1754,7 +1979,9 @@ declare function nlapiRemoveCurrentLineItemSubrecord(type: string, fldnam: strin
 
 /**
  * view a subrecord on a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3037114
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @retun {nlobjSubrecord}
@@ -1765,7 +1992,9 @@ declare function nlapiViewCurrentLineItemSubrecord(type: string, fldnam: string)
 
 /**
  * view a subrecord on a sublist field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3038664
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    type sublist name
  * @param {string}    fldnam sublist field name
  * @param {number}    linenum
@@ -1777,6 +2006,8 @@ declare function nlapiViewLineItemSubrecord(type: string, fldnam: string, linenu
 
 /**
  * get a cache object.
+ * @see https://system.netsuite.com/help/helpcenter/en_US/PDF/scareleasenotespredenali.pdf
+ *
  * @param {string} name of the cache
  * @return {nlobjCache}
  *
@@ -1786,48 +2017,61 @@ declare function nlapiGetCache(name: string): nlobjCache;
 
 /**
  * create a subrecord on body field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036333
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    fldnam body field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function createSubrecord(fldnam: string): nlobjSubrecord;
+declare function nlapiCreateSubrecord(fldnam: string): nlobjSubrecord;
 
 /**
  * edit a subrecord on body field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036670
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    fldnam body field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function editSubrecord(fldnam: string): nlobjSubrecord;
+declare function nlapiEditSubrecord(fldnam: string): nlobjSubrecord;
 
 /**
  * remove a subrecord on body field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036980
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    fldnam body field name
  * @retun {void}
  *
  * @since 2011.2
  */
-declare function removeSubrecord(fldnam: string): void;
+declare function nlapiRemoveSubrecord(fldnam: string): void;
 
 /**
  * view a subrecord on body field on the current record on a page.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3038841
  * @restriction supported in client and user event scripts only.
+ *
  * @param {string}    fldnam body field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
- * @param fldnam
  */
-declare function viewSubrecord(fldnam: string): nlobjSubrecord;
+declare function nlapiViewSubrecord(fldnam: string): nlobjSubrecord;
 
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html
+ */
 declare interface nlobjSearch {
   /**
    * Adds a single return column to the search. Note that existing columns on the search are not changed.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3112448
+   *
+   * @param {nlobjSearchColumn} column
    * @return {void}
    *
    * @method
@@ -1836,9 +2080,12 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   addColumn(column: nlobjSearchColumn): void
-
+  
   /**
    * Adds a single return column to the search. Note that existing columns on the search are not changed.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3112586
+   *
+   * @param {nlobjSearchColumn[]} columns
    * @return {void}
    *
    * @method
@@ -1847,9 +2094,12 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   addColumns(columns: nlobjSearchColumn[]): void
-
+  
   /**
    * Adds a single search filter. Note that existing filters on the search are not changed.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3112724
+   *
+   * @param {nlobjSearchFilter} filter
    * @return {void}
    *
    * @method
@@ -1858,9 +2108,12 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   addFilter(filter: nlobjSearchFilter): void
-
+  
   /**
    * Adds a search filter list. Note that existing filters on the search are not changed.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113485
+   *
+   * @param {nlobjSearchFilter[]} filters
    * @return {void}
    *
    * @method
@@ -1869,9 +2122,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   addFilters(filters: nlobjSearchFilter[]): void
-
+  
   /**
    * Deletes a saved search that was created through scripting or through the UI.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113015
+   *
    * @return {void}
    *
    * @method
@@ -1880,9 +2135,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   deleteSearch(): void
-
+  
   /**
    * Gets the search return columns for the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113155
+   *
    * @return {nlobjSearchColumn[]}
    *
    * @method
@@ -1891,20 +2148,24 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   getColumns(): nlobjSearchColumn[]
-
+  
   /**
    * Gets the filter expression for the search.
-   * @return {Object[]}
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113267
+   *
+   * @return {(string|number|(string|number|(string|number)[])[])[]}
    *
    * @method
    * @memberOf nlobjSearch
    *
    * @since 2012.2
    */
-  getFilterExpression(): object[]
-
+  getFilterExpression(): (string | number | (string | number | (string | number)[])[])[]
+  
   /**
    * Gets the filters for the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113485
+   *
    * @return {nlobjSearchFilter[]}
    *
    * @method
@@ -1913,9 +2174,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   getFilters(): nlobjSearchFilter[]
-
+  
   /**
    * Gets the internal ID of the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113615
+   *
    * @return {string}
    *
    * @method
@@ -1924,9 +2187,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   getId(): string
-
+  
   /**
    * Gets whether the nlobjSearch has been set as public search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113763
+   *
    * @return {boolean}
    *
    * @method
@@ -1935,9 +2200,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   getIsPublic(): boolean
-
+  
   /**
    * Gets the script ID of the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3113869
+   *
    * @return {string}
    *
    * @method
@@ -1946,9 +2213,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   getScriptId(): string
-
+  
   /**
    * Returns the record type that the search was based on.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3114017
+   *
    * @return {string}
    *
    * @method
@@ -1957,9 +2226,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   getSearchType(): string
-
+  
   /**
    * Runs an on demand search, returning the results.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3114123
+   *
    * @return {nlobjSearchResultSet}
    *
    * @method
@@ -1968,11 +2239,13 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   runSearch(): nlobjSearchResultSet
-
+  
   /**
    * Saves the search created by nlapiCreateSearch(type, filters, columns).
-   * @param {string} title [optional] - The title you want to give the saved search. Note that title is required when saving a new search, but optional when saving a search that was loaded using nlapiLoadSearch(type, id) or has already been saved by calling saveSearch(title, scriptId) before.
-   * @param {string} scriptId [optional] - The script ID you want to assign to the saved search. All saved search script IDs must be prefixed with customsearch, for example: 'customsearch_my_new_search', 'customsearchmynewsearch'
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3114333
+   *
+   * @param {string} [title] - The title you want to give the saved search. Note that title is required when saving a new search, but optional when saving a search that was loaded using nlapiLoadSearch(type, id) or has already been saved by calling saveSearch(title, scriptId) before.
+   * @param {string} [scriptId] - The script ID you want to assign to the saved search. All saved search script IDs must be prefixed with customsearch, for example: 'customsearch_my_new_search', 'customsearchmynewsearch'
    * @return {number}
    *
    * @method
@@ -1981,10 +2254,12 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   saveSearch(title?: string, scriptId?: string): number
-
+  
   /**
    * Sets the return columns for this search, overwriting any prior columns. If null is passed in it is treated as if it were an empty array and removes any existing columns on the search.
-   * @param {nlobjSearchColumn[]} columns [required] - The nlobjSearchColumn[] you want to set in the search. Passing in null or [] removes all columns from the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3114539
+   *
+   * @param {nlobjSearchColumn[]} columns - The nlobjSearchColumn[] you want to set in the search. Passing in null or [] removes all columns from the search.
    * @return {void}
    *
    * @method
@@ -1993,10 +2268,12 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   setColumns(columns: nlobjSearchColumn[]): void
-
+  
   /**
    * Sets the search filter expression, overwriting any prior filters. If null is passed in, it is treated as if it was an empty array and removes any existing filters on this search.
-   * @param {object} filterExpression [required] - The filter expression you want to set in the search. Passing in null or [] removes all filters from the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3114684
+   *
+   * @param {(string|number|(string|number|(string|number)[])[])[]} filterExpression - The filter expression you want to set in the search. Passing in null or [] removes all filters from the search.
    * @return {void}
    *
    * @method
@@ -2004,11 +2281,13 @@ declare interface nlobjSearch {
    *
    * @since 2012.2
    */
-  setFilterExpression(filterExpression: object): void
-
+  setFilterExpression(filterExpression: (string | number | (string | number | (string | number)[])[])[]): void
+  
   /**
    * Sets the filters for this search, overwriting any prior filters. If null is passed in it is treated as if it were an empty array and removes any existing filters on this search.
-   * @param {nlobjSearchFilter[]} filters [required] - The nlobjSearchFilter[] you want to set in the search. Passing in null or [] removes all filters from the search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3114881
+   *
+   * @param {nlobjSearchFilter[]} filters - The nlobjSearchFilter[] you want to set in the search. Passing in null or [] removes all filters from the search.
    * @return {void}
    *
    * @method
@@ -2017,10 +2296,12 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   setFilters(filters: nlobjSearchFilter[]): void
-
+  
   /**
    * Sets whether the search is public or private. By default, all searches created through nlapiCreateSearch(type, filters, columns) are private.
-   * @param {nlobjSearchFilter[]} type [required] - Set to true to designate the search as a public search. Set to false to designate the search as a private search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3115056
+   *
+   * @param {boolean} type - Set to true to designate the search as a public search. Set to false to designate the search as a private search.
    * @return {void}
    *
    * @method
@@ -2028,10 +2309,12 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  setIsPublic(type): void
-
+  setIsPublic(type: boolean): void
+  
   /**
    * Acts like nlapiSetRedirectURL(type, identifier, id, editmode, parameters) but redirects end users to a populated search definition page.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3115199
+   *
    * @return {void}
    *
    * @method
@@ -2040,9 +2323,11 @@ declare interface nlobjSearch {
    * @since 2012.1
    */
   setRedirectURLToSearch(): void
-
+  
   /**
    * Acts like nlapiSetRedirectURL(type, identifier, id, editmode, parameters) but redirects end users to a search results page.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html#bridgehead_N3115348
+   *
    * @return {void}
    *
    * @method
@@ -2053,11 +2338,15 @@ declare interface nlobjSearch {
   setRedirectURLToSearchResults(): void
 }
 
-
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3124405.html
+ */
 declare interface nlobjSearchResultSet {
   /**
    * Calls the developer-defined callback function for every result in this set. There is a limit of 4000 rows in the result set returned in forEachResult().
-   * @param {Function} callback [required] - A JavaScript function. This may be defined as a separate named function, or it may be an anonymous inline function.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3124405.html#bridgehead_N3125880
+   *
+   * @param {function(nlobjSearchResult):void} callback - A JavaScript function. This may be defined as a separate named function, or it may be an anonymous inline function.
    * @return {void}
    *
    * @method
@@ -2065,10 +2354,12 @@ declare interface nlobjSearchResultSet {
    *
    * @since 2012.1
    */
-  forEachResult(callback: Function): void
-
+  forEachResult(callback: (result: nlobjSearchResult) => void): void
+  
   /**
    * Returns a list of nlobjSearchColumn objects for this result set. This list contains one nlobjSearchColumn object for each result column in the nlobjSearchResult objects returned by this search.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3124405.html#bridgehead_N3126028
+   *
    * @return {nlobjSearchColumn[]}
    *
    * @method
@@ -2077,11 +2368,13 @@ declare interface nlobjSearchResultSet {
    * @since 2012.1
    */
   getColumns(): nlobjSearchColumn[]
-
+  
   /**
    * Calls the developer-defined callback function for every result in this set. There is a limit of 4000 rows in the result set returned in forEachResult().
-   * @param {number} start [required] - The index number of the first result to return, inclusive.
-   * @param {number} end [required] - The index number of the last result to return, exclusive.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3124405.html#bridgehead_N3126123
+   *
+   * @param {number} start - The index number of the first result to return, inclusive.
+   * @param {number} end - The index number of the last result to return, exclusive.
    * @return {nlobjSearchResult[]}
    *
    * @method
@@ -2092,68 +2385,342 @@ declare interface nlobjSearchResultSet {
   getResults(start: number, end: number): nlobjSearchResult[]
 }
 
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html
+ */
 declare interface StandardLine {
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072809012
+   *
+   * @return {number}
+   */
   getEntityId(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072809239
+   *
+   * @return {number}
+   */
   getId(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072809408
+   *
+   * @return {number}
+   */
   getSubsidiaryId(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072809564
+   *
+   * @return {string}
+   */
   getTaxableAmount(): string;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072809701
+   *
+   * @return {string}
+   */
   getTaxAmount(): string;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072809887
+   *
+   * @return {number}
+   */
   getTaxItemId(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072810791
+   *
+   * @return {string}
+   */
   getTaxType(): string;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072823691
+   *
+   * @return {number}
+   */
+  getAccountId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072825140
+   *
+   * @return {number}
+   */
+  getClassId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072824896
+   *
+   * @return {string}
+   */
+  getCreditAmount(): string;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4211980715
+   *
+   * @return {string}
+   */
+  getDebitAmount(): string;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072825263
+   *
+   * @return {number}
+   */
+  getDepartmentId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072825667
+   *
+   * @return {number}
+   */
+  getLocationId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072826271
+   *
+   * @return {string}
+   */
+  getMemo(): string;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4525244628
+   *
+   * @param {string} segmentId
+   * @return {number}
+   */
+  getSegmentValueId(segmentId: string): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072812464
+   *
+   * @return {boolean}
+   */
   isPosting(): boolean;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072807749.html#bridgehead_4072812705
+   *
+   * @return {boolean}
+   */
   isTaxable(): boolean;
 }
 
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072803330.html
+ */
 declare interface StandardLines {
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072803330.html#bridgehead_4072806151
+   *
+   * @return {number}
+   */
   getCount(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072803330.html#bridgehead_4072806950
+   *
+   * @param {number} index
+   * @return {StandardLine}
+   */
   getLine(index: number): StandardLine;
 }
 
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html
+ */
 declare interface CustomLine {
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072819093
+   *
+   * @return {boolean}
+   */
   isBookSpecific(): boolean;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072819740
+   *
+   * @param {boolean} bookSpecific
+   * @return {void}
+   */
   setBookSpecific(bookSpecific: boolean): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072826446
+   *
+   * @param {number} accountId
+   * @return {void}
+   */
   setAccountId(accountId: number): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072823691
+   *
+   * @return {number}
+   */
+  getAccountId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072826998
+   *
+   * @param {number} classId
+   * @return {void}
+   */
   setClassId(classId: number): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072825140
+   *
+   * @return {number}
+   */
+  getClassId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072826841
+   *
+   * @param {string} credit
+   * @return {void}
+   */
   setCreditAmount(credit: string): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072824896
+   *
+   * @return {string}
+   */
+  getCreditAmount(): string;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4211975932
+   *
+   * @param {string} debit
+   * @return {void}
+   */
   setDebitAmount(debit: string): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4211980715
+   *
+   * @return {string}
+   */
+  getDebitAmount(): string;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072827152
+   *
+   * @param {number} departmentId
+   * @return {void}
+   */
   setDepartmentId(departmentId: number): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072825263
+   *
+   * @return {number}
+   */
+  getDepartmentId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072827304
+   *
+   * @param {number} locationId
+   * @return {void}
+   */
   setLocationId(locationId: number): void;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072825667
+   *
+   * @return {number}
+   */
+  getLocationId(): number;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4072827453
+   *
+   * @param {string} memo
+   * @return {void}
+   */
   setMemo(memo: string): void;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4072826271
+   *
+   * @return {string}
+   */
+  getMemo(): string;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072818715.html#bridgehead_4525237186
+   *
+   * @param {string} segmentId
+   * @param {number} segmentValueId
+   * @return {void}
+   */
+  setSegmentValueId(segmentId: string, segmentValueId: number): void;
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072822491.html#bridgehead_4525244628
+   *
+   * @param {string} segmentId
+   * @return {number}
+   */
+  getSegmentValueId(segmentId: string): number;
 }
 
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804185.html
+ */
 declare interface CustomLines {
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804185.html#bridgehead_4072815957
+   *
+   * @return CustomLine
+   */
   addNewLine(): CustomLine;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804185.html#bridgehead_4072816378
+   *
+   * @return {number}
+   */
   getCount(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804185.html#bridgehead_4072816543
+   *
+   * @param {number} index
+   * @return {CustomLine}
+   */
   getLine(index: number): CustomLine;
 }
 
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804487.html
+ */
 declare interface AccountingBook {
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804487.html#bridgehead_4072821077
+   *
+   * @return {number}
+   */
   getId(): number;
-
+  
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4072804487.html#bridgehead_4072821999
+   *
+   * @return {boolean}
+   */
   isPrimary(): boolean;
 }
 
 /**
  * Return a new instance of nlobjRecord used for accessing and manipulating record objects.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html
  *
  * @classDescription Class definition for business records in the system.
  * @return {nlobjRecord}
@@ -2162,11 +2729,12 @@ declare interface AccountingBook {
  * @since 2008.2
  */
 declare interface nlobjRecord {
-
+  
   new(): nlobjRecord;
-
+  
   /**
    * Return the internalId of the record or NULL for new records.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098054
    *
    * @return {number} Return the integer value of the record ID.
    *
@@ -2175,10 +2743,11 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  getId(): string | number;
-
+  getId(): number;
+  
   /**
    * Return the recordType corresponding to this record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3100903
    *
    * @return {string} The string value of the record name internal ID
    *
@@ -2188,12 +2757,13 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   getRecordType(): string;
-
+  
   /**
    * Return field metadata for field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097358
    *
    * @param {string} fldnam field name
-   * @return    {nlobjField}
+   * @return {nlobjField}
    *
    * @method
    * @memberOf nlobjRecord
@@ -2201,9 +2771,11 @@ declare interface nlobjRecord {
    * @since 2009.1
    */
   getField(fldnam: string): nlobjField;
-
+  
   /**
    * Return sublist metadata for sublist.
+   * @see unknown
+   * @restriction Server SuiteScript only
    *
    * @param {string} type sublist name
    * @return {nlobjSubList}
@@ -2214,9 +2786,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getSubList(type: string): nlobjSubList;
-
+  
   /**
    * Return field metadata for field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099409
    *
    * @param {string} type matrix sublist name
    * @param {string} fldnam matrix field name
@@ -2229,9 +2802,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getMatrixField(type: string, fldnam: string, column: number): nlobjField;
-
+  
   /**
    * Return metadata for sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098202
    *
    * @param {string} type sublist name
    * @param {string} fldnam sublist field name
@@ -2244,9 +2818,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getLineItemField(type: string, fldnam: string, linenum?: number): nlobjField;
-
+  
   /**
    * Return metadata for sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098360
    *
    * @param {string} type matrix sublist name
    * @param {string} fldnam matrix field name
@@ -2260,9 +2835,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getLineItemMatrixField(type: string, fldnam: string, linenum: number, column: number): nlobjField;
-
+  
   /**
    * Set the value of a field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102523
    *
    * @param {string} fldnam field name
    * @param {string|number} value field value
@@ -2274,22 +2850,24 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   setFieldValue(fldnam: string, value: string | number): void;
-
+  
   /**
    * Set the values of a multi-select field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102622
    *
    * @param {string} fldnam field name
-   * @param {string[]|number[]} values string array containing field values
+   * @param {(string|number)[]} values string array containing field values
    *
    * @method
    * @memberOf nlobjRecord
    *
    * @since 2008.1
    */
-  setFieldValues(fldnam: string, values: string[] | number[]): void;
-
+  setFieldValues(fldnam: string, values: (string | number)[]): void;
+  
   /**
    * Return the value of a field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097800
    *
    * @param {string} fldnam field name
    * @return {string}
@@ -2300,9 +2878,10 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   getFieldValue(fldnam: string): string;
-
+  
   /**
    * Return the selected values of a multi-select field as an Array.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097930
    *
    * @param {string} fldnam field name
    * @return {string[]}
@@ -2313,9 +2892,10 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   getFieldValues(fldnam: string): string[];
-
+  
   /**
    * Set the value (via display value) of a select field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102242
    * @restriction only supported for select fields
    *
    * @param {string} fldnam field name
@@ -2328,9 +2908,10 @@ declare interface nlobjRecord {
    * @since 2008.2
    */
   setFieldText(fldnam: string, text: string): void;
-
+  
   /**
    * Set the values (via display values) of a multi-select field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102373
    * @restriction only supported for multi-select fields
    *
    * @param {string} fldnam field name
@@ -2343,9 +2924,10 @@ declare interface nlobjRecord {
    * @since 2008.2
    */
   setFieldTexts(fldnam: string, texts: string[]): void;
-
+  
   /**
    * Return the display value for a select field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097475
    * @restriction only supported for select fields
    *
    * @param {string} fldnam field name
@@ -2357,9 +2939,10 @@ declare interface nlobjRecord {
    * @since 2008.2
    */
   getFieldText(fldnam: string): string;
-
+  
   /**
    * Return the selected display values of a multi-select field as an Array.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097637
    * @restriction only supported for multi-select fields
    *
    * @param {string} fldnam field name
@@ -2371,12 +2954,13 @@ declare interface nlobjRecord {
    * @since 2008.2
    */
   getFieldTexts(fldnam: string): string[];
-
+  
   /**
    * Get the value of a matrix header field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3100718
    *
    * @param {string} type matrix sublist name
-   * @param {string} fldnam    matrix field name
+   * @param {string} fldnam matrix field name
    * @param {number} column matrix column index (1-based)
    * @return {string}
    *
@@ -2386,12 +2970,13 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getMatrixValue(type: string, fldnam: string, column: number): string;
-
+  
   /**
    * Set the value of a matrix header field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3103246
    *
    * @param {string}    type matrix sublist name
-   * @param {string}    fldnam    matrix field name
+   * @param {string}    fldnam matrix field name
    * @param {number}    column matrix column index (1-based)
    * @param {string}    value field value
    * @return {void}
@@ -2402,9 +2987,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   setMatrixValue(type: string, fldnam: string, column: number, value: string): void;
-
+  
   /**
    * Return an Array of all field names on the record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096923
    *
    * @return {string[]}
    *
@@ -2414,9 +3000,10 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   getAllFields(): string[];
-
+  
   /**
    * Return an Array of all field names on a record for a particular sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097066
    *
    * @param {string} group sublist name
    * @return {string[]}
@@ -2427,9 +3014,10 @@ declare interface nlobjRecord {
    * @since 2008.2
    */
   getAllLineItemFields(group: string): string[];
-
+  
   /**
    * Set the value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102723
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
@@ -2443,9 +3031,10 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   setLineItemValue(group: string, fldnam: string, linenum: number, value: string): void;
-
+  
   /**
    * Set the value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751504655
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
@@ -2460,13 +3049,15 @@ declare interface nlobjRecord {
    * @since 2013.2
    */
   setLineItemDateTimeValue(group: string, fldnam: string, linenum: number, dateTime: string, timezone: string | number): void;
-
+  
   /**
    * Return the value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098928
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
    * @param {number}    linenum line number (1-based)
+   * @return {string}
    *
    * @method
    * @memberOf nlobjRecord
@@ -2474,9 +3065,27 @@ declare interface nlobjRecord {
    * @since 2008.1
    */
   getLineItemValue(group: string, fldnam: string, linenum: number): string;
-
+  
+  /**
+   * Return the values of a multiselect sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099101
+   * @restriction Server SuiteScript only
+   *
+   * @param {string}    group sublist name
+   * @param {string}    fldnam sublist field name
+   * @param {number}    linenum line number (1-based)
+   * @return {string[]}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since 2012.1
+   */
+  getLineItemValues(group: string, fldnam: string, linenum: number): string[];
+  
   /**
    * Return the value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099101
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
@@ -2490,9 +3099,10 @@ declare interface nlobjRecord {
    * @since 2013.2
    */
   getLineItemDateTimeValue(group: string, fldnam: string, linenum: number, timezone: string | number): string;
-
+  
   /**
    * Return the text value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098730
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
@@ -2505,12 +3115,14 @@ declare interface nlobjRecord {
    * @since 2008.2
    */
   getLineItemText(group: string, fldnam: string, linenum: number): string;
-
+  
   /**
    * Set the current value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102048
+   *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
-   * @param {string}    value sublist field value
+   * @param {string|number}    value sublist field value
    * @return {void}
    *
    * @method
@@ -2519,9 +3131,13 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   setCurrentLineItemValue(group: string, fldnam: string, value: string | number): void;
-
+  
   /**
    * Set the current text of a sublist field.
+   * This was found in an example script written by Oracle NetSuite, but it is not documented nor defined in nlobjRecord
+   * This may have been documented and supported at one time and been removed
+   * @see unknown
+   *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
    * @param {string}    text sublist field text
@@ -2532,11 +3148,44 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-
+  
   // setCurrentLineItemText(group: string, fldnam: string, text: string): void;
-
+  
+  /**
+   * Return the current value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3946493892
+   *
+   * @param {string}    group sublist name
+   * @param {string}    fldnam sublist field name
+   * @return {string}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since 2009.2
+   */
+  getCurrentLineItemValue(group: string, fldnam: string): string;
+  
+  /**
+   * Return the current values of a multiselect sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096333
+   * @restriction Server SuiteScript only
+   *
+   * @param {string}    group sublist name
+   * @param {string}    fldnam sublist field name
+   * @return {string[]}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since 2009.2
+   */
+  getCurrentLineItemValues(group: string, fldnam: string): string[];
+  
   /**
    * Set the current value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751502141
+   *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
    * @param {string}    value sublist field value
@@ -2549,23 +3198,10 @@ declare interface nlobjRecord {
    * @since 2013.2
    */
   setCurrentLineItemDateTimeValue(group: string, fldnam: string, value: string, timezone: string | number): void;
-
+  
   /**
    * Return the current value of a sublist field.
-   *
-   * @param {string}    group sublist name
-   * @param {string}    fldnam sublist field name
-   * @return {string}
-   *
-   * @method
-   * @memberOf nlobjRecord
-   *
-   * @since 2009.2
-   */
-  getCurrentLineItemValue(group: string, fldnam: string): string;
-
-  /**
-   * Return the current value of a sublist field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751240027
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
@@ -2578,9 +3214,11 @@ declare interface nlobjRecord {
    * @since 2013.2
    */
   getCurrentLineItemDateTimeValue(group: string, fldnam: string, timezone: string | number): string;
-
+  
   /**
    * Return the current display value of a sublist field.
+   * This may have been documented and supported at one time and been removed
+   * @see unknown
    *
    * @param {string}    group sublist name
    * @param {string}    fldnam sublist field name
@@ -2591,10 +3229,12 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getCurrentLineItemText(group: string, fldnam: string): string;
-
+  
+  // getCurrentLineItemText(group: string, fldnam: string): string;
+  
   /**
    * Set the current value of a sublist matrix field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3101871
    *
    * @param {string}    group matrix sublist name
    * @param {string}    fldnam matrix field name
@@ -2608,9 +3248,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   setCurrentLineItemMatrixValue(group: string, fldnam: string, column: number, value: string): void;
-
+  
   /**
    * Return the current value of a sublist matrix field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097186
    *
    * @param {string}    group matrix sublist name
    * @param {string}    fldnam matrix field name
@@ -2623,9 +3264,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getCurrentLineItemMatrixValue(group: string, fldnam: string, column: number): string;
-
+  
   /**
    * Return the number of columns for a matrix field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099247
    *
    * @param {string}    group matrix sublist name
    * @param {string}    fldnam matrix field name
@@ -2637,25 +3279,12 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   getMatrixCount(group: string, fldnam: string): number;
-
+  
   /**
    * Return the number of lines in a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098122
    *
    * @param {string} group sublist name
-   *
-   * @method
-   * @memberOf nlobjRecord
-   *
-   * @since 2009.2
-   */
-  getLineItemCount(group: string): string | number;
-
-  /**
-   * Return line number for 1st occurence of field value in a sublist column.
-   *
-   * @param {string} group    sublist name
-   * @param {string} fldnam    sublist field name
-   * @param {string} value    sublist field value
    * @return {number}
    *
    * @method
@@ -2663,15 +3292,32 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  findLineItemValue(group: string, fldnam: string, value: string): number;
-
+  getLineItemCount(group: string): number;
+  
   /**
    * Return line number for 1st occurence of field value in a sublist column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096783
+   *
+   * @param {string} group    sublist name
+   * @param {string} fldnam    sublist field name
+   * @param {string|number} value    sublist field value
+   * @return {number}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since 2009.2
+   */
+  findLineItemValue(group: string, fldnam: string, value: string | number): number;
+  
+  /**
+   * Return line number for 1st occurence of field value in a sublist column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096610
    *
    * @param {string}    group    sublist name
    * @param {string}    fldnam    sublist field name
    * @param {number}    column  matrix column index (1-based)
-   * @param {string}    value    matrix field value
+   * @param {string|number}    value    matrix field value
    * @return {number}
    *
    * @method
@@ -2679,10 +3325,11 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  findLineItemMatrixValue(group: string, fldnam: string, column: number, value: string): number;
-
+  findLineItemMatrixValue(group: string, fldnam: string, column: number, value: string | number): number;
+  
   /**
    * Insert a new line into a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3100978
    *
    * @param {string}    group sublist name
    * @param {number}    [linenum] line index at which to insert line
@@ -2693,9 +3340,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   insertLineItem(group: string, linenum?: number): void;
-
+  
   /**
    * Remove an existing line from a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3101110
    *
    * @param {string}    group sublist name
    * @param {number}    [linenum] line number to remove
@@ -2706,9 +3354,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   removeLineItem(group: string, linenum?: number): void;
-
+  
   /**
    * Insert and select a new line in a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3101704
    *
    * @param {string} group sublist name
    * @return {void}
@@ -2719,9 +3368,10 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   selectNewLineItem(group: string): void;
-
+  
   /**
    * Select an existing line in a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3101557
    *
    * @param {string}    group sublist name
    * @param {number}    linenum  line number to select
@@ -2733,11 +3383,13 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   selectLineItem(group: string, linenum: number): void;
-
+  
   /**
    * Commit the current line in a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3095664
    *
    * @param {string}    group sublist name
+   * @param {boolean}    [ignoreRecalc] sublist name
    * @return {void}
    *
    * @method
@@ -2745,10 +3397,11 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  commitLineItem(group: string): void;
-
+  commitLineItem(group: string, ignoreRecalc?: boolean): void;
+  
   /**
    * set the value of a field.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751503301
    *
    * @param {string} fldnam field name
    * @param {string} value field value
@@ -2760,33 +3413,174 @@ declare interface nlobjRecord {
    * @since 20013.2
    */
   setDateTimeValue(fldnam: string, value: string, timezone: string): void;
-
+  
   /**
    * Return the value of a field on the current record on a page.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751498025
    * @restriction supported in client and user event scripts only.
+   *
    * @param {string} fldnam the field name
    * @param {string} timezone Olson value
    * @return {string}
    *
+   * @method
+   * @memberOf nlobjRecord
+   *
    * @since    2013.2
    */
   getDateTimeValue(fldnam: string, timezone: string): string;
+  
+  /**
+   * Create a subrecord from a body field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096002
+   *
+   * @param {string} fldname the field name
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  createSubrecord(fldname: string): nlobjSubrecord;
+  
+  /**
+   * View a subrecord from a body field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3103820
+   *
+   * @param {string} fldname the field name
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  viewSubrecord(fldname: string): nlobjSubrecord;
+  
+  /**
+   * Edit a subrecord from a body field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096465
+   *
+   * @param {string} fldname the field name
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  editSubrecord(fldname: string): nlobjSubrecord;
+  
+  /**
+   * Remove a subrecord from a body field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096465
+   *
+   * @param {string} fldname the field name
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  removeSubrecord(fldname: string): void;
+  
+  /**
+   * Create a subrecord from a sublist field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3095828
+   *
+   * @param {string} group sublist name
+   * @param {string} fldname the field name
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  createCurrentLineItemSubrecord(group: string, fldname: string): nlobjSubrecord;
+  
+  /**
+   * View a subrecord from a sublist field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3103452
+   *
+   * @param {string} group sublist name
+   * @param {string} fldname the field name
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  viewCurrentLineItemSubrecord(group: string, fldname: string): nlobjSubrecord;
+  
+  /**
+   * Edit a subrecord from a sublist field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096162
+   *
+   * @param {string} group sublist name
+   * @param {string} fldname the field name
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  editCurrentLineItemSubrecord(group: string, fldname: string): nlobjSubrecord;
+  
+  /**
+   * Remove a subrecord from a sublist field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3101258
+   *
+   * @param {string} group sublist name
+   * @param {string} fldname the field name
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  removeCurrentLineItemSubrecord(group: string, fldname: string): void;
+  
+  /**
+   * View a subrecord from a sublist field on the parent record.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3103640
+   *
+   * @param {string} group sublist name
+   * @param {string} fldname the field name
+   * @param {nlapiResolveURL} linenum line number
+   * @return {nlobjSubrecord}
+   *
+   * @method
+   * @memberOf nlobjRecord
+   *
+   * @since    2011.2
+   */
+  viewLineItemSubrecord(group: string, fldname: string, linenum: number): nlobjSubrecord;
 }
 
 /**
  * Return a new instance of nlobjSubrecord.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3126577.html
  *
  * @classDescription Class definition for nlobjSubrecord.
  * @return {nlobjSubrecord}
  * @constructor
  *
- * @since 2008.2
+ * @since 2011.2
  */
-declare interface nlobjSubrecord {
-
+declare interface nlobjSubrecord extends nlobjRecord {
+  
   new(): nlobjSubrecord;
-
+  
   /**
+   * Use this method to cancel the current processing of the subrecord and revert subrecord data to the last committed change (submitted in the last commit() call).
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3126577.html#bridgehead_N3126668
+   *
    * @return {void}
    *
    * @method
@@ -2795,8 +3589,11 @@ declare interface nlobjSubrecord {
    * @since 2011.2
    */
   cancel(): void;
-
+  
   /**
+   * Use this method to commit the subrecord to the parent record
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3126577.html#bridgehead_N3126777
+   *
    * @return {void}
    *
    * @method
@@ -2817,9 +3614,9 @@ declare interface nlobjSubrecord {
  * @since 2009.2
  */
 declare interface nlobjConfiguration {
-
+  
   new(): nlobjConfiguration;
-
+  
   /**
    * return the type corresponding to this setup record.
    *
@@ -2831,7 +3628,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   getType(): string;
-
+  
   /**
    * return field metadata for field.
    *
@@ -2844,7 +3641,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   getField(fldnam: string): () => nlobjField;
-
+  
   /**
    * set the value of a field.
    *
@@ -2858,7 +3655,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   setFieldValue(fldnam: string, value: string): void;
-
+  
   /**
    * Set the values of a multi-select field.
    * @restriction only supported for multi-select fields
@@ -2873,7 +3670,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   setFieldValues(fldnam: string, values: string[]): void;
-
+  
   /**
    * return the value of a field.
    *
@@ -2886,7 +3683,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   getFieldValue(fldnam: string): string;
-
+  
   /**
    * return the selected values of a multi-select field as an Array.
    * @restriction only supported for multi-select fields
@@ -2900,7 +3697,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   getFieldValues(fldnam: string): string[];
-
+  
   /**
    * set the value (via display value) of a field.
    * @restriction only supported for select fields
@@ -2915,7 +3712,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   setFieldText(fldnam: string, text: string): void;
-
+  
   /**
    * set the values (via display values) of a multi-select field.
    * @restriction only supported for multi-select fields
@@ -2930,7 +3727,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   setFieldTexts(fldnam: string, texts: string[]): void;
-
+  
   /**
    * return the text value of a field.
    * @restriction only supported for select fields
@@ -2944,7 +3741,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   getFieldText(fldnam: string): string;
-
+  
   /**
    * return the selected text values of a multi-select field as an Array.
    * @param {string} fldnam field name
@@ -2956,7 +3753,7 @@ declare interface nlobjConfiguration {
    * @since 2009.2
    */
   getFieldTexts(fldnam: string): void;
-
+  
   /**
    * return an Array of all field names on the record.
    * @return {string[]}
@@ -2979,9 +3776,9 @@ declare interface nlobjConfiguration {
  * @since 2009.1
  */
 declare interface nlobjFile {
-
+  
   new(): nlobjFile;
-
+  
   /**
    * Return the name of the file.
    * @return {string}
@@ -2992,7 +3789,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getName(): string;
-
+  
   /**
    * Sets the name of a file.
    * @param {string} name the name of the file
@@ -3004,7 +3801,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   setName(name: string): void;
-
+  
   /**
    * return the internal ID of the folder that this file is in.
    * @return {number}
@@ -3015,7 +3812,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getFolder(): number;
-
+  
   /**
    * sets the internal ID of the folder that this file is in.
    * @param {number} folder
@@ -3027,7 +3824,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   setFolder(folder: number): void;
-
+  
   /**
    * gets the character encoding for the file.
    * @return {'UTF-8'|'windows-1252'|'ISO-8859-1'|'GB18030'|'SHIFT_JIS'|'MacRoman'|'GB2312'|'Big5'}
@@ -3038,7 +3835,7 @@ declare interface nlobjFile {
    * @since 2010.2
    */
   getEncoding(): 'UTF-8' | 'windows-1252' | 'ISO-8859-1' | 'GB18030' | 'SHIFT_JIS' | 'MacRoman' | 'GB2312' | 'Big5';
-
+  
   /**
    * sets the character encoding for the file.
    * @param {'UTF-8'|'windows-1252'|'ISO-8859-1'|'GB18030'|'SHIFT_JIS'|'MacRoman'|'GB2312'|'Big5'} encoding
@@ -3050,7 +3847,7 @@ declare interface nlobjFile {
    * @since 2010.2
    */
   setEncoding(encoding: 'UTF-8' | 'windows-1252' | 'ISO-8859-1' | 'GB18030' | 'SHIFT_JIS' | 'MacRoman' | 'GB2312' | 'Big5'): void;
-
+  
   /**
    * return true if the file is "Available without Login".
    * @return {boolean}
@@ -3061,7 +3858,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   isOnline(): boolean;
-
+  
   /**
    * sets the file's "Available without Login" status.
    * @param {boolean} online
@@ -3073,7 +3870,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   setIsOnline(online: boolean): void;
-
+  
   /**
    * return true if the file is inactive.
    * @return {boolean}
@@ -3084,7 +3881,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   isInactive(): boolean;
-
+  
   /**
    * sets the file's inactive status.
    * @param {boolean} inactive
@@ -3096,7 +3893,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   setIsInactive(inactive: boolean): void;
-
+  
   /**
    * return the file description.
    * @return {string}
@@ -3107,7 +3904,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getDescription(): string;
-
+  
   /**
    * sets the file's description.
    * @param {string} descr the file description
@@ -3119,7 +3916,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   setDescription(descr: string): void;
-
+  
   /**
    * Return the id of the file (if stored in the FC).
    * @return {number}
@@ -3130,7 +3927,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getId(): number;
-
+  
   /**
    * Return the size of the file in bytes.
    * @return {number}
@@ -3141,7 +3938,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getSize(): number;
-
+  
   /**
    * Return the URL of the file (if stored in the FC).
    * @return {string}
@@ -3152,7 +3949,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getURL(): string;
-
+  
   /**
    * Return the type of the file.
    * @return {'AUTOCAD'|'BMPIMAGE'|'CSV'|'EXCEL'|'FLASH'|'GIFIMAGE'|'GZIP'|'HTMLDOC'|'ICON'|'JAVASCRIPT'|'JPGIMAGE'|'JSON'|'MESSAGERFC'|'MP3'|'MPEGMOVIE'|'MSPROJECT'|'PDF'|'PJPGIMAGE'|'PLAINTEXT'|'PNGIMAGE'|'POSTSCRIPT'|'POWERPOINT'|'QUICKTIME'|'RTF'|'SMS'|'STYLESHEET'|'TIFFIMAGE'|'VISIO'|'WORD'|'XMLDOC'|'ZIP'}
@@ -3163,7 +3960,7 @@ declare interface nlobjFile {
    * @since 2009.1
    */
   getType(): 'AUTOCAD' | 'BMPIMAGE' | 'CSV' | 'EXCEL' | 'FLASH' | 'GIFIMAGE' | 'GZIP' | 'HTMLDOC' | 'ICON' | 'JAVASCRIPT' | 'JPGIMAGE' | 'JSON' | 'MESSAGERFC' | 'MP3' | 'MPEGMOVIE' | 'MSPROJECT' | 'PDF' | 'PJPGIMAGE' | 'PLAINTEXT' | 'PNGIMAGE' | 'POSTSCRIPT' | 'POWERPOINT' | 'QUICKTIME' | 'RTF' | 'SMS' | 'STYLESHEET' | 'TIFFIMAGE' | 'VISIO' | 'WORD' | 'XMLDOC' | 'ZIP';
-
+  
   /**
    * Return the value (base64 encoded for binary types) of the file.
    * @return {string}
@@ -3178,6 +3975,7 @@ declare interface nlobjFile {
 
 /**
  * Return a new instance of nlobjSearchFilter filter objects used to define search criteria.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html
  *
  * @classDescription search filter
  * @constructor
@@ -3191,20 +3989,23 @@ declare interface nlobjFile {
  * @since 2007.0
  */
 declare interface nlobjSearchFilter {
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3120926
    *
    * @param {string} fldnam
    * @param {string} join
-   * @param operator
+   * @param {'after'|'allof'|'any'|'anyof'|'before'|'between'|'contains'|'doesnotcontain'|'doesnotstartwith'|'equalto'|'greaterthan'|'greaterthanorequalto'|'haskeywords'|'is'|'isempty'|'isnot'|'isnotempty'|'lessthan'|'lessthanorequalto'|'noneof'|'notafter'|'notallof'|'notbefore'|'notbetween'|'notequalto'|'notgreaterthan'|'notgreaterthanorequalto'|'notlessthan'|'notlessthanorequalto'|'noton'|'notonorafter'|'notonorbefore'|'notwithin'|'on'|'onorafter'|'onorbefore'|'startswith'|'within'} operator
    * @param {string|string[]|number|Date} value1
    * @param {string|Date} [value2]
    * @return {nlobjSearchFilter}
    */
-  new(fldnam: string, join: string, operator: string, value1: string | string[] | number | Date, value2?: string | Date): nlobjSearchFilter;
-
+  new(fldnam: string, join: string, operator: 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within', value1: string | string[] | number | Date, value2?: string | Date): nlobjSearchFilter;
+  
   /**
    * Return the name of this search filter.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3121716
+   *
    * @return {string}
    *
    * @method
@@ -3213,9 +4014,11 @@ declare interface nlobjSearchFilter {
    * @since 2007.0
    */
   getName(): string;
-
+  
   /**
    * Return the join id for this search filter.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3121629
+   *
    * @return {string}
    *
    * @method
@@ -3224,21 +4027,87 @@ declare interface nlobjSearchFilter {
    * @since 2008.1
    */
   getJoin(): string;
-
+  
   /**
    * Return the filter operator used.
-   * @return {string}
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3121888
+   *
+   * @return {'after'|'allof'|'any'|'anyof'|'before'|'between'|'contains'|'doesnotcontain'|'doesnotstartwith'|'equalto'|'greaterthan'|'greaterthanorequalto'|'haskeywords'|'is'|'isempty'|'isnot'|'isnotempty'|'lessthan'|'lessthanorequalto'|'noneof'|'notafter'|'notallof'|'notbefore'|'notbetween'|'notequalto'|'notgreaterthan'|'notgreaterthanorequalto'|'notlessthan'|'notlessthanorequalto'|'noton'|'notonorafter'|'notonorbefore'|'notwithin'|'on'|'onorafter'|'onorbefore'|'startswith'|'within'}
    *
    * @method
    * @memberOf nlobjSearchFilter
    *
    * @since 2008.2
    */
-  getOperator(): string;
+  getOperator(): 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within';
+  
+  /**
+   * Return the formula for this search filter.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3121543
+   *
+   * @return {string}
+   *
+   * @method
+   * @memberOf nlobjSearchFilter
+   *
+   * @since 2011.1
+   */
+  getFormula(): string;
+  
+  /**
+   * Set the formula for this search filter.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3122263
+   *
+   * @param {string} formula
+   * @return {nlobjSearchFilter}
+   *
+   * @method
+   * @memberOf nlobjSearchFilter
+   *
+   * @since 2011.1
+   */
+  setFormula(formula: string): nlobjSearchFilter;
+  
+  /**
+   * Return the summary type for this search filter.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3121802
+   *
+   * @return {'max'|'min'|'avg'|'sum'|'count'}
+   *
+   * @method
+   * @memberOf nlobjSearchFilter
+   *
+   * @since 2011.1
+   */
+  getSummaryType(): 'max' | 'min' | 'avg' | 'sum' | 'count';
+  
+  /**
+   * Set the summary type for this search filter.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3122263
+   *
+   * @param {'max'|'min'|'avg'|'sum'|'count'} type
+   * @return {nlobjSearchFilter}
+   *
+   * @method
+   * @memberOf nlobjSearchFilter
+   *
+   * @since 2011.1
+   */
+  setSummaryType(type: 'max' | 'min' | 'avg' | 'sum' | 'count'): nlobjSearchFilter;
 }
 
 declare class nlobjSearchFilter {
-  constructor(fldnam: string, join: string, operator: string, value1: string | string[] | number | Date, value2?: string | Date);
+  /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3120926
+   *
+   * @param {string} fldnam
+   * @param {string} join
+   * @param {'after'|'allof'|'any'|'anyof'|'before'|'between'|'contains'|'doesnotcontain'|'doesnotstartwith'|'equalto'|'greaterthan'|'greaterthanorequalto'|'haskeywords'|'is'|'isempty'|'isnot'|'isnotempty'|'lessthan'|'lessthanorequalto'|'noneof'|'notafter'|'notallof'|'notbefore'|'notbetween'|'notequalto'|'notgreaterthan'|'notgreaterthanorequalto'|'notlessthan'|'notlessthanorequalto'|'noton'|'notonorafter'|'notonorbefore'|'notwithin'|'on'|'onorafter'|'onorbefore'|'startswith'|'within'} operator
+   * @param {string|string[]|number|Date} value1
+   * @param {string|Date} [value2]
+   * @return {nlobjSearchFilter}
+   */
+  constructor(fldnam: string, join: string, operator: 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within', value1: string | string[] | number | Date, value2?: string | Date);
 }
 
 /**
@@ -3254,7 +4123,7 @@ declare class nlobjSearchFilter {
  * @since 2007.0
  */
 declare interface nlobjSearchColumn {
-
+  
   /**
    *
    * @param {string} fldnam
@@ -3263,74 +4132,76 @@ declare interface nlobjSearchColumn {
    * @return
    */
   new(fldnam: string, join?: string, summary?: string): nlobjSearchColumn;
-
+  
   /**
    * return the name of this search column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118808
+   *
    * @return {string}
    *
    * @method
    * @memberOf nlobjSearchColumn
    *
    * @since 2008.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118808
    */
   getName(): string;
-
+  
   /**
    * return the join id for this search column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118607
+   *
    * @return {string}
    *
    * @method
    * @memberOf nlobjSearchColumn
    *
    * @since 2008.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118607
    */
   getJoin(): string;
-
+  
   /**
    * return the label of this search column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118693
+   *
    * @return {string}
    *
    * @method
    * @memberOf nlobjSearchColumn
    *
    * @since 2009.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118693
    */
   getLabel(): string;
-
+  
   /**
    * return the summary type (avg,group,sum,count) of this search column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118977
+   *
    * @return {string}
    *
    * @method
    * @memberOf nlobjSearchColumn
    *
    * @since 2008.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118977
    */
   getSummary(): string;
-
+  
   /**
    * return formula for this search column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118195
+   *
    * @return {string}
    *
    * @method
    * @memberOf nlobjSearchColumn
    *
    * @since 2009.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3118195
    */
   getFormula(): string;
-
+  
   /**
    * return nlobjSearchColumn with formula set.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119081
+   *
    * @return {nlobjSearchColumn}
    * @param {string}
    *
@@ -3338,13 +4209,13 @@ declare interface nlobjSearchColumn {
    * @memberOf nlobjSearchColumn
    *
    * @since 2011.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119081
    */
   setFormula(formula: string): nlobjSearchColumn;
-
+  
   /**
    * return nlobjSearchColumn sorted in either ascending or descending order.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120366
+   *
    * @param {boolean} [descending] - if not set, defaults to false, which returns column data in ascending order.
    * @return {nlobjSearchColumn}
    *
@@ -3352,13 +4223,13 @@ declare interface nlobjSearchColumn {
    * @memberOf nlobjSearchColumn
    *
    * @since 2010.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120366
    */
   setSort(descending?: boolean): nlobjSearchColumn;
-
+  
   /**
    * return nlobjSearchColumn with label set.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120259
+   *
    * @param {string} label
    * @return {nlobjSearchColumn}
    *
@@ -3366,13 +4237,13 @@ declare interface nlobjSearchColumn {
    * @memberOf nlobjSearchColumn
    *
    * @since 2011.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120259
    */
   setLabel(label: string): nlobjSearchColumn;
-
+  
   /**
    * return nlobjSearchColumn with special function set.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119209
+   *
    * @param {string} functionId special function ID
    * @return {nlobjSearchColumn}
    *
@@ -3380,13 +4251,13 @@ declare interface nlobjSearchColumn {
    * @memberOf nlobjSearchColumn
    *
    * @since 2011.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3119209
    */
   setFunction(functionId: 'percentOfTotal' | 'absoluteValue' | 'ageInDays' | 'ageInHours' | 'ageInMonths' | 'ageInWeeks' | 'ageInYears' | 'calendarWeek' | 'day' | 'month' | 'negate' | 'numberAsTime' | 'quarter' | 'rank' | 'round' | 'roundToHundredths' | 'roundToTenths' | 'weekOfYear' | 'year'): nlobjSearchColumn;
-
+  
   /**
    * return nlobjSearchColumn for which the minimal or maximal value should be found when returning the nlobjSearchColumn value.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120540
+   *
    * @param {string} fldnam The name of the search column for which the minimal or maximal value should be found
    * @param {string} join The join id for this search column
    * @return {nlobjSearchColumn}
@@ -3395,8 +4266,6 @@ declare interface nlobjSearchColumn {
    * @memberOf nlobjSearchColumn
    *
    * @since 2012.1
-   *
-   * https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120540
    */
   setWhenOrderedBy(fldnam: string, join: string): nlobjSearchColumn;
 }
@@ -3413,9 +4282,9 @@ declare class nlobjSearchColumn {
  * @constructor
  */
 declare interface nlobjSearchResult {
-
+  
   new(): nlobjSearchResult;
-
+  
   /**
    * return the internalId for the record returned in this row.
    * @method
@@ -3423,7 +4292,7 @@ declare interface nlobjSearchResult {
    * @return {number}
    */
   getId(): number;
-
+  
   /**
    * return the recordtype for the record returned in this row.
    * @method
@@ -3431,7 +4300,7 @@ declare interface nlobjSearchResult {
    * @return {string}
    */
   getRecordType(): string;
-
+  
   /**
    * return the value for a return column specified by name, join ID, and summary type.
    * @param {string|nlobjSearchColumn} fldnam the name of the search column
@@ -3443,7 +4312,7 @@ declare interface nlobjSearchResult {
    * @since 2008.1
    */
   getValue(fldnam: string | nlobjSearchColumn): string;
-
+  
   /**
    * return the value for a return column specified by name, join ID, and summary type.
    * @param {string} fldnam the name of the search column
@@ -3457,7 +4326,7 @@ declare interface nlobjSearchResult {
    * @since 2008.1
    */
   getValue(fldnam: string, join: string, summary?: string): string;
-
+  
   /**
    * return the text value of this return column if it's a select field.
    * @param {string|nlobjSearchColumn} fldnam the name of the search column
@@ -3469,7 +4338,7 @@ declare interface nlobjSearchResult {
    * @since 2008.1
    */
   getText(fldnam: string | nlobjSearchColumn): string;
-
+  
   /**
    * return the text value of this return column if it's a select field.
    * @param {string} fldnam the name of the search column
@@ -3483,7 +4352,7 @@ declare interface nlobjSearchResult {
    * @since 2008.1
    */
   getText(fldnam: string, join: string, summary?: string): string;
-
+  
   /**
    * return an array of all nlobjSearchColumn objects returned in this search.
    * @return {nlobjSearchColumn[]}
@@ -3508,9 +4377,9 @@ declare class nlobjSearchResult {
  * @constructor
  */
 declare interface nlobjContext {
-
+  
   new(): nlobjContext;
-
+  
   /**
    * return the name of the current user.
    * @return {string}
@@ -3521,7 +4390,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getName(): string;
-
+  
   /**
    * return the internalId of the current user.
    * @return {string}
@@ -3532,7 +4401,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getUser(): string;
-
+  
   /**
    * return the internalId of the current user's role.
    * @return {string}
@@ -3543,7 +4412,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getRole(): string;
-
+  
   /**
    * return the script ID of the current user's role.
    * @return {string}
@@ -3554,7 +4423,7 @@ declare interface nlobjContext {
    * @since 2008.2
    */
   getRoleId(): string;
-
+  
   /**
    * return the internalId of the current user's center type.
    * @return {string}
@@ -3565,7 +4434,7 @@ declare interface nlobjContext {
    * @since 2008.2
    */
   getRoleCenter(): string;
-
+  
   /**
    * return the email address of the current user.
    * @return {string}
@@ -3576,7 +4445,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getEmail(): string;
-
+  
   /**
    * return the internal ID of the contact logged in on behalf of a customer, vendor, or partner. It returns -1 for non-contact logins
    * @return {number}
@@ -3587,7 +4456,7 @@ declare interface nlobjContext {
    * @since 2009.1
    */
   getContact(): number;
-
+  
   /**
    * return the account ID of the current user.
    * @return {string}
@@ -3598,7 +4467,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getCompany(): string;
-
+  
   /**
    * return the internalId of the current user's department.
    * @return {number}
@@ -3609,7 +4478,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getDepartment(): number;
-
+  
   /**
    * return the internalId of the current user's location.
    * @return {number}
@@ -3620,7 +4489,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getLocation(): number;
-
+  
   /**
    * return the internalId of the current user's subsidiary.
    * @return {number}
@@ -3631,7 +4500,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getSubsidiary(): number;
-
+  
   /**
    * return the execution context for this script: webservices|csvimport|client|userinterface|scheduledscript|portlet|suitelet|custommassupdate|debugger
    * @return {'webservices'|'csvimport'|'client'|'userinterface'|'scheduledscript'|'portlet'|'suitelet'|'custommassupdate'|'debugger'}
@@ -3642,7 +4511,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getExecutionContext(): 'webservices' | 'csvimport' | 'client' | 'userinterface' | 'scheduledscript' | 'portlet' | 'suitelet' | 'custommassupdate' | 'debugger';
-
+  
   /**
    * return the amount of usage units remaining for this script.
    * @return {number}
@@ -3653,7 +4522,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   getRemainingUsage(): number;
-
+  
   /**
    * return true if feature is enabled, false otherwise
    * @param {'ACCOUNTING'|'ACCOUNTINGPERIODS'|'ACHVEND'|'ACTIVITYCODES'|'ADDONS'|'ADMINKERNELPERM'|'ADVANCEDBILLOFMATERIALS'|'ADVANCEDEMPLOYEEPERMISSIONS'|'ADVANCEDJOBS'|'ADVANCEDPRINTING'|'ADVANCEDPROCUREMENTAPPROVALS'|'ADVANCEDPROJECTACCOUNTING'|'ADVANCEDPROMOTIONS'|'ADVANCEDREVENUERECOGNITION'|'ADVANCEDREVENUERECOGNITIONAPP'|'ADVANCEDSITECUST'|'ADVANCEDSITEMANAGEMENT'|'ADVBILLING'|'ADVBINSERIALLOTMGMT'|'ADVFORECASTING'|'ADVINVENTORYMGMT'|'ADVPARTNERACCESS'|'ADVRECEIVING'|'ADVSHIPPING'|'ADVSUBSCRIPTIONBILLING'|'ADVTAXENGINE'|'ADVWEBREPORTS'|'ADVWEBSEARCH'|'ALTSALESADVFORECAST'|'ALTSALESAMOUNT'|'AMORTIZATION'|'APPROVALROUTING'|'ASSEMBLIES'|'ASYNCCUSTOMER'|'ASYNCSALESORDER'|'AUTOAPPLYPROMOTIONS'|'AUTOLOCATIONASSIGNMENT'|'AVAILABLETOPROMISE'|'BARCODES'|'BILLINGACCOUNTS'|'BILLINGCLASSES'|'BILLINGRATECARDS'|'BILLINGWORKCENTER'|'BILLSCOSTS'|'BINMANAGEMENT'|'BLANKETPURCHASEORDERS'|'BOXNET'|'CAMPAIGNASSISTANT'|'CAMPAIGNSUBSCRIPTIONS'|'CCTRACKING'|'CHARGEBASEDBILLING'|'CHECKOUTSUBDOMAIN'|'CLASSES'|'COMMERCECATEGORIES'|'COMMERCESEARCHANALYTICS'|'COMMISSIONONCUSTOMFIELDS'|'COMMISSIONS'|'COMPENSATIONTRACKING'|'CONSOLPAYMENTS'|'CREATESUITEBUNDLES'|'CRM'|'CRMTIME'|'CRM_TEMPLATE_CATEGORIES'|'CROSSSUBSIDIARYFULFILLMENT'|'CUSTOMCODE'|'CUSTOMERACCESS'|'CUSTOMGLLINES'|'CUSTOMRECORDS'|'CUSTOMSEGMENTS'|'CUSTOMTRANSACTIONS'|'DEPARTMENTS'|'DISTRIBUTIONRESOURCEPLANNING'|'DOCUMENTPUBLISHING'|'DOCUMENTS'|'DOWNLOADITEMS'|'DROPSHIPMENTS'|'DUPLICATES'|'DYNALLOCATION'|'EFFECTIVEDATING'|'EFT'|'EMAILINTEGRATION'|'EMPLOYEECENTERPUBLISHING'|'EMPLOYEECHANGEREQUESTS'|'EMPPERMS'|'ENHANCEDINVENTORYLOCATION'|'ENHANCEDPREMIERPAYROLL'|'ESCALATIONRULES'|'ESTIMATES'|'EXPENSEALLOCATION'|'EXPREPORTS'|'EXTCRM'|'EXTREMELIST'|'EXTSTORE'|'FCADVANCEDSECURITY'|'FULFILLMENTREQUEST'|'FXRATEUPDATES'|'GAINLOSSACCTMAPPING'|'GIFTCERTIFICATES'|'GLAUDITNUMBERING'|'GRIDORDERMANAGEMENT'|'GROSSPROFIT'|'GROUPAVERAGECOSTING'|'HELPDESK'|'HISTORICALMETRICS'|'HRANALYSIS'|'I18NTAXREPORTS'|'IC_FRAMEWORK_OR_IC_NETTING'|'INBOUNDCASEEMAIL'|'INBOUNDSHIPMENT'|'INSTALLMENTS'|'INTERCOMPANYAUTODROPSHIP'|'INTERCOMPANYELIMINATION'|'INTERCOMPANYAUTOELIMINATIONENGINE'|'INTERCOMPANYTIMEEXPENSE'|'INTRANET'|'INTRANSITPAYMENTS'|'INVENTORY'|'INVENTORYCOUNT'|'INVENTORYSTATUS'|'IPADDRESSRULES'|'ISSUEDB'|'ITEMDEMANDPLANNING'|'ITEMOPTIONS'|'JOBCOSTING'|'JOBMANAGEMENT'|'JOBREQUISITION'|'JOBS'|'KNOWLEDGEBASE'|'KPIREPORTS'|'KUDOS'|'LANDEDCOST'|'LEADMANAGEMENT'|'LOCATIONS'|'LOTNUMBEREDINVENTORY'|'MAILMERGE'|'MARKETING'|'MATRIXITEMS'|'MERCHANDISEHIERARCHY'|'MFGROUTING'|'MFGWORKINPROCESS'|'MOBILEPUSHNTF'|'MOSS'|'MULTIBOOKMULTICURR'|'MULTICURRENCY'|'MULTICURRENCYCUSTOMER'|'MULTICURRENCYVENDOR'|'MULTILANGUAGE'|'MULTILOCINVT'|'MULTIPARTNER'|'MULTIPLEBUDGETS'|'MULTIPLECALENDARS'|'MULTISHIPTO'|'MULTISITE'|'MULTISUBSIDIARYCUSTOMER'|'MULTIVENDOR'|'MULTPRICE'|'NETSUITEAPPROVALSWORKFLOW'|'NOTALTSALESAMOUNT'|'NOTMULTIPARTNER'|'NOTTEAMSELLING'|'OIDC'|'ONLINEORDERING'|'OPENIDSSO'|'OPPORTUNITIES'|'OTHERSUBLISTFIELDS'|'OUTLOOKINTEGRATION_V3'|'PARTNERACCESS'|'PARTNERCOMMISSIONS'|'PAYABLES'|'PAYCHECKJOURNAL'|'PAYPALINTEGRATION'|'PAYROLL'|'PAYROLLSERVICE'|'PERIODENDJOURNALENTRIES'|'PERSONALIZED_CATALOG_VIEWS'|'PICKPACKSHIP'|'PLANNEDWORK'|'PRM'|'PROJECTTASKMANAGER'|'PROMOCODES'|'PURCHASECARDDATA'|'PURCHASECONTRACTS'|'PURCHASEORDERS'|'PURCHASEREQS'|'QUANTITYPRICING'|'RECEIVABLES'|'REQUISITIONS'|'RESOURCEALLOCATIONAPPROVAL'|'RESOURCEALLOCATIONCHART'|'RESOURCEALLOCATIONS'|'RESOURCESKILLSETS'|'RETURNAUTHS'|'REVENUECOMMITMENTS'|'REVENUERECOGNITION'|'REVRECSALESORDERFORECASTING'|'REVRECVSOE'|'RFQ'|'RULEBASEDRECOGNITIONTREATMENT'|'RUM'|'SALESCAMPAIGNS'|'SALESORDERS'|'SAMLSSO'|'SDFCOPYTOACCOUNT'|'SERIALIZEDINVENTORY'|'SERVERSIDESCRIPTING'|'SERVICEPRINTEDCHECKS'|'SERVICEPRINTEDW2S'|'SFA'|'SFA_AND_NOTASA'|'SHIPPINGLABELS'|'SITELOCATIONALIASES'|'SOFTDESCRIPTORS'|'STACKABLEPROMOTIONS'|'STANDARDCOSTING'|'STATACCOUNTING'|'STOREPICKUP'|'SUBSCRIPTIONBILLING'|'SUITEANALYTICSCONNECT'|'SUITEAPPCONTROLCENTER'|'SUITEAPPDEVELOPMENTFRAMEWORK'|'SUITECOMMERCE'|'SUITECOMMERCE_ADVANCED'|'SUITECOMMERCE_IN_STORE'|'SUITECOMMERCE_MY_ACCOUNT'|'SUITESIGNON'|'SUITESOCIAL'|'SUPPLTAXCALC'|'SUPPLYALLOCATION'|'SUPPLYCHAINCONTROLTOWER'|'SUPPLYCHAINMANAGEMENT'|'SUPPLYCHAINPREDICTEDRISKS'|'SUPPORT'|'TABLEAU'|'TALENTMANAGEMENT'|'TAXAUDITFILES'|'TBA'|'TEAMSELLING'|'TELEPHONY'|'TIMEBASEDPRICING'|'TIMEBASEDPRICINGSUITEAPP'|'TIMETRACKING'|'TRANDELETIONREASONCODE'|'UNITSOFMEASURE'|'UPSELL'|'URLCOMPONENTALIASES'|'USR'|'VENDORACCESS'|'VENDORPREPAYMENTS'|'VENDORRETURNAUTHS'|'WARRANTYANDREPAIRSMANAGEMENT'|'WBS'|'WEBAPPLICATIONS'|'WEBAPPLICATIONVERSIONING'|'WEBDUPLICATEEMAILMANAGEMENT'|'WEBHOSTING'|'WEBSERVICESEXTERNAL'|'WEBSITE'|'WEBSTORE'|'WEEKLYTIMESHEETS'|'WEEKLYTIMESHEETSNEWUI'|'WITHHOLDINGTAX'|'WORKFLOW'|'WORKORDERS'|'accounting'|'accountingperiods'|'achvend'|'activitycodes'|'addons'|'adminkernelperm'|'advancedbillofmaterials'|'advancedemployeepermissions'|'advancedjobs'|'advancedprinting'|'advancedprocurementapprovals'|'advancedprojectaccounting'|'advancedpromotions'|'advancedrevenuerecognition'|'advancedrevenuerecognitionapp'|'advancedsitecust'|'advancedsitemanagement'|'advbilling'|'advbinseriallotmgmt'|'advforecasting'|'advinventorymgmt'|'advpartneraccess'|'advreceiving'|'advshipping'|'advsubscriptionbilling'|'advtaxengine'|'advwebreports'|'advwebsearch'|'altsalesadvforecast'|'altsalesamount'|'amortization'|'approvalrouting'|'assemblies'|'asynccustomer'|'asyncsalesorder'|'autoapplypromotions'|'autolocationassignment'|'availabletopromise'|'barcodes'|'billingaccounts'|'billingclasses'|'billingratecards'|'billingworkcenter'|'billscosts'|'binmanagement'|'blanketpurchaseorders'|'boxnet'|'campaignassistant'|'campaignsubscriptions'|'cctracking'|'chargebasedbilling'|'checkoutsubdomain'|'classes'|'commercecategories'|'commercesearchanalytics'|'commissiononcustomfields'|'commissions'|'compensationtracking'|'consolpayments'|'createsuitebundles'|'crm'|'crmtime'|'crm_template_categories'|'crosssubsidiaryfulfillment'|'customcode'|'customeraccess'|'customgllines'|'customrecords'|'customsegments'|'customtransactions'|'departments'|'distributionresourceplanning'|'documentpublishing'|'documents'|'downloaditems'|'dropshipments'|'duplicates'|'dynallocation'|'effectivedating'|'eft'|'emailintegration'|'employeecenterpublishing'|'employeechangerequests'|'empperms'|'enhancedinventorylocation'|'enhancedpremierpayroll'|'escalationrules'|'estimates'|'expenseallocation'|'expreports'|'extcrm'|'extremelist'|'extstore'|'fcadvancedsecurity'|'fulfillmentrequest'|'fxrateupdates'|'gainlossacctmapping'|'giftcertificates'|'glauditnumbering'|'gridordermanagement'|'grossprofit'|'groupaveragecosting'|'helpdesk'|'historicalmetrics'|'hranalysis'|'i18ntaxreports'|'ic_framework_or_ic_netting'|'inboundcaseemail'|'inboundshipment'|'installments'|'intercompanyautodropship'|'intercompanyelimination'|'intercompanyautoeliminationengine'|'intercompanytimeexpense'|'intranet'|'intransitpayments'|'inventory'|'inventorycount'|'inventorystatus'|'ipaddressrules'|'issuedb'|'itemdemandplanning'|'itemoptions'|'jobcosting'|'jobmanagement'|'jobrequisition'|'jobs'|'knowledgebase'|'kpireports'|'kudos'|'landedcost'|'leadmanagement'|'locations'|'lotnumberedinventory'|'mailmerge'|'marketing'|'matrixitems'|'merchandisehierarchy'|'mfgrouting'|'mfgworkinprocess'|'mobilepushntf'|'moss'|'multibookmulticurr'|'multicurrency'|'multicurrencycustomer'|'multicurrencyvendor'|'multilanguage'|'multilocinvt'|'multipartner'|'multiplebudgets'|'multiplecalendars'|'multishipto'|'multisite'|'multisubsidiarycustomer'|'multivendor'|'multprice'|'netsuiteapprovalsworkflow'|'notaltsalesamount'|'notmultipartner'|'notteamselling'|'oidc'|'onlineordering'|'openidsso'|'opportunities'|'othersublistfields'|'outlookintegration_v3'|'partneraccess'|'partnercommissions'|'payables'|'paycheckjournal'|'paypalintegration'|'payroll'|'payrollservice'|'periodendjournalentries'|'personalized_catalog_views'|'pickpackship'|'plannedwork'|'prm'|'projecttaskmanager'|'promocodes'|'purchasecarddata'|'purchasecontracts'|'purchaseorders'|'purchasereqs'|'quantitypricing'|'receivables'|'requisitions'|'resourceallocationapproval'|'resourceallocationchart'|'resourceallocations'|'resourceskillsets'|'returnauths'|'revenuecommitments'|'revenuerecognition'|'revrecsalesorderforecasting'|'revrecvsoe'|'rfq'|'rulebasedrecognitiontreatment'|'rum'|'salescampaigns'|'salesorders'|'samlsso'|'sdfcopytoaccount'|'serializedinventory'|'serversidescripting'|'serviceprintedchecks'|'serviceprintedw2s'|'sfa'|'sfa_and_notasa'|'shippinglabels'|'sitelocationaliases'|'softdescriptors'|'stackablepromotions'|'standardcosting'|'stataccounting'|'storepickup'|'subscriptionbilling'|'suiteanalyticsconnect'|'suiteappcontrolcenter'|'suiteappdevelopmentframework'|'suitecommerce'|'suitecommerce_advanced'|'suitecommerce_in_store'|'suitecommerce_my_account'|'suitesignon'|'suitesocial'|'suppltaxcalc'|'supplyallocation'|'supplychaincontroltower'|'supplychainmanagement'|'supplychainpredictedrisks'|'support'|'tableau'|'talentmanagement'|'taxauditfiles'|'tba'|'teamselling'|'telephony'|'timebasedpricing'|'timebasedpricingsuiteapp'|'timetracking'|'trandeletionreasoncode'|'unitsofmeasure'|'upsell'|'urlcomponentaliases'|'usr'|'vendoraccess'|'vendorprepayments'|'vendorreturnauths'|'warrantyandrepairsmanagement'|'wbs'|'webapplications'|'webapplicationversioning'|'webduplicateemailmanagement'|'webhosting'|'webservicesexternal'|'website'|'webstore'|'weeklytimesheets'|'weeklytimesheetsnewui'|'withholdingtax'|'workflow'|'workorders'} name
@@ -3665,7 +4534,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getFeature(name: 'ACCOUNTING' | 'ACCOUNTINGPERIODS' | 'ACHVEND' | 'ACTIVITYCODES' | 'ADDONS' | 'ADMINKERNELPERM' | 'ADVANCEDBILLOFMATERIALS' | 'ADVANCEDEMPLOYEEPERMISSIONS' | 'ADVANCEDJOBS' | 'ADVANCEDPRINTING' | 'ADVANCEDPROCUREMENTAPPROVALS' | 'ADVANCEDPROJECTACCOUNTING' | 'ADVANCEDPROMOTIONS' | 'ADVANCEDREVENUERECOGNITION' | 'ADVANCEDREVENUERECOGNITIONAPP' | 'ADVANCEDSITECUST' | 'ADVANCEDSITEMANAGEMENT' | 'ADVBILLING' | 'ADVBINSERIALLOTMGMT' | 'ADVFORECASTING' | 'ADVINVENTORYMGMT' | 'ADVPARTNERACCESS' | 'ADVRECEIVING' | 'ADVSHIPPING' | 'ADVSUBSCRIPTIONBILLING' | 'ADVTAXENGINE' | 'ADVWEBREPORTS' | 'ADVWEBSEARCH' | 'ALTSALESADVFORECAST' | 'ALTSALESAMOUNT' | 'AMORTIZATION' | 'APPROVALROUTING' | 'ASSEMBLIES' | 'ASYNCCUSTOMER' | 'ASYNCSALESORDER' | 'AUTOAPPLYPROMOTIONS' | 'AUTOLOCATIONASSIGNMENT' | 'AVAILABLETOPROMISE' | 'BARCODES' | 'BILLINGACCOUNTS' | 'BILLINGCLASSES' | 'BILLINGRATECARDS' | 'BILLINGWORKCENTER' | 'BILLSCOSTS' | 'BINMANAGEMENT' | 'BLANKETPURCHASEORDERS' | 'BOXNET' | 'CAMPAIGNASSISTANT' | 'CAMPAIGNSUBSCRIPTIONS' | 'CCTRACKING' | 'CHARGEBASEDBILLING' | 'CHECKOUTSUBDOMAIN' | 'CLASSES' | 'COMMERCECATEGORIES' | 'COMMERCESEARCHANALYTICS' | 'COMMISSIONONCUSTOMFIELDS' | 'COMMISSIONS' | 'COMPENSATIONTRACKING' | 'CONSOLPAYMENTS' | 'CREATESUITEBUNDLES' | 'CRM' | 'CRMTIME' | 'CRM_TEMPLATE_CATEGORIES' | 'CROSSSUBSIDIARYFULFILLMENT' | 'CUSTOMCODE' | 'CUSTOMERACCESS' | 'CUSTOMGLLINES' | 'CUSTOMRECORDS' | 'CUSTOMSEGMENTS' | 'CUSTOMTRANSACTIONS' | 'DEPARTMENTS' | 'DISTRIBUTIONRESOURCEPLANNING' | 'DOCUMENTPUBLISHING' | 'DOCUMENTS' | 'DOWNLOADITEMS' | 'DROPSHIPMENTS' | 'DUPLICATES' | 'DYNALLOCATION' | 'EFFECTIVEDATING' | 'EFT' | 'EMAILINTEGRATION' | 'EMPLOYEECENTERPUBLISHING' | 'EMPLOYEECHANGEREQUESTS' | 'EMPPERMS' | 'ENHANCEDINVENTORYLOCATION' | 'ENHANCEDPREMIERPAYROLL' | 'ESCALATIONRULES' | 'ESTIMATES' | 'EXPENSEALLOCATION' | 'EXPREPORTS' | 'EXTCRM' | 'EXTREMELIST' | 'EXTSTORE' | 'FCADVANCEDSECURITY' | 'FULFILLMENTREQUEST' | 'FXRATEUPDATES' | 'GAINLOSSACCTMAPPING' | 'GIFTCERTIFICATES' | 'GLAUDITNUMBERING' | 'GRIDORDERMANAGEMENT' | 'GROSSPROFIT' | 'GROUPAVERAGECOSTING' | 'HELPDESK' | 'HISTORICALMETRICS' | 'HRANALYSIS' | 'I18NTAXREPORTS' | 'IC_FRAMEWORK_OR_IC_NETTING' | 'INBOUNDCASEEMAIL' | 'INBOUNDSHIPMENT' | 'INSTALLMENTS' | 'INTERCOMPANYAUTODROPSHIP' | 'INTERCOMPANYELIMINATION' | 'INTERCOMPANYAUTOELIMINATIONENGINE' | 'INTERCOMPANYTIMEEXPENSE' | 'INTRANET' | 'INTRANSITPAYMENTS' | 'INVENTORY' | 'INVENTORYCOUNT' | 'INVENTORYSTATUS' | 'IPADDRESSRULES' | 'ISSUEDB' | 'ITEMDEMANDPLANNING' | 'ITEMOPTIONS' | 'JOBCOSTING' | 'JOBMANAGEMENT' | 'JOBREQUISITION' | 'JOBS' | 'KNOWLEDGEBASE' | 'KPIREPORTS' | 'KUDOS' | 'LANDEDCOST' | 'LEADMANAGEMENT' | 'LOCATIONS' | 'LOTNUMBEREDINVENTORY' | 'MAILMERGE' | 'MARKETING' | 'MATRIXITEMS' | 'MERCHANDISEHIERARCHY' | 'MFGROUTING' | 'MFGWORKINPROCESS' | 'MOBILEPUSHNTF' | 'MOSS' | 'MULTIBOOKMULTICURR' | 'MULTICURRENCY' | 'MULTICURRENCYCUSTOMER' | 'MULTICURRENCYVENDOR' | 'MULTILANGUAGE' | 'MULTILOCINVT' | 'MULTIPARTNER' | 'MULTIPLEBUDGETS' | 'MULTIPLECALENDARS' | 'MULTISHIPTO' | 'MULTISITE' | 'MULTISUBSIDIARYCUSTOMER' | 'MULTIVENDOR' | 'MULTPRICE' | 'NETSUITEAPPROVALSWORKFLOW' | 'NOTALTSALESAMOUNT' | 'NOTMULTIPARTNER' | 'NOTTEAMSELLING' | 'OIDC' | 'ONLINEORDERING' | 'OPENIDSSO' | 'OPPORTUNITIES' | 'OTHERSUBLISTFIELDS' | 'OUTLOOKINTEGRATION_V3' | 'PARTNERACCESS' | 'PARTNERCOMMISSIONS' | 'PAYABLES' | 'PAYCHECKJOURNAL' | 'PAYPALINTEGRATION' | 'PAYROLL' | 'PAYROLLSERVICE' | 'PERIODENDJOURNALENTRIES' | 'PERSONALIZED_CATALOG_VIEWS' | 'PICKPACKSHIP' | 'PLANNEDWORK' | 'PRM' | 'PROJECTTASKMANAGER' | 'PROMOCODES' | 'PURCHASECARDDATA' | 'PURCHASECONTRACTS' | 'PURCHASEORDERS' | 'PURCHASEREQS' | 'QUANTITYPRICING' | 'RECEIVABLES' | 'REQUISITIONS' | 'RESOURCEALLOCATIONAPPROVAL' | 'RESOURCEALLOCATIONCHART' | 'RESOURCEALLOCATIONS' | 'RESOURCESKILLSETS' | 'RETURNAUTHS' | 'REVENUECOMMITMENTS' | 'REVENUERECOGNITION' | 'REVRECSALESORDERFORECASTING' | 'REVRECVSOE' | 'RFQ' | 'RULEBASEDRECOGNITIONTREATMENT' | 'RUM' | 'SALESCAMPAIGNS' | 'SALESORDERS' | 'SAMLSSO' | 'SDFCOPYTOACCOUNT' | 'SERIALIZEDINVENTORY' | 'SERVERSIDESCRIPTING' | 'SERVICEPRINTEDCHECKS' | 'SERVICEPRINTEDW2S' | 'SFA' | 'SFA_AND_NOTASA' | 'SHIPPINGLABELS' | 'SITELOCATIONALIASES' | 'SOFTDESCRIPTORS' | 'STACKABLEPROMOTIONS' | 'STANDARDCOSTING' | 'STATACCOUNTING' | 'STOREPICKUP' | 'SUBSCRIPTIONBILLING' | 'SUITEANALYTICSCONNECT' | 'SUITEAPPCONTROLCENTER' | 'SUITEAPPDEVELOPMENTFRAMEWORK' | 'SUITECOMMERCE' | 'SUITECOMMERCE_ADVANCED' | 'SUITECOMMERCE_IN_STORE' | 'SUITECOMMERCE_MY_ACCOUNT' | 'SUITESIGNON' | 'SUITESOCIAL' | 'SUPPLTAXCALC' | 'SUPPLYALLOCATION' | 'SUPPLYCHAINCONTROLTOWER' | 'SUPPLYCHAINMANAGEMENT' | 'SUPPLYCHAINPREDICTEDRISKS' | 'SUPPORT' | 'TABLEAU' | 'TALENTMANAGEMENT' | 'TAXAUDITFILES' | 'TBA' | 'TEAMSELLING' | 'TELEPHONY' | 'TIMEBASEDPRICING' | 'TIMEBASEDPRICINGSUITEAPP' | 'TIMETRACKING' | 'TRANDELETIONREASONCODE' | 'UNITSOFMEASURE' | 'UPSELL' | 'URLCOMPONENTALIASES' | 'USR' | 'VENDORACCESS' | 'VENDORPREPAYMENTS' | 'VENDORRETURNAUTHS' | 'WARRANTYANDREPAIRSMANAGEMENT' | 'WBS' | 'WEBAPPLICATIONS' | 'WEBAPPLICATIONVERSIONING' | 'WEBDUPLICATEEMAILMANAGEMENT' | 'WEBHOSTING' | 'WEBSERVICESEXTERNAL' | 'WEBSITE' | 'WEBSTORE' | 'WEEKLYTIMESHEETS' | 'WEEKLYTIMESHEETSNEWUI' | 'WITHHOLDINGTAX' | 'WORKFLOW' | 'WORKORDERS' | 'accounting' | 'accountingperiods' | 'achvend' | 'activitycodes' | 'addons' | 'adminkernelperm' | 'advancedbillofmaterials' | 'advancedemployeepermissions' | 'advancedjobs' | 'advancedprinting' | 'advancedprocurementapprovals' | 'advancedprojectaccounting' | 'advancedpromotions' | 'advancedrevenuerecognition' | 'advancedrevenuerecognitionapp' | 'advancedsitecust' | 'advancedsitemanagement' | 'advbilling' | 'advbinseriallotmgmt' | 'advforecasting' | 'advinventorymgmt' | 'advpartneraccess' | 'advreceiving' | 'advshipping' | 'advsubscriptionbilling' | 'advtaxengine' | 'advwebreports' | 'advwebsearch' | 'altsalesadvforecast' | 'altsalesamount' | 'amortization' | 'approvalrouting' | 'assemblies' | 'asynccustomer' | 'asyncsalesorder' | 'autoapplypromotions' | 'autolocationassignment' | 'availabletopromise' | 'barcodes' | 'billingaccounts' | 'billingclasses' | 'billingratecards' | 'billingworkcenter' | 'billscosts' | 'binmanagement' | 'blanketpurchaseorders' | 'boxnet' | 'campaignassistant' | 'campaignsubscriptions' | 'cctracking' | 'chargebasedbilling' | 'checkoutsubdomain' | 'classes' | 'commercecategories' | 'commercesearchanalytics' | 'commissiononcustomfields' | 'commissions' | 'compensationtracking' | 'consolpayments' | 'createsuitebundles' | 'crm' | 'crmtime' | 'crm_template_categories' | 'crosssubsidiaryfulfillment' | 'customcode' | 'customeraccess' | 'customgllines' | 'customrecords' | 'customsegments' | 'customtransactions' | 'departments' | 'distributionresourceplanning' | 'documentpublishing' | 'documents' | 'downloaditems' | 'dropshipments' | 'duplicates' | 'dynallocation' | 'effectivedating' | 'eft' | 'emailintegration' | 'employeecenterpublishing' | 'employeechangerequests' | 'empperms' | 'enhancedinventorylocation' | 'enhancedpremierpayroll' | 'escalationrules' | 'estimates' | 'expenseallocation' | 'expreports' | 'extcrm' | 'extremelist' | 'extstore' | 'fcadvancedsecurity' | 'fulfillmentrequest' | 'fxrateupdates' | 'gainlossacctmapping' | 'giftcertificates' | 'glauditnumbering' | 'gridordermanagement' | 'grossprofit' | 'groupaveragecosting' | 'helpdesk' | 'historicalmetrics' | 'hranalysis' | 'i18ntaxreports' | 'ic_framework_or_ic_netting' | 'inboundcaseemail' | 'inboundshipment' | 'installments' | 'intercompanyautodropship' | 'intercompanyelimination' | 'intercompanyautoeliminationengine' | 'intercompanytimeexpense' | 'intranet' | 'intransitpayments' | 'inventory' | 'inventorycount' | 'inventorystatus' | 'ipaddressrules' | 'issuedb' | 'itemdemandplanning' | 'itemoptions' | 'jobcosting' | 'jobmanagement' | 'jobrequisition' | 'jobs' | 'knowledgebase' | 'kpireports' | 'kudos' | 'landedcost' | 'leadmanagement' | 'locations' | 'lotnumberedinventory' | 'mailmerge' | 'marketing' | 'matrixitems' | 'merchandisehierarchy' | 'mfgrouting' | 'mfgworkinprocess' | 'mobilepushntf' | 'moss' | 'multibookmulticurr' | 'multicurrency' | 'multicurrencycustomer' | 'multicurrencyvendor' | 'multilanguage' | 'multilocinvt' | 'multipartner' | 'multiplebudgets' | 'multiplecalendars' | 'multishipto' | 'multisite' | 'multisubsidiarycustomer' | 'multivendor' | 'multprice' | 'netsuiteapprovalsworkflow' | 'notaltsalesamount' | 'notmultipartner' | 'notteamselling' | 'oidc' | 'onlineordering' | 'openidsso' | 'opportunities' | 'othersublistfields' | 'outlookintegration_v3' | 'partneraccess' | 'partnercommissions' | 'payables' | 'paycheckjournal' | 'paypalintegration' | 'payroll' | 'payrollservice' | 'periodendjournalentries' | 'personalized_catalog_views' | 'pickpackship' | 'plannedwork' | 'prm' | 'projecttaskmanager' | 'promocodes' | 'purchasecarddata' | 'purchasecontracts' | 'purchaseorders' | 'purchasereqs' | 'quantitypricing' | 'receivables' | 'requisitions' | 'resourceallocationapproval' | 'resourceallocationchart' | 'resourceallocations' | 'resourceskillsets' | 'returnauths' | 'revenuecommitments' | 'revenuerecognition' | 'revrecsalesorderforecasting' | 'revrecvsoe' | 'rfq' | 'rulebasedrecognitiontreatment' | 'rum' | 'salescampaigns' | 'salesorders' | 'samlsso' | 'sdfcopytoaccount' | 'serializedinventory' | 'serversidescripting' | 'serviceprintedchecks' | 'serviceprintedw2s' | 'sfa' | 'sfa_and_notasa' | 'shippinglabels' | 'sitelocationaliases' | 'softdescriptors' | 'stackablepromotions' | 'standardcosting' | 'stataccounting' | 'storepickup' | 'subscriptionbilling' | 'suiteanalyticsconnect' | 'suiteappcontrolcenter' | 'suiteappdevelopmentframework' | 'suitecommerce' | 'suitecommerce_advanced' | 'suitecommerce_in_store' | 'suitecommerce_my_account' | 'suitesignon' | 'suitesocial' | 'suppltaxcalc' | 'supplyallocation' | 'supplychaincontroltower' | 'supplychainmanagement' | 'supplychainpredictedrisks' | 'support' | 'tableau' | 'talentmanagement' | 'taxauditfiles' | 'tba' | 'teamselling' | 'telephony' | 'timebasedpricing' | 'timebasedpricingsuiteapp' | 'timetracking' | 'trandeletionreasoncode' | 'unitsofmeasure' | 'upsell' | 'urlcomponentaliases' | 'usr' | 'vendoraccess' | 'vendorprepayments' | 'vendorreturnauths' | 'warrantyandrepairsmanagement' | 'wbs' | 'webapplications' | 'webapplicationversioning' | 'webduplicateemailmanagement' | 'webhosting' | 'webservicesexternal' | 'website' | 'webstore' | 'weeklytimesheets' | 'weeklytimesheetsnewui' | 'withholdingtax' | 'workflow' | 'workorders'): boolean;
-
+  
   /**
    * return current user's permission level (0-4) for this permission
    * @param {'ADMI_ACCOUNTING'|'ADMI_ACCOUNTINGBOOK'|'ADMI_ACCOUNTINGLIST'|'ADMI_ACCTPERIODS'|'ADMI_ACCTSETUP'|'ADMI_ACH'|'ADMI_ADVANCED_ORDER_MANAGEMENT'|'ADMI_APP_DEPLOYMENT'|'ADMI_APPPUBLISHER'|'ADMI_AUDITLOGIN'|'ADMI_BACKUPEXPORT'|'ADMI_BANK_CONNECTIVITY_CONFIG'|'ADMI_BILLPAYSETUP'|'ADMI_BUNDLER'|'ADMI_BUNDLERMANUP'|'ADMI_CAMPAIGNEMAIL'|'ADMI_CAMPAIGNSETUP'|'ADMI_CASEFORM'|'ADMI_CASEISSUE'|'ADMI_CASEORIGIN'|'ADMI_CASEPRIORITY'|'ADMI_CASERULE'|'ADMI_CASESTATUS'|'ADMI_CASETERRITORY'|'ADMI_CASETYPE'|'ADMI_CERTIFICATES'|'ADMI_CLASSESTOLOCS'|'ADMI_CLASSSEGMENTMAPPING'|'ADMI_CLOSEPERIOD'|'ADMI_COMMERCECATEGORY'|'ADMI_COMMISSIONSETUP'|'ADMI_COMPANY'|'ADMI_CONVERTCLASSES'|'ADMI_CONVERTLEAD'|'ADMI_COPYPROJECTTASK'|'ADMI_CREDITCARD'|'ADMI_CRMLIST'|'ADMI_CSVIMPORTPREF'|'ADMI_CUSTADDRESSFORM'|'ADMI_CUSTBODYFIELD'|'ADMI_CUSTCATEGORY'|'ADMI_CUSTCENTER'|'ADMI_CUSTCOLUMNFIELD'|'ADMI_CUSTEMAILLAYOUT'|'ADMI_CUSTENTITYFIELD'|'ADMI_CUSTENTRYFORM'|'ADMI_CUSTEVENTFIELD'|'ADMI_CUSTFIELD'|'ADMI_CUSTFIELDTAB'|'ADMI_CUSTFORM'|'ADMI_CUSTITEMFIELD'|'ADMI_CUSTITEMNUMBERFIELD'|'ADMI_CUSTLAYOUT'|'ADMI_CUSTLIST'|'ADMI_CUSTOMERFORM'|'ADMI_CUSTOMER_SEGMENTS'|'ADMI_CUSTOMIZEDFIELDLEVELHELP'|'ADMI_CUSTOMSCRIPT'|'ADMI_CUSTOMSUBLIST'|'ADMI_CUSTOTHERFIELD'|'ADMI_CUSTRECORD'|'ADMI_CUSTRECORDFORM'|'ADMI_CUSTSECTION'|'ADMI_CUSTTASKS'|'ADMI_CUSTTRANSACTION'|'ADMI_DELETEDRECORD'|'ADMI_DEPTSEGMENTMAPPING'|'ADMI_DEVICE_ID'|'ADMI_DOMAINS'|'ADMI_DUPLICATESETUP'|'ADMI_EMPLCATEGORY'|'ADMI_EMPLOYEELIST'|'ADMI_ENABLEFEATURES'|'ADMI_ENTITYACCOUNTMAPPING'|'ADMI_ENTITYSTATUS'|'ADMI_ESCALATIONRULE'|'ADMI_ESCALATIONTERRITORY'|'ADMI_EXPORTIIF'|'ADMI_FFTEXCEPTIONREASON'|'ADMI_FINANCIALINSTITUTION'|'ADMI_FINCHARGEPREF'|'ADMI_GAINLOSSACCTMAPPING'|'ADMI_GLOBALACCOUNTMAPPING'|'ADMI_IMPORTCSVFILE'|'ADMI_IMPORTXML'|'ADMI_INTEGRAPP'|'ADMI_ISSUESETUP'|'ADMI_ITEMACCOUNTMAPPING'|'ADMI_KEYS'|'ADMI_KNOWLEDGEBASE'|'ADMI_KPIREPORT'|'ADMI_LOCATIONCOSTINGGROUP'|'ADMI_LOCSEGMENTMAPPING'|'ADMI_MANAGECUSTOMSEGMENTS'|'ADMI_MANAGE_OAUTH_TOKENS'|'ADMI_MANAGE_OWN_OAUTH_TOKENS'|'ADMI_MANAGEROLES'|'ADMI_MANAGEUSERS'|'ADMI_MHLEVEL'|'ADMI_MHNODE'|'ADMI_MHVERSION'|'ADMI_OIDCSETUP'|'ADMI_OPENIDSSOSETUP'|'ADMI_ORDERALLOCATIONSTRATEGY'|'ADMI_OUTLOOKINTEGRATION'|'ADMI_OUTLOOKINTEGRATION_V3'|'ADMI_PAYROLL'|'ADMI_PI_REMOVAL_CREATE'|'ADMI_PI_REMOVAL_RUN'|'ADMI_PROJECT_ACCOUNTING_SETUP'|'ADMI_REVIEW_CUSTOM_GL_RUNS'|'ADMI_SALESTERRITORY'|'ADMI_SAMLSSOSETUP'|'ADMI_SAVEDASHBOARD'|'ADMI_SETUPCOMPANY'|'ADMI_SETUPIMAGERESIZE'|'ADMI_SETUPYEARSTATUS'|'ADMI_SFASETUP'|'ADMI_SITEMANAGEMENT'|'ADMI_STATETAXIMPORT'|'ADMI_STORESEARCH'|'ADMI_STORESETUP'|'ADMI_SUBSIDIARYSETTINGSMANAGER'|'ADMI_SUITEANALYTICSCONNECT'|'ADMI_SUITESIGNON'|'ADMI_SUPPLYALLOCATIONSETUP'|'ADMI_SUPPORTSETUP'|'ADMI_SWAPPRICES'|'ADMI_TAXMIGRATION'|'ADMI_TIMEMODIFICATION'|'ADMI_TAXPERIODS'|'ADMI_TRANSITEMTXT'|'ADMI_TWOFACTORAUTH'|'ADMI_TWOFACTORAUTHBASE'|'ADMI_UNCATSITEITEMS'|'ADMI_UNLOCKEDTIMEPERIOD'|'ADMI_UPDATEPRICES'|'ADMI_UPSELLSETUP'|'ADMI_USERPREF'|'ADMI_WEBSERVICES'|'ADMI_WEBSERVICESLOG'|'ADMI_WEBSERVICESSETUP'|'ADMI_WORKFLOW'|'LIST_ACCOUNT'|'LIST_AMORTIZATION'|'LIST_BIG_SEARCH'|'LIST_BILLINGSCHEDULE'|'LIST_BILLOFDISTRIBUTION'|'LIST_BILLOFMATERIALSINQUIRY'|'LIST_BOM'|'LIST_BIN'|'LIST_CALENDAR'|'LIST_CALL'|'LIST_CAMPAIGN'|'LIST_CAMPAIGNHISTORY'|'LIST_CASE'|'LIST_CATEGORY'|'LIST_CERTIFICATES'|'LIST_CHECKITEMAVAILABILITY'|'LIST_CLASS'|'LIST_COLORTHEME'|'LIST_COMMISSIONRULES'|'LIST_COMPANY'|'LIST_COMPETITOR'|'LIST_COMPONENTWHEREUSEDINQUIRY'|'LIST_CONTACT'|'LIST_CONTACTROLE'|'LIST_COSTEDBOMINQUIRY'|'LIST_CRMGROUP'|'LIST_CRMMESSAGE'|'LIST_CRMTEMPLATE'|'LIST_CURRENCY'|'LIST_CUSTJOB'|'LIST_CUSTPROFILE'|'LIST_CUSTRECORDENTRY'|'LIST_DEPARTMENT'|'LIST_DISTRIBUTIONNETWORK'|'LIST_EMAILTEMPLATE'|'LIST_EMPLOYEE'|'LIST_EMPLOYEECHANGETYPE'|'LIST_EMPLOYEESSN'|'LIST_ENTITY_DUPLICATES'|'LIST_EVENT'|'LIST_EXPENSEAMORTIZATIONRULE'|'LIST_EXPENSEPLAN'|'LIST_EXPORT'|'LIST_FAIRVALUEDIMENSION'|'LIST_FAIRVALUEFORMULA'|'LIST_FAIRVALUEPRICE'|'LIST_FAXMESSAGE'|'LIST_FAXTEMPLATE'|'LIST_FILECABINET'|'LIST_FIND'|'LIST_FISCALCALENDAR'|'LIST_GENERICRESOURCE'|'LIST_GLLINESAUDITLOG'|'LIST_GLLINESAUDITLOGSEG'|'LIST_GLOBALINVTRELATIONSHIP'|'LIST_HCMJOB'|'LIST_HCMPOSITION'|'LIST_HISTORY'|'LIST_INFOITEM'|'LIST_INFOITEMFORM'|'LIST_INTEGRAPP'|'LIST_INVCOSTTEMPLATE'|'LIST_INVENTORYSTATUS'|'LIST_ISSUE'|'LIST_ITEM'|'LIST_ITEM_COLLECTION'|'LIST_ITEMDEMANDPLAN'|'LIST_ITEMREVENUECATEGORY'|'LIST_ITEM_REVISION'|'LIST_ITEMSUPPLYPLAN'|'LIST_JOB'|'LIST_KEYS'|'LIST_KNOWLEDGEBASE'|'LIST_LOCATION'|'LIST_MAILMERGE'|'LIST_MAILMESSAGE'|'LIST_MAILTEMPLATE'|'LIST_MASSUPDATES'|'LIST_MEDIAITEMFOLDER'|'LIST_MEMDOC'|'LIST_MFGCOSTTEMPLATE'|'LIST_MFGROUTING'|'LIST_NEWSITEM'|'LIST_NOTIFICATION'|'LIST_ORDER_REALLOCATION'|'LIST_OTHERNAME'|'LIST_OUTBOUNDREQUEST'|'LIST_PARTNER'|'LIST_PARTNERCOMMISSNRULES'|'LIST_PAYCHECK'|'LIST_PAYMETH'|'LIST_PAYROLLITEM'|'LIST_PDFMESSAGE'|'LIST_PDFTEMPLATE'|'LIST_PLANNEDREVENUE'|'LIST_PLANNEDSTANDARDCOST'|'LIST_PRESCATEGORY'|'LIST_PROJECT_BUDGET'|'LIST_PROJECTREVENUERULE'|'LIST_PROJECTTASK'|'LIST_PROJECTTEMPLATE'|'LIST_PROMOTIONCODE'|'LIST_PUBLISHSEARCH'|'LIST_QUANTITYPRICINGSCHEDULE'|'LIST_RELATEDITEMS'|'LIST_RESOURCE'|'LIST_REVENUEELEMENT'|'LIST_REVENUEPLAN'|'LIST_REVENUERECOGNITIONRULE'|'LIST_REVRECSCHEDULE'|'LIST_REVRECTREATMENT'|'LIST_REVRECTREATMENTRULE'|'LIST_REVRECFIELDMAPPING'|'LIST_REVRECVSOE'|'LIST_RSRCALLOCATION'|'LIST_RSRCALLOCATIONAPPRV'|'LIST_SALESCAMPAIGN'|'LIST_SALESROLE'|'LIST_SCSNAPSHOT'|'LIST_SENTEMAIL'|'LIST_SHIPITEM'|'LIST_SHIPPARTPACKAGE'|'LIST_SHIPPARTREGISTRATION'|'LIST_SHIPPARTSHIPMENT'|'LIST_SITEEMAILTEMPLATE'|'LIST_STANDARDCOSTVERSION'|'LIST_STORETAB'|'LIST_SUBSCRIPTION'|'LIST_SUBSCRIPTIONPLAN'|'LIST_SUBSIDIARY'|'LIST_SUPPLY_REALLOCATION'|'LIST_SYSTEMEMAILTEMPLATE'|'LIST_TALENT_ADMINISTRATION'|'LIST_TASK'|'LIST_TAXITEM'|'LIST_TAXSCHEDULE'|'LIST_TEGATAACCOUNT'|'LIST_TEMPLATE_CATEGORY'|'LIST_TIMEOFFADMIN'|'LIST_TRANNUMBERAUDITLOG'|'LIST_UNIT'|'LIST_UPSELL'|'LIST_UPSELLWIZARD'|'LIST_VENDOR'|'LIST_WBS'|'LIST_WEBSITE'|'LIST_WORKCALENDAR'|'LIST_WORKPLACE'|'REGT_ACCTPAY'|'REGT_ACCTREC'|'REGT_BANK'|'REGT_COGS'|'REGT_CREDCARD'|'REGT_DEFEREXPENSE'|'REGT_DEFERREVENUE'|'REGT_EQUITY'|'REGT_EXPENSE'|'REGT_FIXEDASSET'|'REGT_INCOME'|'REGT_LONGTERMLIAB'|'REGT_NONPOSTING'|'REGT_OTHASSET'|'REGT_OTHCURRASSET'|'REGT_OTHCURRLIAB'|'REGT_OTHINCOME'|'REGT_UNBILLEDREC'|'REPO_1099'|'REPO_940'|'REPO_941'|'REPO_ACCOUNTDETAIL'|'REPO_AMORTIZATION'|'REPO_ANALYTICS'|'REPO_AP'|'REPO_AR'|'REPO_AUTHPARTNERCOMMISSION'|'REPO_BALANCESHEET'|'REPO_BOOKINGS'|'REPO_CASHFLOW'|'REPO_COMMISSION'|'REPO_CUSTOMIZATION'|'REPO_DEFERREDEXPENSE'|'REPO_FINANCIALS'|'REPO_GL'|'REPO_INTEGRATION'|'REPO_INVENTORY'|'REPO_ISSUE'|'REPO_MARKETING'|'REPO_NONPOSTING'|'REPO_PANDL'|'REPO_PARTNERCOMMISSION'|'REPO_PAYCHECKDETAIL'|'REPO_PAYROLL'|'REPO_PAYROLLHOURSEARNING'|'REPO_PAYROLLJOURNAL'|'REPO_PAYROLLLIAB'|'REPO_PAYROLLSTATEWITHHOLD'|'REPO_PAYROLLW2'|'REPO_PERIODENDFINANCIALS'|'REPO_PROJECT_ACCOUNTING'|'REPO_PURCHASEORDER'|'REPO_PURCHASES'|'REPO_QUOTA'|'REPO_RECONCILE'|'REPO_REMINDEREMPLOYEE'|'REPO_RETURNAUTH'|'REPO_REVREC'|'REPO_RSRCALLOCATION'|'REPO_SALES'|'REPO_SALESORDER'|'REPO_SALES_PARTNER'|'REPO_SALES_PROMO'|'REPO_SCHEDULE'|'REPO_SFA'|'REPO_SUPPORT'|'REPO_TAX'|'REPO_TAXREPORTS'|'REPO_TIME'|'REPO_TRAN'|'REPO_TRIALBALANCE'|'REPO_UNBILLED'|'REPO_WEBSITE'|'REPO_WEBSTORE'|'TRAN_ADJUSTMENTJOURNAL'|'TRAN_ALLOCSCHEDULE'|'TRAN_AMENDW4'|'TRAN_APPROVECOMMISSN'|'TRAN_APPROVEDD'|'TRAN_APPROVEEFT'|'TRAN_APPROVEPARTNERCOMM'|'TRAN_APPROVEVP'|'TRAN_AUDIT'|'TRAN_AUTO_CASH'|'TRAN_BALJRNAL'|'TRAN_BILLPAY_APPROVE'|'TRAN_BILLPAY_STATUS'|'TRAN_BINTRNFR'|'TRAN_BINWKSHT'|'TRAN_BLANKORD'|'TRAN_BLANKORDAPPRV'|'TRAN_BUDGET'|'TRAN_BUILD'|'TRAN_CARDCHRG'|'TRAN_CASHRFND'|'TRAN_CASHSALE'|'TRAN_CHARGE'|'TRAN_CHARGERULE'|'TRAN_CHECK'|'TRAN_CLEARHOLD'|'TRAN_COMMISSN'|'TRAN_COPY_BUDGET'|'TRAN_CUSTAUTH'|'TRAN_CUSTCHRG'|'TRAN_CUSTCRED'|'TRAN_CUSTDEP'|'TRAN_CUSTINVC'|'TRAN_CUSTINVCAPPRV'|'TRAN_CUSTPYMT'|'TRAN_CUSTRFND'|'TRAN_DEPAPPL'|'TRAN_DEPOSIT'|'TRAN_EDITPROFILE'|'TRAN_ESTIMATE'|'TRAN_EXPREPT'|'TRAN_FFTREQ'|'TRAN_FINCHRG'|'TRAN_FIND'|'TRAN_FORECAST'|'TRAN_FXREVAL'|'TRAN_GST_REFUND'|'TRAN_IMPORTOLBFILE'|'TRAN_INTERCOADJ'|'TRAN_INVADJST'|'TRAN_INVCOUNT'|'TRAN_INVDISTR'|'TRAN_INVREVAL'|'TRAN_INVTRNFR'|'TRAN_INVWKSHT'|'TRAN_ITEMRCPT'|'TRAN_ITEMSHIP'|'TRAN_JOURNAL'|'TRAN_JOURNALAPPRV'|'TRAN_LIABPYMT'|'TRAN_MGRFORECAST'|'TRAN_OPENBAL'|'TRAN_OPPRTNTY'|'TRAN_OWNTRNSF'|'TRAN_PARTNERCOMMISSN'|'TRAN_PAYCHECK'|'TRAN_PAYMENTAUDIT'|'TRAN_PAYROLLRUN'|'TRAN_PCHKJRNL'|'TRAN_PEJRNL'|'TRAN_POSTVENDORBILLVARIANCE'|'TRAN_PRICELIST'|'TRAN_PRINT'|'TRAN_PRINTCHECKSFORMS'|'TRAN_PROJECT_IC_CHARGE_REQUEST'|'TRAN_PURCHCON'|'TRAN_PURCHCONAPPRV'|'TRAN_PURCHORD'|'TRAN_PURCHORDBILL'|'TRAN_PURCHORDRECEIVE'|'TRAN_PURCHREQ'|'TRAN_PURCHREQAPPRV'|'TRAN_QUOTA'|'TRAN_RECOG_GIFTCERT_INCOME'|'TRAN_RECONCILE'|'TRAN_REVARRNG'|'TRAN_REVARRNGAPPRV'|'TRAN_REVCOMM'|'TRAN_REVCOMRV'|'TRAN_REVCONTR'|'TRAN_RFQ'|'TRAN_RTNAUTH'|'TRAN_RTNAUTHAPPRV'|'TRAN_RTNAUTHCREDIT'|'TRAN_RTNAUTHRECEIVE'|'TRAN_RTNAUTHREVERSEREVCOMMIT'|'TRAN_SALESORD'|'TRAN_SALESORDAPPRV'|'TRAN_SALESORDCOMMITREVENUE'|'TRAN_SALESORDFULFILL'|'TRAN_SALESORDINVOICE'|'TRAN_SALESORDREVENUECONTRACT'|'TRAN_STATEMENT'|'TRAN_STATUSDD'|'TRAN_STATUSEFT'|'TRAN_STATUSVP'|'TRAN_STPICKUP'|'TRAN_TAXLIAB'|'TRAN_TAXPYMT'|'TRAN_TEGPYBL'|'TRAN_TEGRCVBL'|'TRAN_TIMEBILL'|'TRAN_TIMEPOST'|'TRAN_TRANSFER'|'TRAN_TRNFRORD'|'TRAN_TRNFRORDAPPRV'|'TRAN_UNBUILD'|'TRAN_VENDAUTH'|'TRAN_VENDAUTHAPPRV'|'TRAN_VENDAUTHCREDIT'|'TRAN_VENDAUTHRETURN'|'TRAN_VENDBILL'|'TRAN_VENDBILLAPPRV'|'TRAN_VENDCRED'|'TRAN_VENDPYMT'|'TRAN_VENDPYMTAPPRV'|'TRAN_VENDRFQ'|'TRAN_VPREPAPP'|'TRAN_VPREP'|'TRAN_WAVE'|'TRAN_WOCLOSE'|'TRAN_WOCOMPL'|'TRAN_WOISSUE'|'TRAN_WORKORD'|'TRAN_WORKORDBUILD'|'TRAN_WORKORDCLOSE'|'TRAN_WORKORDCOMPLETE'|'TRAN_WORKORDISSUE'|'TRAN_WORKORDMARKBUILT'|'TRAN_WORKORDMARKFIRMED'|'TRAN_WORKORDMARKRELEASED'|'TRAN_YTDADJST'|'admi_accounting'|'admi_accountingbook'|'admi_accountinglist'|'admi_acctperiods'|'admi_acctsetup'|'admi_ach'|'admi_advanced_order_management'|'admi_app_deployment'|'admi_apppublisher'|'admi_auditlogin'|'admi_backupexport'|'admi_bank_connectivity_config'|'admi_billpaysetup'|'admi_bundler'|'admi_bundlermanup'|'admi_campaignemail'|'admi_campaignsetup'|'admi_caseform'|'admi_caseissue'|'admi_caseorigin'|'admi_casepriority'|'admi_caserule'|'admi_casestatus'|'admi_caseterritory'|'admi_casetype'|'admi_certificates'|'admi_classestolocs'|'admi_classsegmentmapping'|'admi_closeperiod'|'admi_commercecategory'|'admi_commissionsetup'|'admi_company'|'admi_convertclasses'|'admi_convertlead'|'admi_copyprojecttask'|'admi_creditcard'|'admi_crmlist'|'admi_csvimportpref'|'admi_custaddressform'|'admi_custbodyfield'|'admi_custcategory'|'admi_custcenter'|'admi_custcolumnfield'|'admi_custemaillayout'|'admi_custentityfield'|'admi_custentryform'|'admi_custeventfield'|'admi_custfield'|'admi_custfieldtab'|'admi_custform'|'admi_custitemfield'|'admi_custitemnumberfield'|'admi_custlayout'|'admi_custlist'|'admi_customerform'|'admi_customer_segments'|'admi_customizedfieldlevelhelp'|'admi_customscript'|'admi_customsublist'|'admi_custotherfield'|'admi_custrecord'|'admi_custrecordform'|'admi_custsection'|'admi_custtasks'|'admi_custtransaction'|'admi_deletedrecord'|'admi_deptsegmentmapping'|'admi_device_id'|'admi_domains'|'admi_duplicatesetup'|'admi_emplcategory'|'admi_employeelist'|'admi_enablefeatures'|'admi_entityaccountmapping'|'admi_entitystatus'|'admi_escalationrule'|'admi_escalationterritory'|'admi_exportiif'|'admi_fftexceptionreason'|'admi_financialinstitution'|'admi_finchargepref'|'admi_gainlossacctmapping'|'admi_globalaccountmapping'|'admi_importcsvfile'|'admi_importxml'|'admi_integrapp'|'admi_issuesetup'|'admi_itemaccountmapping'|'admi_keys'|'admi_knowledgebase'|'admi_kpireport'|'admi_locationcostinggroup'|'admi_locsegmentmapping'|'admi_managecustomsegments'|'admi_manage_oauth_tokens'|'admi_manage_own_oauth_tokens'|'admi_manageroles'|'admi_manageusers'|'admi_mhlevel'|'admi_mhnode'|'admi_mhversion'|'admi_oidcsetup'|'admi_openidssosetup'|'admi_orderallocationstrategy'|'admi_outlookintegration'|'admi_outlookintegration_v3'|'admi_payroll'|'admi_pi_removal_create'|'admi_pi_removal_run'|'admi_project_accounting_setup'|'admi_review_custom_gl_runs'|'admi_salesterritory'|'admi_samlssosetup'|'admi_savedashboard'|'admi_setupcompany'|'admi_setupimageresize'|'admi_setupyearstatus'|'admi_sfasetup'|'admi_sitemanagement'|'admi_statetaximport'|'admi_storesearch'|'admi_storesetup'|'admi_subsidiarysettingsmanager'|'admi_suiteanalyticsconnect'|'admi_suitesignon'|'admi_supplyallocationsetup'|'admi_supportsetup'|'admi_swapprices'|'admi_taxmigration'|'admi_timemodification'|'admi_taxperiods'|'admi_transitemtxt'|'admi_twofactorauth'|'admi_twofactorauthbase'|'admi_uncatsiteitems'|'admi_unlockedtimeperiod'|'admi_updateprices'|'admi_upsellsetup'|'admi_userpref'|'admi_webservices'|'admi_webserviceslog'|'admi_webservicessetup'|'admi_workflow'|'list_account'|'list_amortization'|'list_big_search'|'list_billingschedule'|'list_billofdistribution'|'list_billofmaterialsinquiry'|'list_bom'|'list_bin'|'list_calendar'|'list_call'|'list_campaign'|'list_campaignhistory'|'list_case'|'list_category'|'list_certificates'|'list_checkitemavailability'|'list_class'|'list_colortheme'|'list_commissionrules'|'list_company'|'list_competitor'|'list_componentwhereusedinquiry'|'list_contact'|'list_contactrole'|'list_costedbominquiry'|'list_crmgroup'|'list_crmmessage'|'list_crmtemplate'|'list_currency'|'list_custjob'|'list_custprofile'|'list_custrecordentry'|'list_department'|'list_distributionnetwork'|'list_emailtemplate'|'list_employee'|'list_employeechangetype'|'list_employeessn'|'list_entity_duplicates'|'list_event'|'list_expenseamortizationrule'|'list_expenseplan'|'list_export'|'list_fairvaluedimension'|'list_fairvalueformula'|'list_fairvalueprice'|'list_faxmessage'|'list_faxtemplate'|'list_filecabinet'|'list_find'|'list_fiscalcalendar'|'list_genericresource'|'list_gllinesauditlog'|'list_gllinesauditlogseg'|'list_globalinvtrelationship'|'list_hcmjob'|'list_hcmposition'|'list_history'|'list_infoitem'|'list_infoitemform'|'list_integrapp'|'list_invcosttemplate'|'list_inventorystatus'|'list_issue'|'list_item'|'list_item_collection'|'list_itemdemandplan'|'list_itemrevenuecategory'|'list_item_revision'|'list_itemsupplyplan'|'list_job'|'list_keys'|'list_knowledgebase'|'list_location'|'list_mailmerge'|'list_mailmessage'|'list_mailtemplate'|'list_massupdates'|'list_mediaitemfolder'|'list_memdoc'|'list_mfgcosttemplate'|'list_mfgrouting'|'list_newsitem'|'list_notification'|'list_order_reallocation'|'list_othername'|'list_outboundrequest'|'list_partner'|'list_partnercommissnrules'|'list_paycheck'|'list_paymeth'|'list_payrollitem'|'list_pdfmessage'|'list_pdftemplate'|'list_plannedrevenue'|'list_plannedstandardcost'|'list_prescategory'|'list_project_budget'|'list_projectrevenuerule'|'list_projecttask'|'list_projecttemplate'|'list_promotioncode'|'list_publishsearch'|'list_quantitypricingschedule'|'list_relateditems'|'list_resource'|'list_revenueelement'|'list_revenueplan'|'list_revenuerecognitionrule'|'list_revrecschedule'|'list_revrectreatment'|'list_revrectreatmentrule'|'list_revrecfieldmapping'|'list_revrecvsoe'|'list_rsrcallocation'|'list_rsrcallocationapprv'|'list_salescampaign'|'list_salesrole'|'list_scsnapshot'|'list_sentemail'|'list_shipitem'|'list_shippartpackage'|'list_shippartregistration'|'list_shippartshipment'|'list_siteemailtemplate'|'list_standardcostversion'|'list_storetab'|'list_subscription'|'list_subscriptionplan'|'list_subsidiary'|'list_supply_reallocation'|'list_systememailtemplate'|'list_talent_administration'|'list_task'|'list_taxitem'|'list_taxschedule'|'list_tegataaccount'|'list_template_category'|'list_timeoffadmin'|'list_trannumberauditlog'|'list_unit'|'list_upsell'|'list_upsellwizard'|'list_vendor'|'list_wbs'|'list_website'|'list_workcalendar'|'list_workplace'|'regt_acctpay'|'regt_acctrec'|'regt_bank'|'regt_cogs'|'regt_credcard'|'regt_deferexpense'|'regt_deferrevenue'|'regt_equity'|'regt_expense'|'regt_fixedasset'|'regt_income'|'regt_longtermliab'|'regt_nonposting'|'regt_othasset'|'regt_othcurrasset'|'regt_othcurrliab'|'regt_othincome'|'regt_unbilledrec'|'repo_1099'|'repo_940'|'repo_941'|'repo_accountdetail'|'repo_amortization'|'repo_analytics'|'repo_ap'|'repo_ar'|'repo_authpartnercommission'|'repo_balancesheet'|'repo_bookings'|'repo_cashflow'|'repo_commission'|'repo_customization'|'repo_deferredexpense'|'repo_financials'|'repo_gl'|'repo_integration'|'repo_inventory'|'repo_issue'|'repo_marketing'|'repo_nonposting'|'repo_pandl'|'repo_partnercommission'|'repo_paycheckdetail'|'repo_payroll'|'repo_payrollhoursearning'|'repo_payrolljournal'|'repo_payrollliab'|'repo_payrollstatewithhold'|'repo_payrollw2'|'repo_periodendfinancials'|'repo_project_accounting'|'repo_purchaseorder'|'repo_purchases'|'repo_quota'|'repo_reconcile'|'repo_reminderemployee'|'repo_returnauth'|'repo_revrec'|'repo_rsrcallocation'|'repo_sales'|'repo_salesorder'|'repo_sales_partner'|'repo_sales_promo'|'repo_schedule'|'repo_sfa'|'repo_support'|'repo_tax'|'repo_taxreports'|'repo_time'|'repo_tran'|'repo_trialbalance'|'repo_unbilled'|'repo_website'|'repo_webstore'|'tran_adjustmentjournal'|'tran_allocschedule'|'tran_amendw4'|'tran_approvecommissn'|'tran_approvedd'|'tran_approveeft'|'tran_approvepartnercomm'|'tran_approvevp'|'tran_audit'|'tran_auto_cash'|'tran_baljrnal'|'tran_billpay_approve'|'tran_billpay_status'|'tran_bintrnfr'|'tran_binwksht'|'tran_blankord'|'tran_blankordapprv'|'tran_budget'|'tran_build'|'tran_cardchrg'|'tran_cashrfnd'|'tran_cashsale'|'tran_charge'|'tran_chargerule'|'tran_check'|'tran_clearhold'|'tran_commissn'|'tran_copy_budget'|'tran_custauth'|'tran_custchrg'|'tran_custcred'|'tran_custdep'|'tran_custinvc'|'tran_custinvcapprv'|'tran_custpymt'|'tran_custrfnd'|'tran_depappl'|'tran_deposit'|'tran_editprofile'|'tran_estimate'|'tran_exprept'|'tran_fftreq'|'tran_finchrg'|'tran_find'|'tran_forecast'|'tran_fxreval'|'tran_gst_refund'|'tran_importolbfile'|'tran_intercoadj'|'tran_invadjst'|'tran_invcount'|'tran_invdistr'|'tran_invreval'|'tran_invtrnfr'|'tran_invwksht'|'tran_itemrcpt'|'tran_itemship'|'tran_journal'|'tran_journalapprv'|'tran_liabpymt'|'tran_mgrforecast'|'tran_openbal'|'tran_opprtnty'|'tran_owntrnsf'|'tran_partnercommissn'|'tran_paycheck'|'tran_paymentaudit'|'tran_payrollrun'|'tran_pchkjrnl'|'tran_pejrnl'|'tran_postvendorbillvariance'|'tran_pricelist'|'tran_print'|'tran_printchecksforms'|'tran_project_ic_charge_request'|'tran_purchcon'|'tran_purchconapprv'|'tran_purchord'|'tran_purchordbill'|'tran_purchordreceive'|'tran_purchreq'|'tran_purchreqapprv'|'tran_quota'|'tran_recog_giftcert_income'|'tran_reconcile'|'tran_revarrng'|'tran_revarrngapprv'|'tran_revcomm'|'tran_revcomrv'|'tran_revcontr'|'tran_rfq'|'tran_rtnauth'|'tran_rtnauthapprv'|'tran_rtnauthcredit'|'tran_rtnauthreceive'|'tran_rtnauthreverserevcommit'|'tran_salesord'|'tran_salesordapprv'|'tran_salesordcommitrevenue'|'tran_salesordfulfill'|'tran_salesordinvoice'|'tran_salesordrevenuecontract'|'tran_statement'|'tran_statusdd'|'tran_statuseft'|'tran_statusvp'|'tran_stpickup'|'tran_taxliab'|'tran_taxpymt'|'tran_tegpybl'|'tran_tegrcvbl'|'tran_timebill'|'tran_timepost'|'tran_transfer'|'tran_trnfrord'|'tran_trnfrordapprv'|'tran_unbuild'|'tran_vendauth'|'tran_vendauthapprv'|'tran_vendauthcredit'|'tran_vendauthreturn'|'tran_vendbill'|'tran_vendbillapprv'|'tran_vendcred'|'tran_vendpymt'|'tran_vendpymtapprv'|'tran_vendrfq'|'tran_vprepapp'|'tran_vprep'|'tran_wave'|'tran_woclose'|'tran_wocompl'|'tran_woissue'|'tran_workord'|'tran_workordbuild'|'tran_workordclose'|'tran_workordcomplete'|'tran_workordissue'|'tran_workordmarkbuilt'|'tran_workordmarkfirmed'|'tran_workordmarkreleased'|'tran_ytdadjst'} name
@@ -3677,7 +4546,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getPermission(name: 'ADMI_ACCOUNTING' | 'ADMI_ACCOUNTINGBOOK' | 'ADMI_ACCOUNTINGLIST' | 'ADMI_ACCTPERIODS' | 'ADMI_ACCTSETUP' | 'ADMI_ACH' | 'ADMI_ADVANCED_ORDER_MANAGEMENT' | 'ADMI_APP_DEPLOYMENT' | 'ADMI_APPPUBLISHER' | 'ADMI_AUDITLOGIN' | 'ADMI_BACKUPEXPORT' | 'ADMI_BANK_CONNECTIVITY_CONFIG' | 'ADMI_BILLPAYSETUP' | 'ADMI_BUNDLER' | 'ADMI_BUNDLERMANUP' | 'ADMI_CAMPAIGNEMAIL' | 'ADMI_CAMPAIGNSETUP' | 'ADMI_CASEFORM' | 'ADMI_CASEISSUE' | 'ADMI_CASEORIGIN' | 'ADMI_CASEPRIORITY' | 'ADMI_CASERULE' | 'ADMI_CASESTATUS' | 'ADMI_CASETERRITORY' | 'ADMI_CASETYPE' | 'ADMI_CERTIFICATES' | 'ADMI_CLASSESTOLOCS' | 'ADMI_CLASSSEGMENTMAPPING' | 'ADMI_CLOSEPERIOD' | 'ADMI_COMMERCECATEGORY' | 'ADMI_COMMISSIONSETUP' | 'ADMI_COMPANY' | 'ADMI_CONVERTCLASSES' | 'ADMI_CONVERTLEAD' | 'ADMI_COPYPROJECTTASK' | 'ADMI_CREDITCARD' | 'ADMI_CRMLIST' | 'ADMI_CSVIMPORTPREF' | 'ADMI_CUSTADDRESSFORM' | 'ADMI_CUSTBODYFIELD' | 'ADMI_CUSTCATEGORY' | 'ADMI_CUSTCENTER' | 'ADMI_CUSTCOLUMNFIELD' | 'ADMI_CUSTEMAILLAYOUT' | 'ADMI_CUSTENTITYFIELD' | 'ADMI_CUSTENTRYFORM' | 'ADMI_CUSTEVENTFIELD' | 'ADMI_CUSTFIELD' | 'ADMI_CUSTFIELDTAB' | 'ADMI_CUSTFORM' | 'ADMI_CUSTITEMFIELD' | 'ADMI_CUSTITEMNUMBERFIELD' | 'ADMI_CUSTLAYOUT' | 'ADMI_CUSTLIST' | 'ADMI_CUSTOMERFORM' | 'ADMI_CUSTOMER_SEGMENTS' | 'ADMI_CUSTOMIZEDFIELDLEVELHELP' | 'ADMI_CUSTOMSCRIPT' | 'ADMI_CUSTOMSUBLIST' | 'ADMI_CUSTOTHERFIELD' | 'ADMI_CUSTRECORD' | 'ADMI_CUSTRECORDFORM' | 'ADMI_CUSTSECTION' | 'ADMI_CUSTTASKS' | 'ADMI_CUSTTRANSACTION' | 'ADMI_DELETEDRECORD' | 'ADMI_DEPTSEGMENTMAPPING' | 'ADMI_DEVICE_ID' | 'ADMI_DOMAINS' | 'ADMI_DUPLICATESETUP' | 'ADMI_EMPLCATEGORY' | 'ADMI_EMPLOYEELIST' | 'ADMI_ENABLEFEATURES' | 'ADMI_ENTITYACCOUNTMAPPING' | 'ADMI_ENTITYSTATUS' | 'ADMI_ESCALATIONRULE' | 'ADMI_ESCALATIONTERRITORY' | 'ADMI_EXPORTIIF' | 'ADMI_FFTEXCEPTIONREASON' | 'ADMI_FINANCIALINSTITUTION' | 'ADMI_FINCHARGEPREF' | 'ADMI_GAINLOSSACCTMAPPING' | 'ADMI_GLOBALACCOUNTMAPPING' | 'ADMI_IMPORTCSVFILE' | 'ADMI_IMPORTXML' | 'ADMI_INTEGRAPP' | 'ADMI_ISSUESETUP' | 'ADMI_ITEMACCOUNTMAPPING' | 'ADMI_KEYS' | 'ADMI_KNOWLEDGEBASE' | 'ADMI_KPIREPORT' | 'ADMI_LOCATIONCOSTINGGROUP' | 'ADMI_LOCSEGMENTMAPPING' | 'ADMI_MANAGECUSTOMSEGMENTS' | 'ADMI_MANAGE_OAUTH_TOKENS' | 'ADMI_MANAGE_OWN_OAUTH_TOKENS' | 'ADMI_MANAGEROLES' | 'ADMI_MANAGEUSERS' | 'ADMI_MHLEVEL' | 'ADMI_MHNODE' | 'ADMI_MHVERSION' | 'ADMI_OIDCSETUP' | 'ADMI_OPENIDSSOSETUP' | 'ADMI_ORDERALLOCATIONSTRATEGY' | 'ADMI_OUTLOOKINTEGRATION' | 'ADMI_OUTLOOKINTEGRATION_V3' | 'ADMI_PAYROLL' | 'ADMI_PI_REMOVAL_CREATE' | 'ADMI_PI_REMOVAL_RUN' | 'ADMI_PROJECT_ACCOUNTING_SETUP' | 'ADMI_REVIEW_CUSTOM_GL_RUNS' | 'ADMI_SALESTERRITORY' | 'ADMI_SAMLSSOSETUP' | 'ADMI_SAVEDASHBOARD' | 'ADMI_SETUPCOMPANY' | 'ADMI_SETUPIMAGERESIZE' | 'ADMI_SETUPYEARSTATUS' | 'ADMI_SFASETUP' | 'ADMI_SITEMANAGEMENT' | 'ADMI_STATETAXIMPORT' | 'ADMI_STORESEARCH' | 'ADMI_STORESETUP' | 'ADMI_SUBSIDIARYSETTINGSMANAGER' | 'ADMI_SUITEANALYTICSCONNECT' | 'ADMI_SUITESIGNON' | 'ADMI_SUPPLYALLOCATIONSETUP' | 'ADMI_SUPPORTSETUP' | 'ADMI_SWAPPRICES' | 'ADMI_TAXMIGRATION' | 'ADMI_TIMEMODIFICATION' | 'ADMI_TAXPERIODS' | 'ADMI_TRANSITEMTXT' | 'ADMI_TWOFACTORAUTH' | 'ADMI_TWOFACTORAUTHBASE' | 'ADMI_UNCATSITEITEMS' | 'ADMI_UNLOCKEDTIMEPERIOD' | 'ADMI_UPDATEPRICES' | 'ADMI_UPSELLSETUP' | 'ADMI_USERPREF' | 'ADMI_WEBSERVICES' | 'ADMI_WEBSERVICESLOG' | 'ADMI_WEBSERVICESSETUP' | 'ADMI_WORKFLOW' | 'LIST_ACCOUNT' | 'LIST_AMORTIZATION' | 'LIST_BIG_SEARCH' | 'LIST_BILLINGSCHEDULE' | 'LIST_BILLOFDISTRIBUTION' | 'LIST_BILLOFMATERIALSINQUIRY' | 'LIST_BOM' | 'LIST_BIN' | 'LIST_CALENDAR' | 'LIST_CALL' | 'LIST_CAMPAIGN' | 'LIST_CAMPAIGNHISTORY' | 'LIST_CASE' | 'LIST_CATEGORY' | 'LIST_CERTIFICATES' | 'LIST_CHECKITEMAVAILABILITY' | 'LIST_CLASS' | 'LIST_COLORTHEME' | 'LIST_COMMISSIONRULES' | 'LIST_COMPANY' | 'LIST_COMPETITOR' | 'LIST_COMPONENTWHEREUSEDINQUIRY' | 'LIST_CONTACT' | 'LIST_CONTACTROLE' | 'LIST_COSTEDBOMINQUIRY' | 'LIST_CRMGROUP' | 'LIST_CRMMESSAGE' | 'LIST_CRMTEMPLATE' | 'LIST_CURRENCY' | 'LIST_CUSTJOB' | 'LIST_CUSTPROFILE' | 'LIST_CUSTRECORDENTRY' | 'LIST_DEPARTMENT' | 'LIST_DISTRIBUTIONNETWORK' | 'LIST_EMAILTEMPLATE' | 'LIST_EMPLOYEE' | 'LIST_EMPLOYEECHANGETYPE' | 'LIST_EMPLOYEESSN' | 'LIST_ENTITY_DUPLICATES' | 'LIST_EVENT' | 'LIST_EXPENSEAMORTIZATIONRULE' | 'LIST_EXPENSEPLAN' | 'LIST_EXPORT' | 'LIST_FAIRVALUEDIMENSION' | 'LIST_FAIRVALUEFORMULA' | 'LIST_FAIRVALUEPRICE' | 'LIST_FAXMESSAGE' | 'LIST_FAXTEMPLATE' | 'LIST_FILECABINET' | 'LIST_FIND' | 'LIST_FISCALCALENDAR' | 'LIST_GENERICRESOURCE' | 'LIST_GLLINESAUDITLOG' | 'LIST_GLLINESAUDITLOGSEG' | 'LIST_GLOBALINVTRELATIONSHIP' | 'LIST_HCMJOB' | 'LIST_HCMPOSITION' | 'LIST_HISTORY' | 'LIST_INFOITEM' | 'LIST_INFOITEMFORM' | 'LIST_INTEGRAPP' | 'LIST_INVCOSTTEMPLATE' | 'LIST_INVENTORYSTATUS' | 'LIST_ISSUE' | 'LIST_ITEM' | 'LIST_ITEM_COLLECTION' | 'LIST_ITEMDEMANDPLAN' | 'LIST_ITEMREVENUECATEGORY' | 'LIST_ITEM_REVISION' | 'LIST_ITEMSUPPLYPLAN' | 'LIST_JOB' | 'LIST_KEYS' | 'LIST_KNOWLEDGEBASE' | 'LIST_LOCATION' | 'LIST_MAILMERGE' | 'LIST_MAILMESSAGE' | 'LIST_MAILTEMPLATE' | 'LIST_MASSUPDATES' | 'LIST_MEDIAITEMFOLDER' | 'LIST_MEMDOC' | 'LIST_MFGCOSTTEMPLATE' | 'LIST_MFGROUTING' | 'LIST_NEWSITEM' | 'LIST_NOTIFICATION' | 'LIST_ORDER_REALLOCATION' | 'LIST_OTHERNAME' | 'LIST_OUTBOUNDREQUEST' | 'LIST_PARTNER' | 'LIST_PARTNERCOMMISSNRULES' | 'LIST_PAYCHECK' | 'LIST_PAYMETH' | 'LIST_PAYROLLITEM' | 'LIST_PDFMESSAGE' | 'LIST_PDFTEMPLATE' | 'LIST_PLANNEDREVENUE' | 'LIST_PLANNEDSTANDARDCOST' | 'LIST_PRESCATEGORY' | 'LIST_PROJECT_BUDGET' | 'LIST_PROJECTREVENUERULE' | 'LIST_PROJECTTASK' | 'LIST_PROJECTTEMPLATE' | 'LIST_PROMOTIONCODE' | 'LIST_PUBLISHSEARCH' | 'LIST_QUANTITYPRICINGSCHEDULE' | 'LIST_RELATEDITEMS' | 'LIST_RESOURCE' | 'LIST_REVENUEELEMENT' | 'LIST_REVENUEPLAN' | 'LIST_REVENUERECOGNITIONRULE' | 'LIST_REVRECSCHEDULE' | 'LIST_REVRECTREATMENT' | 'LIST_REVRECTREATMENTRULE' | 'LIST_REVRECFIELDMAPPING' | 'LIST_REVRECVSOE' | 'LIST_RSRCALLOCATION' | 'LIST_RSRCALLOCATIONAPPRV' | 'LIST_SALESCAMPAIGN' | 'LIST_SALESROLE' | 'LIST_SCSNAPSHOT' | 'LIST_SENTEMAIL' | 'LIST_SHIPITEM' | 'LIST_SHIPPARTPACKAGE' | 'LIST_SHIPPARTREGISTRATION' | 'LIST_SHIPPARTSHIPMENT' | 'LIST_SITEEMAILTEMPLATE' | 'LIST_STANDARDCOSTVERSION' | 'LIST_STORETAB' | 'LIST_SUBSCRIPTION' | 'LIST_SUBSCRIPTIONPLAN' | 'LIST_SUBSIDIARY' | 'LIST_SUPPLY_REALLOCATION' | 'LIST_SYSTEMEMAILTEMPLATE' | 'LIST_TALENT_ADMINISTRATION' | 'LIST_TASK' | 'LIST_TAXITEM' | 'LIST_TAXSCHEDULE' | 'LIST_TEGATAACCOUNT' | 'LIST_TEMPLATE_CATEGORY' | 'LIST_TIMEOFFADMIN' | 'LIST_TRANNUMBERAUDITLOG' | 'LIST_UNIT' | 'LIST_UPSELL' | 'LIST_UPSELLWIZARD' | 'LIST_VENDOR' | 'LIST_WBS' | 'LIST_WEBSITE' | 'LIST_WORKCALENDAR' | 'LIST_WORKPLACE' | 'REGT_ACCTPAY' | 'REGT_ACCTREC' | 'REGT_BANK' | 'REGT_COGS' | 'REGT_CREDCARD' | 'REGT_DEFEREXPENSE' | 'REGT_DEFERREVENUE' | 'REGT_EQUITY' | 'REGT_EXPENSE' | 'REGT_FIXEDASSET' | 'REGT_INCOME' | 'REGT_LONGTERMLIAB' | 'REGT_NONPOSTING' | 'REGT_OTHASSET' | 'REGT_OTHCURRASSET' | 'REGT_OTHCURRLIAB' | 'REGT_OTHINCOME' | 'REGT_UNBILLEDREC' | 'REPO_1099' | 'REPO_940' | 'REPO_941' | 'REPO_ACCOUNTDETAIL' | 'REPO_AMORTIZATION' | 'REPO_ANALYTICS' | 'REPO_AP' | 'REPO_AR' | 'REPO_AUTHPARTNERCOMMISSION' | 'REPO_BALANCESHEET' | 'REPO_BOOKINGS' | 'REPO_CASHFLOW' | 'REPO_COMMISSION' | 'REPO_CUSTOMIZATION' | 'REPO_DEFERREDEXPENSE' | 'REPO_FINANCIALS' | 'REPO_GL' | 'REPO_INTEGRATION' | 'REPO_INVENTORY' | 'REPO_ISSUE' | 'REPO_MARKETING' | 'REPO_NONPOSTING' | 'REPO_PANDL' | 'REPO_PARTNERCOMMISSION' | 'REPO_PAYCHECKDETAIL' | 'REPO_PAYROLL' | 'REPO_PAYROLLHOURSEARNING' | 'REPO_PAYROLLJOURNAL' | 'REPO_PAYROLLLIAB' | 'REPO_PAYROLLSTATEWITHHOLD' | 'REPO_PAYROLLW2' | 'REPO_PERIODENDFINANCIALS' | 'REPO_PROJECT_ACCOUNTING' | 'REPO_PURCHASEORDER' | 'REPO_PURCHASES' | 'REPO_QUOTA' | 'REPO_RECONCILE' | 'REPO_REMINDEREMPLOYEE' | 'REPO_RETURNAUTH' | 'REPO_REVREC' | 'REPO_RSRCALLOCATION' | 'REPO_SALES' | 'REPO_SALESORDER' | 'REPO_SALES_PARTNER' | 'REPO_SALES_PROMO' | 'REPO_SCHEDULE' | 'REPO_SFA' | 'REPO_SUPPORT' | 'REPO_TAX' | 'REPO_TAXREPORTS' | 'REPO_TIME' | 'REPO_TRAN' | 'REPO_TRIALBALANCE' | 'REPO_UNBILLED' | 'REPO_WEBSITE' | 'REPO_WEBSTORE' | 'TRAN_ADJUSTMENTJOURNAL' | 'TRAN_ALLOCSCHEDULE' | 'TRAN_AMENDW4' | 'TRAN_APPROVECOMMISSN' | 'TRAN_APPROVEDD' | 'TRAN_APPROVEEFT' | 'TRAN_APPROVEPARTNERCOMM' | 'TRAN_APPROVEVP' | 'TRAN_AUDIT' | 'TRAN_AUTO_CASH' | 'TRAN_BALJRNAL' | 'TRAN_BILLPAY_APPROVE' | 'TRAN_BILLPAY_STATUS' | 'TRAN_BINTRNFR' | 'TRAN_BINWKSHT' | 'TRAN_BLANKORD' | 'TRAN_BLANKORDAPPRV' | 'TRAN_BUDGET' | 'TRAN_BUILD' | 'TRAN_CARDCHRG' | 'TRAN_CASHRFND' | 'TRAN_CASHSALE' | 'TRAN_CHARGE' | 'TRAN_CHARGERULE' | 'TRAN_CHECK' | 'TRAN_CLEARHOLD' | 'TRAN_COMMISSN' | 'TRAN_COPY_BUDGET' | 'TRAN_CUSTAUTH' | 'TRAN_CUSTCHRG' | 'TRAN_CUSTCRED' | 'TRAN_CUSTDEP' | 'TRAN_CUSTINVC' | 'TRAN_CUSTINVCAPPRV' | 'TRAN_CUSTPYMT' | 'TRAN_CUSTRFND' | 'TRAN_DEPAPPL' | 'TRAN_DEPOSIT' | 'TRAN_EDITPROFILE' | 'TRAN_ESTIMATE' | 'TRAN_EXPREPT' | 'TRAN_FFTREQ' | 'TRAN_FINCHRG' | 'TRAN_FIND' | 'TRAN_FORECAST' | 'TRAN_FXREVAL' | 'TRAN_GST_REFUND' | 'TRAN_IMPORTOLBFILE' | 'TRAN_INTERCOADJ' | 'TRAN_INVADJST' | 'TRAN_INVCOUNT' | 'TRAN_INVDISTR' | 'TRAN_INVREVAL' | 'TRAN_INVTRNFR' | 'TRAN_INVWKSHT' | 'TRAN_ITEMRCPT' | 'TRAN_ITEMSHIP' | 'TRAN_JOURNAL' | 'TRAN_JOURNALAPPRV' | 'TRAN_LIABPYMT' | 'TRAN_MGRFORECAST' | 'TRAN_OPENBAL' | 'TRAN_OPPRTNTY' | 'TRAN_OWNTRNSF' | 'TRAN_PARTNERCOMMISSN' | 'TRAN_PAYCHECK' | 'TRAN_PAYMENTAUDIT' | 'TRAN_PAYROLLRUN' | 'TRAN_PCHKJRNL' | 'TRAN_PEJRNL' | 'TRAN_POSTVENDORBILLVARIANCE' | 'TRAN_PRICELIST' | 'TRAN_PRINT' | 'TRAN_PRINTCHECKSFORMS' | 'TRAN_PROJECT_IC_CHARGE_REQUEST' | 'TRAN_PURCHCON' | 'TRAN_PURCHCONAPPRV' | 'TRAN_PURCHORD' | 'TRAN_PURCHORDBILL' | 'TRAN_PURCHORDRECEIVE' | 'TRAN_PURCHREQ' | 'TRAN_PURCHREQAPPRV' | 'TRAN_QUOTA' | 'TRAN_RECOG_GIFTCERT_INCOME' | 'TRAN_RECONCILE' | 'TRAN_REVARRNG' | 'TRAN_REVARRNGAPPRV' | 'TRAN_REVCOMM' | 'TRAN_REVCOMRV' | 'TRAN_REVCONTR' | 'TRAN_RFQ' | 'TRAN_RTNAUTH' | 'TRAN_RTNAUTHAPPRV' | 'TRAN_RTNAUTHCREDIT' | 'TRAN_RTNAUTHRECEIVE' | 'TRAN_RTNAUTHREVERSEREVCOMMIT' | 'TRAN_SALESORD' | 'TRAN_SALESORDAPPRV' | 'TRAN_SALESORDCOMMITREVENUE' | 'TRAN_SALESORDFULFILL' | 'TRAN_SALESORDINVOICE' | 'TRAN_SALESORDREVENUECONTRACT' | 'TRAN_STATEMENT' | 'TRAN_STATUSDD' | 'TRAN_STATUSEFT' | 'TRAN_STATUSVP' | 'TRAN_STPICKUP' | 'TRAN_TAXLIAB' | 'TRAN_TAXPYMT' | 'TRAN_TEGPYBL' | 'TRAN_TEGRCVBL' | 'TRAN_TIMEBILL' | 'TRAN_TIMEPOST' | 'TRAN_TRANSFER' | 'TRAN_TRNFRORD' | 'TRAN_TRNFRORDAPPRV' | 'TRAN_UNBUILD' | 'TRAN_VENDAUTH' | 'TRAN_VENDAUTHAPPRV' | 'TRAN_VENDAUTHCREDIT' | 'TRAN_VENDAUTHRETURN' | 'TRAN_VENDBILL' | 'TRAN_VENDBILLAPPRV' | 'TRAN_VENDCRED' | 'TRAN_VENDPYMT' | 'TRAN_VENDPYMTAPPRV' | 'TRAN_VENDRFQ' | 'TRAN_VPREPAPP' | 'TRAN_VPREP' | 'TRAN_WAVE' | 'TRAN_WOCLOSE' | 'TRAN_WOCOMPL' | 'TRAN_WOISSUE' | 'TRAN_WORKORD' | 'TRAN_WORKORDBUILD' | 'TRAN_WORKORDCLOSE' | 'TRAN_WORKORDCOMPLETE' | 'TRAN_WORKORDISSUE' | 'TRAN_WORKORDMARKBUILT' | 'TRAN_WORKORDMARKFIRMED' | 'TRAN_WORKORDMARKRELEASED' | 'TRAN_YTDADJST' | 'admi_accounting' | 'admi_accountingbook' | 'admi_accountinglist' | 'admi_acctperiods' | 'admi_acctsetup' | 'admi_ach' | 'admi_advanced_order_management' | 'admi_app_deployment' | 'admi_apppublisher' | 'admi_auditlogin' | 'admi_backupexport' | 'admi_bank_connectivity_config' | 'admi_billpaysetup' | 'admi_bundler' | 'admi_bundlermanup' | 'admi_campaignemail' | 'admi_campaignsetup' | 'admi_caseform' | 'admi_caseissue' | 'admi_caseorigin' | 'admi_casepriority' | 'admi_caserule' | 'admi_casestatus' | 'admi_caseterritory' | 'admi_casetype' | 'admi_certificates' | 'admi_classestolocs' | 'admi_classsegmentmapping' | 'admi_closeperiod' | 'admi_commercecategory' | 'admi_commissionsetup' | 'admi_company' | 'admi_convertclasses' | 'admi_convertlead' | 'admi_copyprojecttask' | 'admi_creditcard' | 'admi_crmlist' | 'admi_csvimportpref' | 'admi_custaddressform' | 'admi_custbodyfield' | 'admi_custcategory' | 'admi_custcenter' | 'admi_custcolumnfield' | 'admi_custemaillayout' | 'admi_custentityfield' | 'admi_custentryform' | 'admi_custeventfield' | 'admi_custfield' | 'admi_custfieldtab' | 'admi_custform' | 'admi_custitemfield' | 'admi_custitemnumberfield' | 'admi_custlayout' | 'admi_custlist' | 'admi_customerform' | 'admi_customer_segments' | 'admi_customizedfieldlevelhelp' | 'admi_customscript' | 'admi_customsublist' | 'admi_custotherfield' | 'admi_custrecord' | 'admi_custrecordform' | 'admi_custsection' | 'admi_custtasks' | 'admi_custtransaction' | 'admi_deletedrecord' | 'admi_deptsegmentmapping' | 'admi_device_id' | 'admi_domains' | 'admi_duplicatesetup' | 'admi_emplcategory' | 'admi_employeelist' | 'admi_enablefeatures' | 'admi_entityaccountmapping' | 'admi_entitystatus' | 'admi_escalationrule' | 'admi_escalationterritory' | 'admi_exportiif' | 'admi_fftexceptionreason' | 'admi_financialinstitution' | 'admi_finchargepref' | 'admi_gainlossacctmapping' | 'admi_globalaccountmapping' | 'admi_importcsvfile' | 'admi_importxml' | 'admi_integrapp' | 'admi_issuesetup' | 'admi_itemaccountmapping' | 'admi_keys' | 'admi_knowledgebase' | 'admi_kpireport' | 'admi_locationcostinggroup' | 'admi_locsegmentmapping' | 'admi_managecustomsegments' | 'admi_manage_oauth_tokens' | 'admi_manage_own_oauth_tokens' | 'admi_manageroles' | 'admi_manageusers' | 'admi_mhlevel' | 'admi_mhnode' | 'admi_mhversion' | 'admi_oidcsetup' | 'admi_openidssosetup' | 'admi_orderallocationstrategy' | 'admi_outlookintegration' | 'admi_outlookintegration_v3' | 'admi_payroll' | 'admi_pi_removal_create' | 'admi_pi_removal_run' | 'admi_project_accounting_setup' | 'admi_review_custom_gl_runs' | 'admi_salesterritory' | 'admi_samlssosetup' | 'admi_savedashboard' | 'admi_setupcompany' | 'admi_setupimageresize' | 'admi_setupyearstatus' | 'admi_sfasetup' | 'admi_sitemanagement' | 'admi_statetaximport' | 'admi_storesearch' | 'admi_storesetup' | 'admi_subsidiarysettingsmanager' | 'admi_suiteanalyticsconnect' | 'admi_suitesignon' | 'admi_supplyallocationsetup' | 'admi_supportsetup' | 'admi_swapprices' | 'admi_taxmigration' | 'admi_timemodification' | 'admi_taxperiods' | 'admi_transitemtxt' | 'admi_twofactorauth' | 'admi_twofactorauthbase' | 'admi_uncatsiteitems' | 'admi_unlockedtimeperiod' | 'admi_updateprices' | 'admi_upsellsetup' | 'admi_userpref' | 'admi_webservices' | 'admi_webserviceslog' | 'admi_webservicessetup' | 'admi_workflow' | 'list_account' | 'list_amortization' | 'list_big_search' | 'list_billingschedule' | 'list_billofdistribution' | 'list_billofmaterialsinquiry' | 'list_bom' | 'list_bin' | 'list_calendar' | 'list_call' | 'list_campaign' | 'list_campaignhistory' | 'list_case' | 'list_category' | 'list_certificates' | 'list_checkitemavailability' | 'list_class' | 'list_colortheme' | 'list_commissionrules' | 'list_company' | 'list_competitor' | 'list_componentwhereusedinquiry' | 'list_contact' | 'list_contactrole' | 'list_costedbominquiry' | 'list_crmgroup' | 'list_crmmessage' | 'list_crmtemplate' | 'list_currency' | 'list_custjob' | 'list_custprofile' | 'list_custrecordentry' | 'list_department' | 'list_distributionnetwork' | 'list_emailtemplate' | 'list_employee' | 'list_employeechangetype' | 'list_employeessn' | 'list_entity_duplicates' | 'list_event' | 'list_expenseamortizationrule' | 'list_expenseplan' | 'list_export' | 'list_fairvaluedimension' | 'list_fairvalueformula' | 'list_fairvalueprice' | 'list_faxmessage' | 'list_faxtemplate' | 'list_filecabinet' | 'list_find' | 'list_fiscalcalendar' | 'list_genericresource' | 'list_gllinesauditlog' | 'list_gllinesauditlogseg' | 'list_globalinvtrelationship' | 'list_hcmjob' | 'list_hcmposition' | 'list_history' | 'list_infoitem' | 'list_infoitemform' | 'list_integrapp' | 'list_invcosttemplate' | 'list_inventorystatus' | 'list_issue' | 'list_item' | 'list_item_collection' | 'list_itemdemandplan' | 'list_itemrevenuecategory' | 'list_item_revision' | 'list_itemsupplyplan' | 'list_job' | 'list_keys' | 'list_knowledgebase' | 'list_location' | 'list_mailmerge' | 'list_mailmessage' | 'list_mailtemplate' | 'list_massupdates' | 'list_mediaitemfolder' | 'list_memdoc' | 'list_mfgcosttemplate' | 'list_mfgrouting' | 'list_newsitem' | 'list_notification' | 'list_order_reallocation' | 'list_othername' | 'list_outboundrequest' | 'list_partner' | 'list_partnercommissnrules' | 'list_paycheck' | 'list_paymeth' | 'list_payrollitem' | 'list_pdfmessage' | 'list_pdftemplate' | 'list_plannedrevenue' | 'list_plannedstandardcost' | 'list_prescategory' | 'list_project_budget' | 'list_projectrevenuerule' | 'list_projecttask' | 'list_projecttemplate' | 'list_promotioncode' | 'list_publishsearch' | 'list_quantitypricingschedule' | 'list_relateditems' | 'list_resource' | 'list_revenueelement' | 'list_revenueplan' | 'list_revenuerecognitionrule' | 'list_revrecschedule' | 'list_revrectreatment' | 'list_revrectreatmentrule' | 'list_revrecfieldmapping' | 'list_revrecvsoe' | 'list_rsrcallocation' | 'list_rsrcallocationapprv' | 'list_salescampaign' | 'list_salesrole' | 'list_scsnapshot' | 'list_sentemail' | 'list_shipitem' | 'list_shippartpackage' | 'list_shippartregistration' | 'list_shippartshipment' | 'list_siteemailtemplate' | 'list_standardcostversion' | 'list_storetab' | 'list_subscription' | 'list_subscriptionplan' | 'list_subsidiary' | 'list_supply_reallocation' | 'list_systememailtemplate' | 'list_talent_administration' | 'list_task' | 'list_taxitem' | 'list_taxschedule' | 'list_tegataaccount' | 'list_template_category' | 'list_timeoffadmin' | 'list_trannumberauditlog' | 'list_unit' | 'list_upsell' | 'list_upsellwizard' | 'list_vendor' | 'list_wbs' | 'list_website' | 'list_workcalendar' | 'list_workplace' | 'regt_acctpay' | 'regt_acctrec' | 'regt_bank' | 'regt_cogs' | 'regt_credcard' | 'regt_deferexpense' | 'regt_deferrevenue' | 'regt_equity' | 'regt_expense' | 'regt_fixedasset' | 'regt_income' | 'regt_longtermliab' | 'regt_nonposting' | 'regt_othasset' | 'regt_othcurrasset' | 'regt_othcurrliab' | 'regt_othincome' | 'regt_unbilledrec' | 'repo_1099' | 'repo_940' | 'repo_941' | 'repo_accountdetail' | 'repo_amortization' | 'repo_analytics' | 'repo_ap' | 'repo_ar' | 'repo_authpartnercommission' | 'repo_balancesheet' | 'repo_bookings' | 'repo_cashflow' | 'repo_commission' | 'repo_customization' | 'repo_deferredexpense' | 'repo_financials' | 'repo_gl' | 'repo_integration' | 'repo_inventory' | 'repo_issue' | 'repo_marketing' | 'repo_nonposting' | 'repo_pandl' | 'repo_partnercommission' | 'repo_paycheckdetail' | 'repo_payroll' | 'repo_payrollhoursearning' | 'repo_payrolljournal' | 'repo_payrollliab' | 'repo_payrollstatewithhold' | 'repo_payrollw2' | 'repo_periodendfinancials' | 'repo_project_accounting' | 'repo_purchaseorder' | 'repo_purchases' | 'repo_quota' | 'repo_reconcile' | 'repo_reminderemployee' | 'repo_returnauth' | 'repo_revrec' | 'repo_rsrcallocation' | 'repo_sales' | 'repo_salesorder' | 'repo_sales_partner' | 'repo_sales_promo' | 'repo_schedule' | 'repo_sfa' | 'repo_support' | 'repo_tax' | 'repo_taxreports' | 'repo_time' | 'repo_tran' | 'repo_trialbalance' | 'repo_unbilled' | 'repo_website' | 'repo_webstore' | 'tran_adjustmentjournal' | 'tran_allocschedule' | 'tran_amendw4' | 'tran_approvecommissn' | 'tran_approvedd' | 'tran_approveeft' | 'tran_approvepartnercomm' | 'tran_approvevp' | 'tran_audit' | 'tran_auto_cash' | 'tran_baljrnal' | 'tran_billpay_approve' | 'tran_billpay_status' | 'tran_bintrnfr' | 'tran_binwksht' | 'tran_blankord' | 'tran_blankordapprv' | 'tran_budget' | 'tran_build' | 'tran_cardchrg' | 'tran_cashrfnd' | 'tran_cashsale' | 'tran_charge' | 'tran_chargerule' | 'tran_check' | 'tran_clearhold' | 'tran_commissn' | 'tran_copy_budget' | 'tran_custauth' | 'tran_custchrg' | 'tran_custcred' | 'tran_custdep' | 'tran_custinvc' | 'tran_custinvcapprv' | 'tran_custpymt' | 'tran_custrfnd' | 'tran_depappl' | 'tran_deposit' | 'tran_editprofile' | 'tran_estimate' | 'tran_exprept' | 'tran_fftreq' | 'tran_finchrg' | 'tran_find' | 'tran_forecast' | 'tran_fxreval' | 'tran_gst_refund' | 'tran_importolbfile' | 'tran_intercoadj' | 'tran_invadjst' | 'tran_invcount' | 'tran_invdistr' | 'tran_invreval' | 'tran_invtrnfr' | 'tran_invwksht' | 'tran_itemrcpt' | 'tran_itemship' | 'tran_journal' | 'tran_journalapprv' | 'tran_liabpymt' | 'tran_mgrforecast' | 'tran_openbal' | 'tran_opprtnty' | 'tran_owntrnsf' | 'tran_partnercommissn' | 'tran_paycheck' | 'tran_paymentaudit' | 'tran_payrollrun' | 'tran_pchkjrnl' | 'tran_pejrnl' | 'tran_postvendorbillvariance' | 'tran_pricelist' | 'tran_print' | 'tran_printchecksforms' | 'tran_project_ic_charge_request' | 'tran_purchcon' | 'tran_purchconapprv' | 'tran_purchord' | 'tran_purchordbill' | 'tran_purchordreceive' | 'tran_purchreq' | 'tran_purchreqapprv' | 'tran_quota' | 'tran_recog_giftcert_income' | 'tran_reconcile' | 'tran_revarrng' | 'tran_revarrngapprv' | 'tran_revcomm' | 'tran_revcomrv' | 'tran_revcontr' | 'tran_rfq' | 'tran_rtnauth' | 'tran_rtnauthapprv' | 'tran_rtnauthcredit' | 'tran_rtnauthreceive' | 'tran_rtnauthreverserevcommit' | 'tran_salesord' | 'tran_salesordapprv' | 'tran_salesordcommitrevenue' | 'tran_salesordfulfill' | 'tran_salesordinvoice' | 'tran_salesordrevenuecontract' | 'tran_statement' | 'tran_statusdd' | 'tran_statuseft' | 'tran_statusvp' | 'tran_stpickup' | 'tran_taxliab' | 'tran_taxpymt' | 'tran_tegpybl' | 'tran_tegrcvbl' | 'tran_timebill' | 'tran_timepost' | 'tran_transfer' | 'tran_trnfrord' | 'tran_trnfrordapprv' | 'tran_unbuild' | 'tran_vendauth' | 'tran_vendauthapprv' | 'tran_vendauthcredit' | 'tran_vendauthreturn' | 'tran_vendbill' | 'tran_vendbillapprv' | 'tran_vendcred' | 'tran_vendpymt' | 'tran_vendpymtapprv' | 'tran_vendrfq' | 'tran_vprepapp' | 'tran_vprep' | 'tran_wave' | 'tran_woclose' | 'tran_wocompl' | 'tran_woissue' | 'tran_workord' | 'tran_workordbuild' | 'tran_workordclose' | 'tran_workordcomplete' | 'tran_workordissue' | 'tran_workordmarkbuilt' | 'tran_workordmarkfirmed' | 'tran_workordmarkreleased' | 'tran_ytdadjst'): 0 | 1 | 2 | 3 | 4;
-
+  
   /**
    * return system or script preference selection for current user
    * @param {string} name
@@ -3689,7 +4558,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getPreference(name: string): string;
-
+  
   /**
    * return value of session object set by script
    * @param {string} name
@@ -3701,7 +4570,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getSessionObject(name: string): string;
-
+  
   /**
    * set the value of a session object using a key.
    * @param {string} name
@@ -3714,7 +4583,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   setSessionObject(name: string, value: string): void;
-
+  
   /**
    * return an array containing the names of all keys used to set session objects
    * @return {string[]}
@@ -3725,7 +4594,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getAllSessionObjects(): string[];
-
+  
   /**
    * return the NetSuite version for the current account
    * @return {string}
@@ -3736,7 +4605,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getVersion(): string;
-
+  
   /**
    * return the environment that the script is executing in: SANDBOX, PRODUCTION, BETA, INTERNAL
    * @return {'SANDBOX'|'PRODUCTION'|'BETA'|'INTERNAL'}
@@ -3744,7 +4613,7 @@ declare interface nlobjContext {
    * @since 2008.2
    */
   getEnvironment(): 'SANDBOX' | 'PRODUCTION' | 'BETA' | 'INTERNAL';
-
+  
   /**
    * return the logging level for the current script execution. Not supported in CLIENT scripts
    * @return {'DEBUG'|'AUDIT'|'ERROR'|'EMERGENCY'}
@@ -3752,7 +4621,7 @@ declare interface nlobjContext {
    * @since 2008.2
    */
   getLogLevel(): 'DEBUG' | 'AUDIT' | 'ERROR' | 'EMERGENCY';
-
+  
   /**
    * return the script ID for the current script
    * @return {string}
@@ -3763,7 +4632,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getScriptId(): string;
-
+  
   /**
    * return the deployment ID for the current script
    * @return {string}
@@ -3774,7 +4643,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getDeploymentId(): string;
-
+  
   /**
    * return the % complete specified for the current scheduled script execution
    * @return {number}
@@ -3785,7 +4654,7 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   getPercentComplete(): number;
-
+  
   /**
    * set the % complete for the current scheduled script execution
    * @param {number|string} percentage the percentage of records completed
@@ -3797,18 +4666,18 @@ declare interface nlobjContext {
    * @since 2009.2
    */
   setPercentComplete(percentage: number | string): void;
-
+  
   /**
    * return a system/script setting. Types are SCRIPT, SESSION, FEATURE, PERMISSION
    *
    * @param {'SESSION'|'FEATURE'|'PERMISSION'|'SCRIPT'|'session'|'feature'|'permission'|'script'} type
    * @param {string} name
-   * @return {string|number}
+   * @return {string}
    *
    * @since 2007.0
    */
-  getSetting(type: 'SESSION' | 'FEATURE' | 'PERMISSION' | 'SCRIPT' | 'session' | 'feature' | 'permission' | 'script', name: string): string | number;
-
+  getSetting(type: 'SESSION' | 'FEATURE' | 'PERMISSION' | 'SCRIPT' | 'session' | 'feature' | 'permission' | 'script', name: string): string;
+  
   /**
    * set a system/script setting. Only supported type is SESSION
    *
@@ -3820,7 +4689,7 @@ declare interface nlobjContext {
    * @since 2007.0
    */
   setSetting(type: 'SESSION' | 'FEATURE' | 'PERMISSION' | 'SCRIPT' | 'session' | 'feature' | 'permission' | 'script', name: string, value: string): void;
-
+  
   /**
    * return an Object containing name/value pairs of color groups to their corresponding RGB hex color based on the currenly logged in user's color them preferences.
    * @return {Object}
@@ -3831,7 +4700,7 @@ declare interface nlobjContext {
    * @since 2010.1
    */
   getColorPreferences(): Object;
-
+  
   /**
    * return the runtime version of SuiteScript, could be 1.0 or 2.0
    * @return {Object}
@@ -3852,9 +4721,9 @@ declare interface nlobjContext {
  * @constructor
  */
 declare interface nlobjError {
-
+  
   new(): nlobjError;
-
+  
   /**
    * return the error db ID for this error (if it was an unhandled unexpected error).
    * @return {string}
@@ -3865,7 +4734,7 @@ declare interface nlobjError {
    * @since 2008.2
    */
   getId(): string;
-
+  
   /**
    * return the error code for this system or user-defined error.
    * @return {string}
@@ -3876,7 +4745,7 @@ declare interface nlobjError {
    * @since 2008.2
    */
   getCode(): string;
-
+  
   /**
    * return the error description for this error.
    * @return {string}
@@ -3887,7 +4756,7 @@ declare interface nlobjError {
    * @since 2008.2
    */
   getDetails(): string;
-
+  
   /**
    * return a stacktrace containing the location of the error.
    * @return {string[]}
@@ -3897,8 +4766,8 @@ declare interface nlobjError {
    *
    * @since 2008.2
    */
-  getStackTrace(): void;
-
+  getStackTrace(): string[];
+  
   /**
    * return the userevent script name where this error was thrown.
    * @return {string}
@@ -3909,7 +4778,7 @@ declare interface nlobjError {
    * @since 2008.2
    */
   getUserEvent(): string;
-
+  
   /**
    * return the internalid of the record if this error was thrown in an aftersubmit script.
    * @return {number}
@@ -3923,7 +4792,7 @@ declare interface nlobjError {
 }
 
 declare class nlobjError {
-  constructor(name: string, join?: string, summary?: string);
+  constructor(code: string, details: string, suppressEmail?: boolean);
 }
 
 /**
@@ -3934,14 +4803,14 @@ declare class nlobjError {
  * @constructor
  */
 declare interface nlobjResponse {
-
+  
   new(): nlobjResponse;
-
+  
   CACHE_DURATION_UNIQUE: 'UNIQUE';
   CACHE_DURATION_SHORT: 'SHORT';
   CACHE_DURATION_MEDIUM: 'MEDIUM';
   CACHE_DURATION_LONG: 'LONG';
-
+  
   /**
    * return the response body returned.
    * @return {string}
@@ -3952,7 +4821,7 @@ declare interface nlobjResponse {
    * @since 2008.1
    */
   getBody(): string;
-
+  
   /**
    * add a value for a response header.
    * @param  {string} name of header
@@ -3965,7 +4834,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   addHeader(name: string, value: string): void;
-
+  
   /**
    * set the value of a response header.
    * @param  {string} name of header
@@ -3978,7 +4847,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   setHeader(name: string, value: string): void;
-
+  
   /**
    * return the value of a response header.
    * @param  {string} name of header
@@ -3990,7 +4859,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   getHeader(): string;
-
+  
   /**
    * return an Array of all response header values for a header
    * @param  {string} name of header
@@ -4002,7 +4871,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   getHeaders(name: string): void;
-
+  
   /**
    * return an Array of all response headers
    * @return  {string[]}
@@ -4013,7 +4882,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   getAllHeaders(): string[];
-
+  
   /**
    * suppress caching for this response.
    * @return  {void}
@@ -4024,7 +4893,7 @@ declare interface nlobjResponse {
    * @since 2009.1
    */
   sendNoCache(): void;
-
+  
   /**
    * sets CDN caching for a shorter period of time or a longer period of time.
    *
@@ -4036,7 +4905,7 @@ declare interface nlobjResponse {
    * @since 2013.1
    */
   setCDNCacheable(type: 'UNIQUE' | 'SHORT' | 'MEDIUM' | 'LONG'): void;
-
+  
   /**
    * sets the content type for the response (and an optional filename for binary output).
    *
@@ -4050,7 +4919,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   setContentType(type: string, name?: string, disposition?: string): void;
-
+  
   /**
    * sets the redirect URL for the response. all URLs must be internal unless the Suitelet is being executed in an "Available without Login" context
    *  at which point it can use type "external" to specify an external url via the subtype arg
@@ -4068,7 +4937,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   sendRedirect(type: string, subtype: string, id?: string | number, pagemode?: boolean, parameters?: Object): void;
-
+  
   /**
    * write information (text/xml/html) to the response.
    *
@@ -4081,7 +4950,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   write(output: string): void;
-
+  
   /**
    * write line information (text/xml/html) to the response.
    *
@@ -4094,7 +4963,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   writeLine(output: string): void;
-
+  
   /**
    * write a UI object page.
    *
@@ -4107,7 +4976,7 @@ declare interface nlobjResponse {
    * @since 2008.2
    */
   writePage(pageobject: nlobjForm | nlobjList): void;
-
+  
   /**
    * sets the character encoding for the response.
    * @param {'UTF-8'|'windows-1252'|'ISO-8859-1'|'GB18030'|'GB2312'|'SHIFT_JIS'|'MacRoman'} encoding
@@ -4118,7 +4987,7 @@ declare interface nlobjResponse {
    * @since 2012.2
    */
   setEncoding(encoding: 'UTF-8' | 'windows-1252' | 'ISO-8859-1' | 'GB18030' | 'GB2312' | 'SHIFT_JIS' | 'MacRoman'): void;
-
+  
   /**
    * return the response code returned.
    * @return {string}
@@ -4129,7 +4998,7 @@ declare interface nlobjResponse {
    * @since 2008.1
    */
   getCode(): string;
-
+  
   /**
    * return the nlobjError thrown via a client call to nlapiRequestURL.
    * @return {nlobjError}
@@ -4157,9 +5026,9 @@ declare namespace nlobjResponse {
  * @constructor
  */
 declare interface nlobjRequest {
-
+  
   new(): nlobjRequest;
-
+  
   /**
    * return the value of a request parameter.
    *
@@ -4171,7 +5040,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getParameter(name: string): string;
-
+  
   /**
    * return the values of a request parameter as an Array.
    *
@@ -4183,7 +5052,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getParameterValues(name: string): void;
-
+  
   /**
    * return an Object containing all the request parameters and their values.
    * @return {Object}
@@ -4193,7 +5062,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getAllParameters(): Object;
-
+  
   /**
    * return the value of a sublist value.
    * @param {string}    group sublist name
@@ -4207,7 +5076,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getLineItemValue(group: string, name: string, linenum: number): string;
-
+  
   /**
    * return the number of lines in a sublist.
    * @param {string} group sublist name
@@ -4219,7 +5088,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getLineItemCount(group: string): string | number;
-
+  
   /**
    * return the value of a request header.
    * @param {string} name
@@ -4231,7 +5100,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getHeader(name: string): string;
-
+  
   /**
    * return an Object containing all the request headers and their values.
    * @return {Object}
@@ -4242,7 +5111,7 @@ declare interface nlobjRequest {
    * @since 2008.2
    */
   getAllHeaders(): Object;
-
+  
   /**
    * return the value of an uploaded file.
    * @param {string} name file field name
@@ -4254,7 +5123,7 @@ declare interface nlobjRequest {
    * @since 2009.1
    */
   getFile(name: string): nlobjFile;
-
+  
   /**
    * return an Object containing field names to file objects for all uploaded files.
    * @return {Object}
@@ -4264,9 +5133,9 @@ declare interface nlobjRequest {
    *
    * @since 2009.1
    */
-
+  
   // getAllFiles(): Object;
-
+  
   /**
    * return the body of the POST request
    * @return {string}
@@ -4277,7 +5146,7 @@ declare interface nlobjRequest {
    * @since 2008.1
    */
   getBody(): string;
-
+  
   /**
    * return the URL of the request
    * @return {string}
@@ -4288,7 +5157,7 @@ declare interface nlobjRequest {
    * @since 2008.1
    */
   getURL(): string;
-
+  
   /**
    * return the METHOD of the request
    * @return {'GET'|'POST'}
@@ -4309,9 +5178,9 @@ declare interface nlobjRequest {
  * @constructor
  */
 declare interface nlobjPortlet {
-
+  
   new(): nlobjPortlet;
-
+  
   /**
    * set the portlet title.
    *
@@ -4321,7 +5190,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   setTitle(title: string): void;
-
+  
   /**
    * set the entire contents of the HTML portlet (will be placed inside a <TD>...</TD>).
    *
@@ -4331,7 +5200,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   setHtml(html: string): void;
-
+  
   /**
    * add a column (nlobjColumn) to this LIST portlet and return it.
    *
@@ -4344,7 +5213,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   addColumn(name: string, type: string, label: string, align?: string): nlobjColumn;
-
+  
   /**
    * add an Edit column (nlobjColumn) to the left of the column specified (supported on LIST portlets only).
    *
@@ -4356,7 +5225,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   addEditColumn(column: nlobjColumn, showView: boolean, showHrefCol?: string): nlobjColumn;
-
+  
   /**
    * add a row (nlobjSearchResult or Array of name-value pairs) to this LIST portlet.
    *
@@ -4366,7 +5235,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   addRow(row: string[] | nlobjSearchResult): void;
-
+  
   /**
    * add multiple rows (Array of nlobjSearchResults or name-value pair Arrays) to this LIST portlet.
    *
@@ -4376,7 +5245,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   addRows(rows: string[][] | nlobjSearchResult[]): void;
-
+  
   /**
    * add a field (nlobjField) to this FORM portlet and return it.
    *
@@ -4389,7 +5258,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   addField(name: string, type: string, label?: string, source?: string | number): nlobjField;
-
+  
   /**
    * add a FORM submit button to this FORM portlet.
    *
@@ -4400,7 +5269,7 @@ declare interface nlobjPortlet {
    * @since 2008.2
    */
   setSubmitButton(url: string, label?: string): void;
-
+  
   /**
    * add a line (containing text or simple HTML) with optional indenting and URL to this LINKS portlet.
    *
@@ -4422,16 +5291,16 @@ declare interface nlobjPortlet {
  * @constructor
  */
 declare interface nlobjList {
-
+  
   new(): nlobjList;
-
+  
   /**
    * set the page title.
    *
    * @param {string} title
    */
   setTitle(title: string): void;
-
+  
   /**
    * set the global style for this list: grid|report|plain|normal.
    *
@@ -4441,7 +5310,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   setStyle(style: string): void;
-
+  
   /**
    * set the Client SuiteScript used for this page.
    *
@@ -4451,7 +5320,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   setScript(script: string | number): void;
-
+  
   /**
    * add a column (nlobjColumn) to this list and return it.
    *
@@ -4464,7 +5333,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   addColumn(name: string, type: string, label: string, align?: string): nlobjColumn;
-
+  
   /**
    * add an Edit column (nlobjColumn) to the left of the column specified.
    *
@@ -4476,7 +5345,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   addEditColumn(column: nlobjColumn, showView: boolean, showHref?: string): nlobjColumn;
-
+  
   /**
    * add a row (Array of name-value pairs or nlobjSearchResult) to this portlet.
    *
@@ -4486,7 +5355,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   addRow(row: string[] | nlobjSearchResult): void;
-
+  
   /**
    * add multiple rows (Array of nlobjSearchResults or name-value pair Arrays) to this portlet.
    *
@@ -4496,7 +5365,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   addRows(rows: string[][] | nlobjSearchResult[]): void;
-
+  
   /**
    * add a button (nlobjButton) to the footer of this page.
    *
@@ -4508,7 +5377,7 @@ declare interface nlobjList {
    * @since 2008.2
    */
   addButton(name: string, label: string, script: string): void;
-
+  
   /**
    * add a navigation cross-link to the page.
    *
@@ -4530,9 +5399,9 @@ declare interface nlobjList {
  * @constructor
  */
 declare interface nlobjForm {
-
+  
   new(): nlobjForm;
-
+  
   /**
    * set the page title.
    *
@@ -4545,7 +5414,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   setTitle(title: string): void;
-
+  
   /**
    * set additional title Html. INTERNAL ONLY
    *
@@ -4558,7 +5427,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addTitleHtml(html: string): void;
-
+  
   /**
    * set the Client Script definition used for this page.
    *
@@ -4571,7 +5440,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   setScript(script: string | number): void;
-
+  
   /**
    * set the values for all the fields on this form.
    *
@@ -4583,8 +5452,8 @@ declare interface nlobjForm {
    *
    * @since 2008.2
    */
-  setFieldValues(values: { [key:string]: string | number }): void;
-
+  setFieldValues(values: { [key: string]: string | number }): void;
+  
   /**
    * add a navigation cross-link to the page.
    *
@@ -4599,7 +5468,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addPageLink(type: string, title: string, url: string): void;
-
+  
   /**
    * add a button to this form.
    *
@@ -4615,7 +5484,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addButton(name: string, label: string, script?: string): nlobjButton;
-
+  
   /**
    * get a button from this form by name.
    * @param {string} name
@@ -4627,7 +5496,7 @@ declare interface nlobjForm {
    * @since 2009.2
    */
   getButton(name: string): nlobjButton;
-
+  
   /**
    * add a reset button to this form.
    *
@@ -4640,7 +5509,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addResetButton(label?: string): nlobjButton;
-
+  
   /**
    * add a submit button to this form.
    *
@@ -4653,7 +5522,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addSubmitButton(label?: string): nlobjButton;
-
+  
   /**
    * add a tab (nlobjTab) to this form and return it.
    *
@@ -4667,14 +5536,14 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addTab(name: string, label: string): nlobjTab;
-
+  
   /**
    * add a field (nlobjField) to this form and return it.
    *
    * @param {string} name field name
    * @param {string} type field type
    * @param {string} [label] field label
-   * @param {string, int} [source] script ID or internal ID for source list (select and multiselects only)
+   * @param {string|number} [source] script ID or internal ID for source list (select and multiselects only)
    * @param {string} [tab] tab name that this field will live on. If empty then the field is added to the main section of the form (immediately below the title bar)
    * @return {nlobjField}
    *
@@ -4684,7 +5553,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addField(name: string, type: string, label?: string, source?: string | number, tab?: string): nlobjField;
-
+  
   /**
    * add a field (nlobjField) to this form and return it.
    *
@@ -4701,7 +5570,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addField(name: string, type: string, label?: string, radio?: string | number, tab?: string): nlobjField;
-
+  
   /**
    * add a field that lets you store credentials in NetSuite to be used when invoking services provided by third parties.
    *
@@ -4720,7 +5589,7 @@ declare interface nlobjForm {
    * @since 2012.1
    */
   addCredentialField(id: string, label: string, website?: string, scriptId?: string, value?: string, entityMatch?: boolean, tab?: string): nlobjField;
-
+  
   /**
    * add a subtab (nlobjTab) to this form and return it.
    *
@@ -4735,7 +5604,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addSubTab(name: string, label: string, tab?: string): nlobjTab;
-
+  
   /**
    * add a sublist (nlobjSubList) to this form and return it.
    *
@@ -4751,7 +5620,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   addSubList(name: string, type: string, label: string, tab?: string): nlobjSubList;
-
+  
   /**
    * insert a tab (nlobjTab) before another tab (name).
    *
@@ -4765,7 +5634,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   insertTab(tab: nlobjTab, nexttab: string): nlobjTab;
-
+  
   /**
    * insert a field (nlobjField) before another field (name).
    *
@@ -4779,7 +5648,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   insertField(field: nlobjField, nextfld: string): nlobjField;
-
+  
   /**
    * insert a subtab (nlobjTab) before another subtab or sublist (name).
    *
@@ -4793,7 +5662,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   insertSubTab(subtab: nlobjTab, nextsubtab: string): nlobjTab;
-
+  
   /**
    * insert a sublist (nlobjSubList) before another subtab or sublist (name).
    *
@@ -4807,7 +5676,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   insertSubList(sublist: nlobjSubList, nextsublist: string): nlobjSubList;
-
+  
   /**
    * return a tab (nlobjTab) on this form.
    *
@@ -4820,7 +5689,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   getTab(name: string): nlobjTab;
-
+  
   /**
    * return a field (nlobjField) on this form.
    *
@@ -4834,7 +5703,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   getField(name: string, radio?: string): nlobjField;
-
+  
   /**
    * return a subtab (nlobjTab) on this form.
    *
@@ -4847,7 +5716,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   getSubTab(name: string): nlobjTab;
-
+  
   /**
    * return a sublist (nlobjSubList) on this form.
    *
@@ -4860,7 +5729,7 @@ declare interface nlobjForm {
    * @since 2008.2
    */
   getSubList(name: string): nlobjSubList;
-
+  
   /**
    * add a field group to the form.
    * @param {string} name field group name
@@ -4874,7 +5743,7 @@ declare interface nlobjForm {
    * @since 2011.1
    */
   addFieldGroup(name: string, label: string, tab: string): nlobjFieldGroup;
-
+  
   /**
    * get a list of all tabs.
    * @return {nlobjTab[]} an array with names of all tabs
@@ -4899,9 +5768,9 @@ declare interface nlobjForm {
  * @since 2009.2
  */
 declare interface nlobjAssistant {
-
+  
   new(): nlobjAssistant;
-
+  
   /**
    * set the page title.
    * @param {string} title
@@ -4913,10 +5782,10 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setTitle(title: string): void;
-
+  
   /**
    * set the script ID for Client Script used for this form.
-   * @param {string, int} script script ID or internal ID for global client script used to enable Client SuiteScript on page
+   * @param {string|number} script script ID or internal ID for global client script used to enable Client SuiteScript on page
    * @return {void}
    *
    * @method
@@ -4925,7 +5794,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setScript(script: string | number): void;
-
+  
   /**
    * set the splash screen used for this page.
    * @param {string} title splash portlet title
@@ -4939,7 +5808,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setSplash(title: string, text1: string, text2?: string): void;
-
+  
   /**
    * show/hide shortcut link. Always hidden on external pages
    * @param {boolean} show enable/disable "Add To Shortcut" link on this page
@@ -4951,7 +5820,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setShortcut(show: boolean): void;
-
+  
   /**
    * set the values for all the fields on this page.
    * @param {Object} values Object of field name/value pairs used to set all fields on page
@@ -4963,7 +5832,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setFieldValues(values: Object): void;
-
+  
   /**
    * if ordered, steps are show on left and must be completed sequentially, otherwise steps are shown on top and can be done in any order
    * @param {boolean} ordered    If true (default assistant behavior) then a navigation order thru the steps/pages will be imposed on the user. Otherwise the user
@@ -4976,7 +5845,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setOrdered(ordered: boolean): void;
-
+  
   /**
    * if numbered, step numbers are displayed next to the step's label in the navigation area
    * @param {boolean} numbered    If true (default assistant behavior) step numbers will be displayed next to the step label
@@ -4988,7 +5857,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setNumbered(numbered: boolean): void;
-
+  
   /**
    * return true if all the steps have been completed.
    * @return {boolean}
@@ -4999,7 +5868,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   isFinished(): boolean;
-
+  
   /**
    * mark assistant page as completed and optionally set the rich text to display on completed page.
    * @param {string} html completion message (rich text) to display on the "Finish" page
@@ -5011,7 +5880,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setFinished(html: string): void;
-
+  
   /**
    * return true if the assistant has an error message to display for the current step.
    * @return {boolean}
@@ -5022,7 +5891,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   hasError(): boolean;
-
+  
   /**
    * set the error message for the currrent step.
    * @param {string} html error message (rich text) to display on the page to the user
@@ -5034,7 +5903,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setError(html: string): void;
-
+  
   /**
    * mark a step as current. It will be highlighted accordingly when the page is displayed
    * @param {nlobjAssistantStep} step assistant step object representing the current step that the user is on.
@@ -5046,7 +5915,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   setCurrentStep(step: nlobjAssistantStep): void;
-
+  
   /**
    * add a step to the assistant.
    * @param {string} name the name of the step
@@ -5059,7 +5928,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   addStep(name: string, label: string): void;
-
+  
   /**
    * add a field to this page and return it.
    * @param {string} name field name
@@ -5075,7 +5944,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   addField(name: string, type: string, label?: string, source?: string | number, group?: string): void;
-
+  
   /**
    * add a field to this page and return it.
    * @param {string} name field name
@@ -5091,7 +5960,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   addField(name: string, type: string, label?: string, radio?: string | number, group?: string): void;
-
+  
   /**
    * add a sublist to this page and return it. For now only sublists of type inlineeditor are supported
    * @param {string} name sublist name
@@ -5105,7 +5974,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   addSubList(name: string, type: string, label: string): nlobjSubList;
-
+  
   /**
    * add a field group to the page.
    * @param {string} name field group name
@@ -5118,7 +5987,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   addFieldGroup(name: string, label: string): nlobjFieldGroup;
-
+  
   /**
    * return an assistant step on this page.
    * @param {string} name step name
@@ -5130,7 +5999,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getStep(name: string): nlobjAssistantStep;
-
+  
   /**
    * return a field on this page.
    * @param {string} name field name
@@ -5142,7 +6011,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getField(name: string): nlobjField;
-
+  
   /**
    * return a sublist on this page.
    * @param {string} name sublist name
@@ -5154,7 +6023,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getSubList(name: string): nlobjSubList;
-
+  
   /**
    * return a field group on this page.
    * @param {string} name field group name
@@ -5166,7 +6035,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getFieldGroup(name: string): nlobjFieldGroup;
-
+  
   /**
    * return an array of all the assistant steps for this assistant.
    * @return {nlobjAssistantStep[]}
@@ -5177,7 +6046,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getAllSteps(): void;
-
+  
   /**
    * return an array of the names of all fields on this page.
    * @return {string[]}
@@ -5188,7 +6057,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getAllFields(): string[];
-
+  
   /**
    *  return an array of the names of all sublists on this page .
    * @return {string[]}
@@ -5199,7 +6068,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getAllSubLists(): void;
-
+  
   /**
    * return an array of the names of all field groups on this page.
    * @return {string[]}
@@ -5210,7 +6079,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getAllFieldGroups(): void;
-
+  
   /**
    * return the last submitted action by the user: next|back|cancel|finish|jump
    * @return {string}
@@ -5221,7 +6090,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getLastAction(): string;
-
+  
   /**
    * return step from which the last submitted action came from
    * @return {nlobjAssistantStep}
@@ -5232,7 +6101,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getLastStep(): nlobjAssistantStep;
-
+  
   /**
    * return the next logical step corresponding to the user's last submitted action. You should only call this after
    * you have successfully captured all the information from the last step and are ready to move on to the next step. You
@@ -5246,7 +6115,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getNextStep(): nlobjAssistantStep;
-
+  
   /**
    * return current step set via nlobjAssistant.setCurrentStep(step)
    * @return {nlobjAssistantStep}
@@ -5257,7 +6126,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getCurrentStep(): nlobjAssistantStep;
-
+  
   /**
    * return the total number of steps in the assistant
    * @return {number}
@@ -5268,7 +6137,7 @@ declare interface nlobjAssistant {
    * @since 2009.2
    */
   getStepCount(): number;
-
+  
   /**
    * redirect the user following a user submit operation. Use this to automatically redirect the user to the next logical step.
    * @param {nlobjResponse} response the response object used to communicate back to the user's client
@@ -5291,9 +6160,9 @@ declare interface nlobjAssistant {
  * @constructor
  */
 declare interface nlobjField {
-
+  
   new(): nlobjField;
-
+  
   /**
    *  return field name.
    *  @return {string}
@@ -5304,7 +6173,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   getName(): string;
-
+  
   /**
    * return field label.
    * @return {string}
@@ -5315,7 +6184,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   getLabel(): string;
-
+  
   /**
    * return field type.
    *  @return {string}
@@ -5326,7 +6195,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   getType(): string;
-
+  
   /**
    * return true if field is hidden.
    * @return {boolean}
@@ -5337,7 +6206,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   isHidden(): boolean;
-
+  
   /**
    * return true if field is mandatory.
    * @return {boolean}
@@ -5348,7 +6217,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   isMandatory(): boolean;
-
+  
   /**
    * return true if field is disabled.
    * @return {boolean}
@@ -5362,7 +6231,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   isDisabled(): boolean;
-
+  
   /**
    * set the label for this field.
    * This method is only supported on scripted fields via the UI Object API
@@ -5376,7 +6245,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setLabel(label: string): () => nlobjField;
-
+  
   /**
    * set the alias used to set the value for this field. Defaults to field name.
    * This method is only supported on scripted fields via the UI Object API
@@ -5390,7 +6259,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setAlias(alias: string): () => nlobjField;
-
+  
   /**
    * set the default value for this field.
    * This method is only supported on scripted fields via the UI Object API
@@ -5404,7 +6273,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setDefaultValue(value: string): () => nlobjField;
-
+  
   /**
    * Disable field via field metadata.
    * This method is only supported on scripted fields via the UI Object API
@@ -5417,7 +6286,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   setDisabled(disabled: boolean): () => nlobjField;
-
+  
   /**
    * make this field mandatory.
    * This method is only supported on scripted fields via the UI Object API
@@ -5431,7 +6300,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setMandatory(mandatory: boolean): () => nlobjField;
-
+  
   /**
    * set the maxlength for this field (only valid for certain field types).
    *  This method is only supported on scripted fields via the UI Object API
@@ -5445,7 +6314,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setMaxLength(maxlength: number): () => nlobjField;
-
+  
   /**
    * set the display type for this field.
    * This method is only supported on scripted fields via the UI Object API
@@ -5459,7 +6328,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setDisplayType(type: string): () => nlobjField;
-
+  
   /**
    * set the break type (startcol|startrow|none) for this field. startrow is only used for fields with a layout type of outside
    * This method is only supported on scripted fields via the UI Object API
@@ -5473,7 +6342,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   setBreakType(breaktype: string): () => nlobjField;
-
+  
   /**
    * set the layout type and optionally the break type.
    * This method is only supported on scripted fields via the UI Object API
@@ -5488,7 +6357,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setLayoutType(type: string, breaktype?: string): () => nlobjField;
-
+  
   /**
    * set the text that gets displayed in lieu of the field value for URL fields.
    *
@@ -5501,7 +6370,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setLinkText(text: string): () => nlobjField;
-
+  
   /**
    * set the width and height for this field.
    * This method is only supported on scripted fields via the UI Object API
@@ -5516,7 +6385,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setDisplaySize(width: number, height: number): () => nlobjField;
-
+  
   /**
    * set the amount of emppty vertical space (rows) between this field and the previous field.
    * This method is only supported on scripted fields via the UI Object API
@@ -5530,7 +6399,7 @@ declare interface nlobjField {
    * @since 2008.2
    */
   setPadding(padding: number): () => nlobjField;
-
+  
   /**
    * set help text for this field. If inline is set on assistant pages, help is displayed inline below field
    * This method is only supported on scripted fields via the UI Object API
@@ -5545,7 +6414,7 @@ declare interface nlobjField {
    * @since 2009.2
    */
   setHelpText(help: string, inline?: string): () => nlobjField;
-
+  
   /**
    * add a select option to this field (valid for select/multiselect fields).
    * This method is only supported on scripted fields via the UI Object API
@@ -5566,18 +6435,20 @@ declare interface nlobjField {
 /**
  * Return a new instance of nlobjSubList used for scriptable sublist (sublist).
  * This object is READ-ONLY except for instances created via the UI Object API using Suitelets or beforeLoad user events.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html
  *
  * @classDescription high level container for defining sublist (many to one) relationships on a record or multi-line data entry UIs on pages.
  * @return {nlobjSubList}
  * @constructor
  */
 declare interface nlobjSubList {
-
+  
   new(): nlobjSubList;
-
+  
   /**
    * set the label for this sublist.
-   * This method is only supported on sublists via the UI Object API
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162546
+   * @restriction This method is only supported on sublists via the UI Object API
    *
    * @param {string} label
    * @return {void}
@@ -5588,10 +6459,11 @@ declare interface nlobjSubList {
    * @since 2008.2
    */
   setLabel(label: string): void;
-
+  
   /**
    * set helper text for this sublist.
-   * This method is only supported on sublists via the UI Object API
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162437
+   * @restriction This method is only supported on sublists via the UI Object API
    *
    * @param {string} help
    * @return {void}
@@ -5602,12 +6474,13 @@ declare interface nlobjSubList {
    * @since 2008.2
    */
   setHelpText(help: string): void;
-
+  
   /**
    * set the displaytype for this sublist: hidden|normal.
-   * This method is only supported on scripted or staticlist sublists via the UI Object API
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162311
+   * @restriction This method is only supported on scripted or staticlist sublists via the UI Object API
    *
-   * @param {string} type
+   * @param {'hidden'|'normal'} type - default is normal
    * @return {void}
    *
    * @method
@@ -5615,10 +6488,11 @@ declare interface nlobjSubList {
    *
    * @since 2008.2
    */
-  setDisplayType(type: string): void;
-
+  setDisplayType(type: 'hidden' | 'normal'): void;
+  
   /**
    * set the value of a cell in this sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162654
    *
    * @param {string}    field sublist field name
    * @param {number}    linenum  line number (1-based)
@@ -5631,13 +6505,28 @@ declare interface nlobjSubList {
    * @since 2008.2
    */
   setLineItemValue(field: string, linenum: number, value: string): void;
-
+  
+  /**
+   * set values for multiple lines (Array of nlobjSearchResults or name-value pair Arrays) in this sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162802
+   * @restriction Note that this method is only supported on scripted sublists via the UI Object API
+   *
+   * @param {string[][]|nlobjSearchResult[]} values
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjSubList
+   *
+   * @since 2008.2
+   */
+  setLineItemValues(values: string[][] | nlobjSearchResult[]): void;
+  
   /**
    * set the value of a matrix cell in this sublist.
-   * @param {string}    field    matrix field name
-   * @param {number}    linenum    line number (1-based)
-   * @param {number}    column  matrix column index (1-based)
-   * @param {string}    value   matrix field value
+   * @param {string}    field     matrix field name
+   * @param {number}    linenum   line number (1-based)
+   * @param {number}    column    matrix column index (1-based)
+   * @param {string}    value     matrix field value
    * @return {void}
    *
    * @method
@@ -5645,21 +6534,12 @@ declare interface nlobjSubList {
    *
    * @since 2009.2
    */
-  setLineItemMatrixValue(field: string, linenum: number, column: number, value: string): void;
-
-  /**
-   * set values for multiple lines (Array of nlobjSearchResults or name-value pair Arrays) in this sublist.
-   * Note that this method is only supported on scripted sublists via the UI Object API
-   *
-   * @param {string[][]|nlobjSearchResult[]} values
-   * @return {void}
-   *
-   * @since 2008.2
-   */
-  setLineItemValues(values: string[][] | nlobjSearchResult[]): void;
-
+  
+  // setLineItemMatrixValue(field: string, linenum: number, column: number, value: string): void;
+  
   /**
    * Return the number of lines in a sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3161941
    *
    * @param {string} group sublist name
    * @return {void}
@@ -5670,14 +6550,15 @@ declare interface nlobjSubList {
    * @since 2010.1
    */
   getLineItemCount(group: string): string | number;
-
+  
   /**
    * add a field (column) to this sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3161467
    *
    * @param {string} name field name
    * @param {string} type field type
    * @param {string} label field label
-   * @param {string, int} [source] script ID or internal ID for source list used for this select field
+   * @param {string|number} [source] script ID or internal ID for source list used for this select field
    * @return {nlobjField}
    *
    * @method
@@ -5685,10 +6566,12 @@ declare interface nlobjSubList {
    *
    * @since 2008.2
    */
-  addField(name: string, type: string, label: string, source: string | number): nlobjField;
-
+  addField(name: string, type: string, label: string, source?: string | number): nlobjField;
+  
   /**
    * designate a field on sublist that must be unique across all lines (only supported on sublists of type inlineeditor, editor).
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162943
+   *
    * @param {string} fldnam the name of a field on this sublist whose value must be unique across all lines
    * @return {nlobjField}
    *
@@ -5698,9 +6581,10 @@ declare interface nlobjSubList {
    * @since 2009.2
    */
   setUniqueField(fldnam: string): nlobjField;
-
+  
   /**
    * add a button to this sublist.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3161339
    *
    * @param {string} name button name
    * @param {string} label button label
@@ -5713,9 +6597,11 @@ declare interface nlobjSubList {
    * @since 2008.2
    */
   addButton(name: string, label: string, script: string): nlobjButton;
-
+  
   /**
    * add "Refresh" button to sublists of type "staticlist" to support manual refreshing of the sublist (without entire page reloads) if it's contents are very volatile
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3161847
+   *
    * @return {nlobjButton}
    *
    * @method
@@ -5724,9 +6610,10 @@ declare interface nlobjSubList {
    * @since 2009.2
    */
   addRefreshButton(): nlobjButton;
-
+  
   /**
    * add "Mark All" and "Unmark All" buttons to this sublist of type "list".
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3161756
    *
    * @return {void}
    *
@@ -5740,17 +6627,19 @@ declare interface nlobjSubList {
 
 /**
  * Return a new instance of nlobjColumn used for scriptable list column.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139838.html
  *
  * @classDescription Class definition for columns used on lists and list portlets.
  * @return {nlobjColumn}
  * @constructor
  */
 declare interface nlobjColumn {
-
+  
   new(): nlobjColumn;
-
+  
   /**
    * set the header name for this column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139838.html#bridgehead_N3140151
    *
    * @param {string} label the label for this column
    * @return {void}
@@ -5761,9 +6650,10 @@ declare interface nlobjColumn {
    * @since 2008.2
    */
   setLabel(label: string): void;
-
+  
   /**
    * set the base URL (optionally defined per row) for this column.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139838.html#bridgehead_N3140260
    *
    * @param {string} value the base URL or a column in the datasource that returns the base URL for each row
    * @param {boolean} perRow if true then the 1st arg is expected to be a column in the datasource
@@ -5775,9 +6665,10 @@ declare interface nlobjColumn {
    * @since 2008.2
    */
   setURL(value: string, perRow: boolean): void;
-
+  
   /**
    * add a URL parameter (optionally defined per row) to this column's URL.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139838.html#bridgehead_N3139996
    *
    * @param {string} param the name of a parameter to add to URL
    * @param {string} value the value of the parameter to add to URL -or- a column in the datasource that returns the parameter value for each row
@@ -5794,30 +6685,39 @@ declare interface nlobjColumn {
 
 /**
  * Return a new instance of nlobjTab used for scriptable tab or subtab.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163084.html
  *
  * @classDescription high level grouping for fields on a data entry form (nlobjForm).
  * @return {nlobjTab}
  * @constructor
  */
 declare interface nlobjTab {
-
+  
   new(): nlobjTab;
-
+  
   /**
    * set the label for this tab or subtab.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163084.html#bridgehead_N3163195
    *
    * @param {string} label string used as label for this tab or subtab
    * @return {nlobjTab}
    *
+   * @method
+   * @memberOf nlobjTab
+   *
    * @since 2008.2
    */
   setLabel(label: string): nlobjTab;
-
+  
   /**
    * set helper text for this tab or subtab.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163084.html#bridgehead_N3163303
    *
    * @param {string} help inline help text used for this tab or subtab
    * @return {nlobjTab}
+   *
+   * @method
+   * @memberOf nlobjTab
    *
    * @since 2008.2
    */
@@ -5826,6 +6726,7 @@ declare interface nlobjTab {
 
 /**
  * Return a new instance of nlobjAssistantStep.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html
  *
  * @classDescription assistant step definition. Used to define individual steps/pages in multi-step workflows.
  * @return {nlobjAssistantStep}
@@ -5834,11 +6735,13 @@ declare interface nlobjTab {
  * @since 2009.2
  */
 declare interface nlobjAssistantStep {
-
+  
   new(): nlobjAssistantStep;
-
+  
   /**
    * set the label for this assistant step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3139115
+   *
    * @param {string} label display label used for this assistant step
    * @return {void}
    *
@@ -5848,9 +6751,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   setLabel(label: string): void;
-
+  
   /**
    * set helper text for this assistant step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138985
+   *
    * @param {string} help inline help text to display on assistant page for this step
    * @return {nlobjAssistantStep}
    *
@@ -5860,9 +6765,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   setHelpText(help: string): nlobjAssistantStep;
-
+  
   /**
    * return the index of this step in the assistant page (1-based)
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138883
+   *
    * @return {number} the index of this step in the assistant (1-based) based on the order in which the steps were added.
    *
    * @method
@@ -5871,9 +6778,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getStepNumber(): number;
-
+  
   /**
    * return the value of a field entered by the user during this step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138404
+   *
    * @param {string} name field name
    * @return {string}
    *
@@ -5883,9 +6792,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getFieldValue(name: string): string;
-
+  
   /**
    * return the selected values of a multi-select field as an Array entered by the user during this step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138516
+   *
    * @param {string} name multi-select field name
    * @return {string[]}
    *
@@ -5895,9 +6806,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getFieldValues(name: string): string[];
-
+  
   /**
    * return the number of lines previously entered by the user in this step (or -1 if the sublist does not exist).
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138634
+   *
    * @param {string} group sublist name
    * @return {number}
    *
@@ -5907,9 +6820,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getLineItemCount(group: string): number;
-
+  
   /**
    * return the value of a sublist field entered by the user during this step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138752
+   *
    * @param {string}    group sublist name
    * @param {string}    name sublist field name
    * @param {number}    linenum sublist (1-based)
@@ -5921,9 +6836,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getLineItemValue(group: string, name: string, linenum: number): string;
-
+  
   /**
    * return an array of the names of all fields entered by the user during this step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138125
+   *
    * @return {string[]}
    *
    * @method
@@ -5932,9 +6849,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getAllFields(): string[];
-
+  
   /**
    * return an array of the names of all sublists entered by the user during this step.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138318
+   *
    * @return {string[]}
    *
    * @method
@@ -5943,9 +6862,11 @@ declare interface nlobjAssistantStep {
    * @since 2009.2
    */
   getAllLineItems(): void;
-
+  
   /**
    * return an array of the names of all sublist fields entered by the user during this step
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3137928.html#bridgehead_N3138211
+   *
    * @param {string} group sublist name
    * @return {string[]}
    *
@@ -5959,6 +6880,7 @@ declare interface nlobjAssistantStep {
 
 /**
  * Return a new instance of nlobjFieldGroup (currently only supported on nlobjAssistant pages)
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3143883.html
  *
  * @classDescription object used for grouping fields on pages (currently only supported on assistant pages).
  * @return {nlobjFieldGroup}
@@ -5967,11 +6889,13 @@ declare interface nlobjAssistantStep {
  * @since 2009.2
  */
 declare interface nlobjFieldGroup {
-
+  
   new(): nlobjFieldGroup;
-
+  
   /**
    * set the label for this field group.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3143883.html#bridgehead_N3144249
+   *
    * @param {string} label display label for field group
    * @return {nlobjFieldGroup}
    *
@@ -5981,9 +6905,10 @@ declare interface nlobjFieldGroup {
    * @since 2009.2
    */
   setLabel(label: string): nlobjFieldGroup;
-
+  
   /**
    * set collapsibility property for this field group.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3143883.html#bridgehead_N3144022
    *
    * @param {boolean} collapsible if true then this field group is collapsible
    * @param {boolean} [defaultcollapsed] if true and the field group is collapsible, collapse this field group by default
@@ -5995,9 +6920,10 @@ declare interface nlobjFieldGroup {
    * @since 2009.2
    */
   setCollapsible(collapsible: boolean, defaultcollapsed?: boolean): nlobjFieldGroup;
-
+  
   /**
    * set singleColumn property for this field group.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3143883.html#bridgehead_N3144487
    *
    * @param {boolean} singleColumn if true then this field group is displayed in single column
    * @return {nlobjFieldGroup}
@@ -6008,9 +6934,10 @@ declare interface nlobjFieldGroup {
    * @since 2011.1
    */
   setSingleColumn(singleColumn: boolean): nlobjFieldGroup;
-
+  
   /**
    * set showBorder property for this field group.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3143883.html#bridgehead_N3144357
    *
    * @param {boolean} showBorder if true then this field group shows border including label of group
    * @return {nlobjFieldGroup}
@@ -6025,6 +6952,7 @@ declare interface nlobjFieldGroup {
 
 /**
  * Return a new instance of nlobjButton.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139249.html
  *
  * @classDescription buttons used for triggering custom behaviors on pages.
  * @return {nlobjButton}
@@ -6033,11 +6961,12 @@ declare interface nlobjFieldGroup {
  * @since 2009.2
  */
 declare interface nlobjButton {
-
+  
   new(): nlobjButton;
-
+  
   /**
    * set the label for this button.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139249.html#bridgehead_N3139554
    *
    * @param {string} label display label for button
    * @return {nlobjButton}
@@ -6048,9 +6977,10 @@ declare interface nlobjButton {
    * @since 2008.2
    */
   setLabel(label: string): nlobjButton;
-
+  
   /**
    * disable or enable button.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139249.html#bridgehead_N3139411
    *
    * @param {boolean} disabled if true then this button should be disabled on the page
    * @return {nlobjButton}
@@ -6061,9 +6991,10 @@ declare interface nlobjButton {
    * @since 2008.2
    */
   setDisabled(disabled: boolean): nlobjButton;
-
+  
   /**
    * set visibility of button.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3139249.html#bridgehead_N3139700
    *
    * @param {boolean} visible if true then this button should be visibile on the page
    * @return {nlobjButton}
@@ -6078,6 +7009,7 @@ declare interface nlobjButton {
 
 /**
  * Return a new instance of nlobjSelectOption.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3126295.html
  *
  * @classDescription select|radio option used for building select fields via the UI Object API and for describing select|radio fields.
  * @return {nlobjSelectOption}
@@ -6086,11 +7018,13 @@ declare interface nlobjButton {
  * @since 2009.2
  */
 declare interface nlobjSelectOption {
-
+  
   new(): nlobjSelectOption;
-
+  
   /**
    * return internal ID for select option
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3126295.html#bridgehead_N3126369
+   *
    * @return {string}
    *
    * @method
@@ -6099,9 +7033,11 @@ declare interface nlobjSelectOption {
    * @since 2009.2
    */
   getId(): string;
-
+  
   /**
    * return display value for select option.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3126295.html#bridgehead_N3126474
+   *
    * @return {string}
    *
    * @method
@@ -6113,13 +7049,64 @@ declare interface nlobjSelectOption {
 }
 
 /**
+ * Use these APIs to change the NetSuite login credentials of the currently logged-in user. In NetSuite, a user's login credentials consists of a user's email address and a password.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3073947.html#bridgehead_N3074008
+ *
  * @return nlobjLogin
  *
  * @since 2012.2
  */
-declare function nlapiGetLogin(): void;
+declare function nlapiGetLogin(): nlobjLogin;
 
 /**
+ * Return a new instance of nlobjLogin.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3090113.html
+ *
+ * @classDescription Primary object used to encapsulate NetSuite user login credentials.
+ * @return {nlobjLogin}
+ * @constructor
+ *
+ * @since 2012.2
+ */
+declare interface nlobjLogin {
+  
+  new(): nlobjLogin;
+  
+  /**
+   * Sets the logged-in user's email address to a new one.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3090113.html#bridgehead_N3090191
+   *
+   * @param {string} currentPassword - The current password of the logged-in user. If a valid value is not specified, an error will be thrown.
+   * @param {string} newEmailAddress - The new email address for the logged-in user. If a valid value is not specified, an error will be thrown.
+   * @param {boolean} [justThisAccount] - If not set, this argument defaults to true. If set to true, the email address change is applied only to roles within the current account. If set to false, the email address change is applied to all accounts and roles.
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjJobManager
+   *
+   * @since 2012.2
+   */
+  changeEmail(currentPassword: string, newEmailAddress: string, justThisAccount?: boolean): void;
+  
+  /**
+   * Sets the logged-in user's password to a new one.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3090113.html#bridgehead_N3090326
+   *
+   * @param {string} currentPassword - The current password of the logged-in user. If a valid value is not specified, an error will be thrown.
+   * @param {string} newPassword - The new password for the logged-in user. If a valid value is not specified, an error will be thrown.
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjJobManager
+   *
+   * @since 2012.2
+   */
+  changeEmail(currentPassword: string, newPassword: string): void;
+}
+
+/**
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3074192.html#bridgehead_N3074310
+ *
  * @param {string} jobType - Job Type
  * @return {nlobjJobManager}
  *
@@ -6129,6 +7116,7 @@ declare function nlapiGetJobManager(jobType: string): nlobjJobManager;
 
 /**
  * Return a new instance of nlobjJobManager.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089592.html
  *
  * @classDescription Encapsulates the properties of a job manager. A call to nlapiGetJobManager(jobType) returns a reference to this object. Use the methods in nlobjJobManager to create and submit your merge duplicate records job request.
  * @return {nlobjJobManager}
@@ -6137,10 +7125,12 @@ declare function nlapiGetJobManager(jobType: string): nlobjJobManager;
  * @since 2013.1
  */
 declare interface nlobjJobManager {
-
+  
   new(): nlobjJobManager;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089592.html#bridgehead_N3089729
+   *
    * @return {nlobjDuplicateJobRequest}
    *
    * @method
@@ -6149,8 +7139,10 @@ declare interface nlobjJobManager {
    * @since 2013.1
    */
   createJobRequest(): nlobjDuplicateJobRequest;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089592.html#bridgehead_N3089844
+   *
    * @param {duplicateJobRequest} nlobjDuplicateJobRequest
    * @return {string}
    *
@@ -6160,8 +7152,10 @@ declare interface nlobjJobManager {
    * @since 2013.1
    */
   submit(duplicateJobRequest: nlobjDuplicateJobRequest): string;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089592.html#bridgehead_N3089981
+   *
    * @return {string}
    *
    * @method
@@ -6174,6 +7168,7 @@ declare interface nlobjJobManager {
 
 /**
  * Return a new instance of nlobjDuplicateJobRequest.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3085362.html
  *
  * @classDescription Primary object used to encapsulate all the properties of a merge duplicate record job request. Note that nlobjJobManager.createJobRequest() returns a reference to this object.
  * @return {nlobjDuplicateJobRequest}
@@ -6182,10 +7177,12 @@ declare interface nlobjJobManager {
  * @since 2013.1
  */
 declare interface nlobjDuplicateJobRequest {
-
+  
   new(): nlobjDuplicateJobRequest;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3085362.html#bridgehead_N3085524
+   *
    * @param {'ENTITY_CUSTOMER'|'ENTITY_CONTACT'|'ENTITY_LEAD'|'ENTITY_PROSPECT'|'ENTITY_PARTNER'|'ENTITY_VENDOR'|'entity_customer'|'entity_contact'|'entity_lead'|'entity_prospect'|'entity_partner'|'entity_vendor'} entityType
    * @return {void}
    *
@@ -6195,8 +7192,10 @@ declare interface nlobjDuplicateJobRequest {
    * @since 2013.1
    */
   setEntityType(entityType: 'ENTITY_CUSTOMER' | 'ENTITY_CONTACT' | 'ENTITY_LEAD' | 'ENTITY_PROSPECT' | 'ENTITY_PARTNER' | 'ENTITY_VENDOR' | 'entity_customer' | 'entity_contact' | 'entity_lead' | 'entity_prospect' | 'entity_partner' | 'entity_vendor'): void;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3085362.html#bridgehead_N3085709
+   *
    * @param {string} masterId
    * @return {void}
    *
@@ -6206,8 +7205,10 @@ declare interface nlobjDuplicateJobRequest {
    * @since 2013.1
    */
   setMasterId(masterId: string): void;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3085362.html#bridgehead_N3085817
+   *
    * @param {'MASTERSELECTIONMODE_CREATED_EARLIEST'|'MASTERSELECTIONMODE_MOST_RECENT_ACTIVITY'|'MASTERSELECTIONMODE_MOST_POPULATED_FIELDS'|'MASTERSELECTIONMODE_SELECT_BY_ID'|'masterselectionmode_created_earliest'|'masterselectionmode_most_recent_activity'|'masterselectionmode_most_populated_fields'|'masterselectionmode_select_by_id'} mode
    * @return {void}
    *
@@ -6217,8 +7218,10 @@ declare interface nlobjDuplicateJobRequest {
    * @since 2013.1
    */
   setMasterSelectionMode(mode: 'MASTERSELECTIONMODE_CREATED_EARLIEST' | 'MASTERSELECTIONMODE_MOST_RECENT_ACTIVITY' | 'MASTERSELECTIONMODE_MOST_POPULATED_FIELDS' | 'MASTERSELECTIONMODE_SELECT_BY_ID' | 'masterselectionmode_created_earliest' | 'masterselectionmode_most_recent_activity' | 'masterselectionmode_most_populated_fields' | 'masterselectionmode_select_by_id'): void;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3085362.html#bridgehead_N3085977
+   *
    * @param {'OPERATION_MERGE'|'OPERATION_DELETE'|'OPERATION_MAKE_MASTER_PARENT'|'OPERATION_MARK_AS_NOT_DUPES'|'operation_merge'|'operation_delete'|'operation_make_master_parent'|'operation_mark_as_not_dupes'} operation
    * @return {void}
    *
@@ -6228,9 +7231,11 @@ declare interface nlobjDuplicateJobRequest {
    * @since 2013.1
    */
   setOperation(operation: 'OPERATION_MERGE' | 'OPERATION_DELETE' | 'OPERATION_MAKE_MASTER_PARENT' | 'OPERATION_MARK_AS_NOT_DUPES' | 'operation_merge' | 'operation_delete' | 'operation_make_master_parent' | 'operation_mark_as_not_dupes'): void;
-
+  
   /**
-   * @param {string[]|number[]} dupeRecords
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3085362.html#bridgehead_N3086136
+   *
+   * @param {(string|number)[]} dupeRecords
    * @return {void}
    *
    * @method
@@ -6238,11 +7243,12 @@ declare interface nlobjDuplicateJobRequest {
    *
    * @since 2013.1
    */
-  setOperation(dupeRecords: string[] | number[]): void;
+  setRecords(dupeRecords: (string | number)[]): void;
 }
 
 /**
  * Return a new instance of nlobjFuture.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089287.html
  *
  * @classDescription Encapsulates the properties of a merge duplicate record job status. Note that nlobjJobManager.getFuture() returns a reference to this object.
  * @return {nlobjFuture}
@@ -6251,10 +7257,12 @@ declare interface nlobjDuplicateJobRequest {
  * @since 2013.1
  */
 declare interface nlobjFuture {
-
+  
   new(): nlobjFuture;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089287.html#bridgehead_N3089378
+   *
    * @return {boolean} - true if job has finished
    *
    * @method
@@ -6263,8 +7271,10 @@ declare interface nlobjFuture {
    * @since 2013.1
    */
   isDone(): boolean;
-
+  
   /**
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3089287.html#bridgehead_N3089485
+   *
    * @return {boolean} - for merge duplicate records, will always returns false
    *
    * @method
@@ -6277,6 +7287,7 @@ declare interface nlobjFuture {
 
 /**
  * Return a new instance of nlobjCache.
+ * @see unknown
  *
  * @classDescription
  * @return {nlobjCache}
@@ -6285,10 +7296,12 @@ declare interface nlobjFuture {
  * @since 2013.2
  */
 declare interface nlobjCache {
-
+  
   new(): nlobjCache;
-
+  
   /**
+   * @see unknown
+   *
    * @param {string} key
    * @param {string|number} value
    * @param {number} [ttl] - Time To Live - cache duration time in seconds - default is 2 hours - value can be between 5 mins a
@@ -6301,8 +7314,10 @@ declare interface nlobjCache {
    * @since 2013.2
    */
   put(key: string, value: string | number, ttl: number): Object;
-
+  
   /**
+   * @see unknown
+   *
    * @param {string} key
    * @return {string}
    *
@@ -6312,8 +7327,10 @@ declare interface nlobjCache {
    * @since 2013.2
    */
   get(key: string): string;
-
+  
   /**
+   * @see unknown
+   *
    * @param {string} key
    * @return {Object}
    *
@@ -6323,4 +7340,256 @@ declare interface nlobjCache {
    * @since 2013.2
    */
   remove(key: string): Object;
+}
+
+/**
+ * Return a new instance of nlobjTemplateRenderer.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163411.html
+ *
+ * @classDescription
+ * @return {nlobjTemplateRenderer}
+ * @constructor
+ *
+ * @since 2013.1
+ */
+declare interface nlobjTemplateRenderer {
+  
+  new(): nlobjTemplateRenderer;
+  
+  /**
+   * Passes in raw string of template to be transformed by FreeMarker.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163411.html#bridgehead_N3163655
+   *
+   * @param {string} template - raw string of template
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjTemplateRenderer
+   *
+   * @since 2013.1
+   */
+  setTemplate(template: string): void;
+  
+  /**
+   * Binds nlobjRecord object to variable name used in template.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163411.html#bridgehead_N3163762
+   *
+   * @param {string} variable - variable name that represents record
+   * @param {nlobjRecord} record - NetSuite record
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjTemplateRenderer
+   *
+   * @since 2013.1
+   */
+  addRecord(variable: string, record: nlobjRecord): void;
+  
+  /**
+   * Binds nlobjRecord object to variable name used in template.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163411.html#bridgehead_N3163890
+   *
+   * @param {string} variable - variable name that represents search result
+   * @param {nlobjSearchResult} searchResult - NetSuite search result
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjTemplateRenderer
+   *
+   * @since 2013.1
+   */
+  addSearchResults(variable: string, searchResult: nlobjSearchResult): void;
+  
+  /**
+   * Returns template content interpreted by FreeMarker as XML string that can be passed to nlapiXMLToPDF(xmlstring) to produce PDF output.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163411.html#bridgehead_N3164018
+   *
+   * @return {string} - XML string of template interpreted by FreeMarker
+   *
+   * @method
+   * @memberOf nlobjTemplateRenderer
+   *
+   * @since 2013.1
+   */
+  renderToString(): string;
+  
+  /**
+   * Renders HTML output to nlobjResponse object.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3163411.html#bridgehead_N3164147
+   *
+   * @return {nlobjResponse} - HTML output to an HTTP response object
+   *
+   * @method
+   * @memberOf nlobjTemplateRenderer
+   *
+   * @since 2013.1
+   */
+  renderToResponse(): nlobjResponse;
+}
+
+/**
+ * Return a new instance of nlobjEmailMerger.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html
+ * @restriction supported in server-side scripts only.
+ *
+ * @classDescription
+ * @return {nlobjEmailMerger}
+ * @constructor
+ *
+ * @since 2015.1
+ */
+declare interface nlobjEmailMerger {
+  
+  new(): nlobjEmailMerger;
+  
+  /**
+   * Use this method to perform a mail merge on an nlobjEmailMerger object (a scriptable e-mail template) and the records designated with the nlobjEmailMerger set methods.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html#bridgehead_4175414674
+   * @governance 20 units
+   * @restriction supported in server-side scripts only.
+   *
+   * @return {nlobjMergeResult} - object containing the e-mail subject and body
+   *
+   * @method
+   * @memberOf nlobjEmailMerger
+   *
+   * @exception {SSS_MERGER_ERROR_OCCURRED} - Thrown if the template merger fails
+   *
+   * @since 2015.1
+   */
+  merge(): nlobjMergeResult;
+  
+  /**
+   * Use this method to designate a custom record to use in a mail merge.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html#bridgehead_4175414953
+   * @restriction supported in server-side scripts only.
+   *
+   * @param {string} recordType - internal ID of the custom record type
+   * @param {number|string} recordId - internal ID of the custom record to use in the mail merge
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjEmailMerger
+   *
+   * @exception {SSS_INVALID_TYPE_ARG} - Thrown if the recordType argument is invalid or missing
+   *
+   * @since 2015.1
+   */
+  setCustomRecord(recordType: string, recordId: number | string): void;
+  
+  /**
+   * Use this method to designate an entity to use in a mail merge.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html#bridgehead_4175413325
+   * @restriction supported in server-side scripts only.
+   *
+   * @param {'customer'|'contact'|'partner'|'vendor'|'employee'} entityType - record type of the record to use in the mail merge
+   * @param {number|string} entityId - internal ID of the record to use in the mail merge
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjEmailMerger
+   *
+   * @exception {SSS_INVALID_TYPE_ARG} - Thrown if the entityType argument is invalid or missing
+   * @exception {SSS_MERGER_ERROR_OCCURRED} - Thrown if the entity cannot be set
+   *
+   * @since 2015.1
+   */
+  setEntity(entityType: 'customer' | 'contact' | 'partner' | 'vendor' | 'employee', entityId: number | string): void;
+  
+  /**
+   * Use this method to designate a second entity (as a recipient) to use in a mail merge.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html#bridgehead_4175414108
+   * @restriction supported in server-side scripts only.
+   *
+   * @param {'customer'|'contact'|'partner'|'vendor'|'employee'} recipientType - record type of the record to use in the mail merge
+   * @param {number|string} recipientId - internal ID of the record to use in the mail merge
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjEmailMerger
+   *
+   * @exception {SSS_INVALID_TYPE_ARG} - Thrown if the recipientType argument is invalid or missing
+   * @exception {SSS_MERGER_ERROR_OCCURRED} - Thrown if the recipient cannot be set
+   *
+   * @since 2015.1
+   */
+  setRecipient(recipientType: 'customer' | 'contact' | 'partner' | 'vendor' | 'employee', recipientId: number | string): void;
+  
+  /**
+   * Use this method to designate a support case to use in a mail merge.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html#bridgehead_4175415331
+   * @restriction supported in server-side scripts only.
+   *
+   * @param {number|string} caseId - internal ID of the case record to use in the mail merge
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjEmailMerger
+   *
+   * @exception {SSS_MERGER_ERROR_OCCURRED} - Thrown if the case cannot be set
+   *
+   * @since 2015.1
+   */
+  setSupportCase(caseId: number | string): void;
+  
+  /**
+   * Use this method to designate a transaction to use in a mail merge. All transaction types are supported.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4175410855.html#bridgehead_4175415590
+   * @restriction supported in server-side scripts only.
+   *
+   * @param {number|string} transactionId - internal ID of the transaction record to use in the mail merge
+   * @return {void}
+   *
+   * @method
+   * @memberOf nlobjEmailMerger
+   *
+   * @exception {SSS_MERGER_ERROR_OCCURRED} - Thrown if the transaction cannot be set
+   *
+   * @since 2015.1
+   */
+  setTransaction(transactionId: number | string): void;
+}
+
+/**
+ * Return a new instance of nlobjMergeResult.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4176454795.html
+ * @restriction supported in server-side scripts only.
+ *
+ * @classDescription
+ * @return {nlobjMergeResult}
+ * @constructor
+ *
+ * @since 2015.1
+ */
+declare interface nlobjMergeResult {
+  
+  new(): nlobjMergeResult;
+  
+  /**
+   * Use this method to get the body of the email distribution in string format.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4176454795.html#bridgehead_4176456131
+   * @restriction supported in server-side scripts only.
+   *
+   * @return {string}
+   *
+   * @method
+   * @memberOf nlobjMergeResult
+   *
+   * @since 2015.1
+   */
+  getBody(): string;
+  
+  /**
+   * Use this method to get the subject of the email distribution in string format.
+   * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4176454795.html#bridgehead_4176456571
+   * @restriction supported in server-side scripts only.
+   *
+   * @return {string}
+   *
+   * @method
+   * @memberOf nlobjMergeResult
+   *
+   * @since 2015.1
+   */
+  getSubject(): string;
 }
