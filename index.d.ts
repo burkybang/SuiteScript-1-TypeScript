@@ -3640,7 +3640,7 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  getField(fldnam: string): () => nlobjField;
+  getField(fldnam: string): nlobjField;
   
   /**
    * set the value of a field.
@@ -6244,7 +6244,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setLabel(label: string): () => nlobjField;
+  setLabel(label: string): nlobjField;
   
   /**
    * set the alias used to set the value for this field. Defaults to field name.
@@ -6258,7 +6258,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setAlias(alias: string): () => nlobjField;
+  setAlias(alias: string): nlobjField;
   
   /**
    * set the default value for this field.
@@ -6272,7 +6272,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setDefaultValue(value: string): () => nlobjField;
+  setDefaultValue(value: string): nlobjField;
   
   /**
    * Disable field via field metadata.
@@ -6285,7 +6285,7 @@ declare interface nlobjField {
    *
    * @since 2009.2
    */
-  setDisabled(disabled: boolean): () => nlobjField;
+  setDisabled(disabled: boolean): nlobjField;
   
   /**
    * make this field mandatory.
@@ -6299,7 +6299,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setMandatory(mandatory: boolean): () => nlobjField;
+  setMandatory(mandatory: boolean): nlobjField;
   
   /**
    * set the maxlength for this field (only valid for certain field types).
@@ -6313,7 +6313,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setMaxLength(maxlength: number): () => nlobjField;
+  setMaxLength(maxlength: number): nlobjField;
   
   /**
    * set the display type for this field.
@@ -6327,7 +6327,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setDisplayType(type: string): () => nlobjField;
+  setDisplayType(type: string): nlobjField;
   
   /**
    * set the break type (startcol|startrow|none) for this field. startrow is only used for fields with a layout type of outside
@@ -6341,7 +6341,7 @@ declare interface nlobjField {
    *
    * @since 2009.2
    */
-  setBreakType(breaktype: string): () => nlobjField;
+  setBreakType(breaktype: string): nlobjField;
   
   /**
    * set the layout type and optionally the break type.
@@ -6356,7 +6356,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setLayoutType(type: string, breaktype?: string): () => nlobjField;
+  setLayoutType(type: string, breaktype?: string): nlobjField;
   
   /**
    * set the text that gets displayed in lieu of the field value for URL fields.
@@ -6369,7 +6369,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setLinkText(text: string): () => nlobjField;
+  setLinkText(text: string): nlobjField;
   
   /**
    * set the width and height for this field.
@@ -6384,7 +6384,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setDisplaySize(width: number, height: number): () => nlobjField;
+  setDisplaySize(width: number, height: number): nlobjField;
   
   /**
    * set the amount of emppty vertical space (rows) between this field and the previous field.
@@ -6398,7 +6398,7 @@ declare interface nlobjField {
    *
    * @since 2008.2
    */
-  setPadding(padding: number): () => nlobjField;
+  setPadding(padding: number): nlobjField;
   
   /**
    * set help text for this field. If inline is set on assistant pages, help is displayed inline below field
@@ -6413,7 +6413,7 @@ declare interface nlobjField {
    *
    * @since 2009.2
    */
-  setHelpText(help: string, inline?: string): () => nlobjField;
+  setHelpText(help: string, inline?: string): nlobjField;
   
   /**
    * add a select option to this field (valid for select/multiselect fields).
