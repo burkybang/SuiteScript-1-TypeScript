@@ -5734,7 +5734,7 @@ declare interface nlobjForm {
    * add a field group to the form.
    * @param {string} name field group name
    * @param {string} label field group label
-   * @param {string} tab
+   * @param {string} [tab]
    * @return {nlobjFieldGroup}
    *
    * @method
@@ -5742,7 +5742,7 @@ declare interface nlobjForm {
    *
    * @since 2011.1
    */
-  addFieldGroup(name: string, label: string, tab: string): nlobjFieldGroup;
+  addFieldGroup(name: string, label: string, tab?: string): nlobjFieldGroup;
   
   /**
    * get a list of all tabs.
