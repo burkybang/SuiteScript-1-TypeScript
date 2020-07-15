@@ -617,7 +617,7 @@ declare function nlapiGetRecordId(): number;
  * @restriction all outbound emails subject to email Anti-SPAM policies
  *
  * @param {number}        author internal ID for employee user on behalf of whom this email is sent
- * @param {string|number} recipient email address or internal ID of user that this email is being sent to
+ * @param {string|string[]|number} recipient email address, email addresses separated by commas, array of email addresses, or internal ID of user that this email is being sent to
  * @param {string}        subject email subject
  * @param {string}        body email body
  * @param {string|string[]} cc copy email address(es)
@@ -631,7 +631,7 @@ declare function nlapiGetRecordId(): number;
  *
  * @since    2007.0
  */
-declare function nlapiSendEmail(author: number, recipient: string | number, subject: string, body: string, cc?: string | string[], bcc?: string | string[], records?: Object, attachments?: nlobjFile | nlobjFile[], notifySenderOnBounce?: boolean, internalOnly?: boolean, replyTo?: string): void;
+declare function nlapiSendEmail(author: number, recipient: string | string[] | number, subject: string, body: string, cc?: string | string[], bcc?: string | string[], records?: Object, attachments?: nlobjFile | nlobjFile[], notifySenderOnBounce?: boolean, internalOnly?: boolean, replyTo?: string): void;
 
 /**
  * Sends a single on-demand campaign email to a specified recipient and returns a campaign response ID to track the email.
