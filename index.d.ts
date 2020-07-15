@@ -6187,7 +6187,7 @@ declare interface nlobjField {
   
   /**
    * return field type.
-   *  @return {string}
+   * @return {string}
    *
    * @method
    * @memberOf nlobjField
@@ -6195,6 +6195,20 @@ declare interface nlobjField {
    * @since 2009.2
    */
   getType(): string;
+  
+  /**
+   * return select options.
+   *
+   * @param {string} [filter]
+   * @param {'contains'|'is'|'startswith'} [filterOperator]
+   * @return {nlobjSelectOption[]}
+   *
+   * @method
+   * @memberOf nlobjField
+   *
+   * @since 2009.2
+   */
+  getSelectOptions(filter?: string, filterOperator?: 'contains' | 'is' | 'startswith'): nlobjSelectOption[];
   
   /**
    * return true if field is hidden.
@@ -6430,6 +6444,39 @@ declare interface nlobjField {
    * @since 2008.2
    */
   addSelectOption(value: string, text: string, selected?: boolean): void;
+}
+
+/**
+ * Return a new instance of nlobjSelectOption used for scriptable field.
+ * This object is READ-ONLY
+ *
+ * @classDescription Primary object used to encapsulate available select options for a select field.
+ * @return {nlobjSelectOption}
+ * @constructor
+ */
+declare interface nlobjSelectOption {
+  
+  /**
+   *  return option ID.
+   *  @return {string}
+   *
+   * @method
+   * @memberOf nlobjField
+   *
+   * @since 2009.2
+   */
+  getId(): string
+  
+  /**
+   *  return option text label.
+   *  @return {string}
+   *
+   * @method
+   * @memberOf nlobjField
+   *
+   * @since 2009.2
+   */
+  getText(): string
 }
 
 /**
