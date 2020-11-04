@@ -1,5 +1,5 @@
-[![](https://img.shields.io/github/watchers/burkybang/SuiteScript-1.0-TypeScript?style=social)](https://github.com/burkybang/SuiteScript-1.0-TypeScript/watchers)
-[![](https://img.shields.io/github/stars/burkybang/SuiteScript-1.0-TypeScript?style=social)](https://github.com/burkybang/SuiteScript-1.0-TypeScript/stargazers)
+[![](https://img.shields.io/github/watchers/burkybang/SuiteScript-1.0-TypeScript?style=social)](../../watchers)
+[![](https://img.shields.io/github/stars/burkybang/SuiteScript-1.0-TypeScript?style=social)](../../stargazers)
 
 # Summary
 This package contains type definitions for SuiteScript 1.0 (http://www.netsuite.com).
