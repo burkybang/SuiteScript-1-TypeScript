@@ -313,7 +313,7 @@ declare function nlapiSubmitRecord(record: nlobjRecord, doSourcing?: boolean, ig
  * @governance 20 units for transactions, 4 for custom records, 8 for all other records
  *
  * @param {string}    type The record type name.
- * @param {number}    id The internal ID for the record.
+ * @param {number|string}    id The internal ID for the record.
  * @return {void}
  *
  * @exception {SSS_INVALID_RECORD_TYPE}
@@ -323,7 +323,7 @@ declare function nlapiSubmitRecord(record: nlobjRecord, doSourcing?: boolean, ig
  *
  * @since    2007.0
  */
-declare function nlapiDeleteRecord(type: string, id: number): void;
+declare function nlapiDeleteRecord(type: string, id: number | string): void;
 
 /**
  * Perform a record search using an existing search or filters and columns.
@@ -603,11 +603,11 @@ declare function nlapiGetRecordType(): string;
  * Return the internal ID corresponding to the current page or userevent script.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030530
  *
- * @return {number}
+ * @return {string}
  *
  * @since    2007.0
  */
-declare function nlapiGetRecordId(): number;
+declare function nlapiGetRecordId(): string;
 
 /**
  * Send out an email and associate it with records in the system.
@@ -1649,12 +1649,12 @@ declare function nlapiOutboundSSO(ssoAppKey: string): string;
  * @restriction Server SuiteScript only
  * @governance 10 units
  *
- * @param {string} type
+ * @param {'companyinformation'|'companypreferences'|'userpreferences'|'accountingpreferences'|'accountingperiods'|'taxperiods'|'companyfeatures'} type
  * @return {nlobjConfiguration}
  *
  * @since 2009.2
  */
-declare function nlapiLoadConfiguration(type: string): nlobjConfiguration;
+declare function nlapiLoadConfiguration(type: 'companyinformation' | 'companypreferences' | 'userpreferences' | 'accountingpreferences' | 'accountingperiods' | 'taxperiods' | 'companyfeatures'): nlobjConfiguration;
 
 /**
  * Commits all changes to a configuration record.
@@ -1679,7 +1679,7 @@ declare function nlapiSubmitConfiguration(setup: nlobjConfiguration): void;
  *
  * @since 2005.0
  */
-declare function nlapiStringToDate(str: string, format?: 'date' | 'datetime' | 'datetimetz' | 'timeofday'): Date;
+declare function nlapiStringToDate(str: string, format?: 'date' | 'datetime' | 'datetimetz' | 'timeofday' | string): Date;
 
 /**
  * Convert a Date object into a String
@@ -1691,7 +1691,7 @@ declare function nlapiStringToDate(str: string, format?: 'date' | 'datetime' | '
  *
  * @since 2005.0
  */
-declare function nlapiDateToString(date: Date, formattype?: 'date' | 'datetime' | 'datetimetz' | 'timeofday'): string;
+declare function nlapiDateToString(date: Date, formattype?: 'date' | 'datetime' | 'datetimetz' | 'timeofday' | string): string;
 
 /**
  * Add days to a Date object and returns a new Date
@@ -4291,7 +4291,7 @@ declare interface nlobjSearchResult {
    * @memberOf nlobjSearchResult
    * @return {number}
    */
-  getId(): number;
+  getId(): string;
   
   /**
    * return the recordtype for the record returned in this row.
