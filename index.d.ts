@@ -36,7 +36,7 @@ declare namespace nlobjRecord.prototype {
       addRefreshButton: /* nlobjSubList.prototype.addRefreshButton */ any;
       
       addMarkAllButtons: /* nlobjSubList.prototype.addMarkAllButtons */ any;
-    }
+    };
   }
 }
 declare namespace nlobjRecord.prototype.GetSubListRet.prototype {
@@ -49,7 +49,7 @@ declare namespace nlobjRecord.prototype.GetSubListRet.prototype {
       setLabel: /* nlobjButton.prototype.setLabel */ any;
       
       setDisabled: /* nlobjButton.prototype.setDisabled */ any;
-    }
+    };
   }
 }
 declare namespace nlobjRecord.prototype {
@@ -98,7 +98,7 @@ declare namespace nlobjRecord.prototype {
       setHelpText: /* nlobjField.prototype.setHelpText */ any;
       
       addSelectOption: /* nlobjField.prototype.addSelectOption */ any;
-    }
+    };
   }
 }
 declare namespace nlobjPortlet.prototype {
@@ -113,7 +113,7 @@ declare namespace nlobjPortlet.prototype {
       setURL: /* nlobjColumn.prototype.setURL */ any;
       
       addParamToURL: /* nlobjColumn.prototype.addParamToURL */ any;
-    }
+    };
   }
 }
 declare namespace nlobjForm.prototype {
@@ -126,7 +126,7 @@ declare namespace nlobjForm.prototype {
       setLabel: /* nlobjTab.prototype.setLabel */ any;
       
       setHelpText: /* nlobjTab.prototype.setHelpText */ any;
-    }
+    };
   }
 }
 declare namespace nlobjAssistant.prototype {
@@ -155,7 +155,7 @@ declare namespace nlobjAssistant.prototype {
       getAllLineItems: /* nlobjAssistantStep.prototype.getAllLineItems */ any;
       
       getAllLineItemFields: /* nlobjAssistantStep.prototype.getAllLineItemFields */ any;
-    }
+    };
   }
 }
 declare namespace nlobjForm.prototype {
@@ -172,7 +172,7 @@ declare namespace nlobjForm.prototype {
       setSingleColumn: /* nlobjFieldGroup.prototype.setSingleColumn */ any;
       
       setShowBorder: /* nlobjFieldGroup.prototype.setShowBorder */ any;
-    }
+    };
   }
 }
 declare namespace nlobjForm.prototype {
@@ -185,7 +185,7 @@ declare namespace nlobjForm.prototype {
       setLabel: /* nlobjButton.prototype.setLabel */ any;
       
       setDisabled: /* nlobjButton.prototype.setDisabled */ any;
-    }
+    };
   }
 }
 
@@ -401,8 +401,7 @@ declare function nlapiTransformRecord(type: string, id: number | string, transfo
  *
  * @param type - The transaction type name.
  * @param id - The internal ID for the record.
- * @return if accounting preference is reversing journal, then it is new journal id,
- *                   otherwise, it is the input record id
+ * @return If accounting preference is reversing journal, then it is new journal id, otherwise, it is the input record id
  *
  * @since 2014.1
  */
@@ -1620,7 +1619,8 @@ declare function nlapiScheduleScript(script: string | number, deployment?: strin
  * @since 2008.1
  */
 declare function nlapiSetRecoveryPoint(): {
-  status: 'SUCCESS' | 'FAILURE' | 'RESUME', reason: 'SS_NLAPIYIELDSCRIPT' | 'SS_ABORT' | 'SS_MAJOR_RELEASE' | 'SS_EXCESSIVE_MEMORY_FOOTPRINT' | 'SS_CANCELLED' | 'SS_DISALLOWED_OBJECT_REFERENCE' | 'SSS_FILE_OBJECT_NOT_SERIALIZABLE' | 'SSS_SCRIPT_DESERIALIZATION_FAILURE',
+  status: 'SUCCESS' | 'FAILURE' | 'RESUME',
+  reason: 'SS_NLAPIYIELDSCRIPT' | 'SS_ABORT' | 'SS_MAJOR_RELEASE' | 'SS_EXCESSIVE_MEMORY_FOOTPRINT' | 'SS_CANCELLED' | 'SS_DISALLOWED_OBJECT_REFERENCE' | 'SSS_FILE_OBJECT_NOT_SERIALIZABLE' | 'SSS_SCRIPT_DESERIALIZATION_FAILURE',
   size: number,
   information: string
 };
@@ -1633,7 +1633,8 @@ declare function nlapiSetRecoveryPoint(): {
  * @since 2008.2
  */
 declare function nlapiYieldScript(): {
-  status: 'FAILURE' | 'RESUME', reason: 'SS_NLAPIYIELDSCRIPT' | 'SS_ABORT' | 'SS_MAJOR_RELEASE' | 'SS_EXCESSIVE_MEMORY_FOOTPRINT' | 'SS_CANCELLED' | 'SS_DISALLOWED_OBJECT_REFERENCE' | 'SSS_FILE_OBJECT_NOT_SERIALIZABLE' | 'SSS_SCRIPT_DESERIALIZATION_FAILURE',
+  status: 'FAILURE' | 'RESUME',
+  reason: 'SS_NLAPIYIELDSCRIPT' | 'SS_ABORT' | 'SS_MAJOR_RELEASE' | 'SS_EXCESSIVE_MEMORY_FOOTPRINT' | 'SS_CANCELLED' | 'SS_DISALLOWED_OBJECT_REFERENCE' | 'SSS_FILE_OBJECT_NOT_SERIALIZABLE' | 'SSS_SCRIPT_DESERIALIZATION_FAILURE',
   size: number,
   information: string
 };
@@ -2063,7 +2064,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  addColumn(column: nlobjSearchColumn): void
+  addColumn(column: nlobjSearchColumn): void;
   
   /**
    * Adds a single return column to the search. Note that existing columns on the search are not changed.
@@ -2077,7 +2078,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  addColumns(columns: nlobjSearchColumn[]): void
+  addColumns(columns: nlobjSearchColumn[]): void;
   
   /**
    * Adds a single search filter. Note that existing filters on the search are not changed.
@@ -2091,7 +2092,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  addFilter(filter: nlobjSearchFilter): void
+  addFilter(filter: nlobjSearchFilter): void;
   
   /**
    * Adds a search filter list. Note that existing filters on the search are not changed.
@@ -2105,7 +2106,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  addFilters(filters: nlobjSearchFilter[]): void
+  addFilters(filters: nlobjSearchFilter[]): void;
   
   /**
    * Deletes a saved search that was created through scripting or through the UI.
@@ -2118,7 +2119,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  deleteSearch(): void
+  deleteSearch(): void;
   
   /**
    * Gets the search return columns for the search.
@@ -2131,7 +2132,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  getColumns(): nlobjSearchColumn[]
+  getColumns(): nlobjSearchColumn[];
   
   /**
    * Gets the filter expression for the search.
@@ -2144,7 +2145,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.2
    */
-  getFilterExpression(): (string | number | (string | number | (string | number)[])[])[]
+  getFilterExpression(): (string | number | (string | number | (string | number)[])[])[];
   
   /**
    * Gets the filters for the search.
@@ -2157,7 +2158,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  getFilters(): nlobjSearchFilter[]
+  getFilters(): nlobjSearchFilter[];
   
   /**
    * Gets the internal ID of the search.
@@ -2170,7 +2171,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  getId(): string
+  getId(): string;
   
   /**
    * Gets whether the nlobjSearch has been set as public search.
@@ -2183,7 +2184,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  getIsPublic(): boolean
+  getIsPublic(): boolean;
   
   /**
    * Gets the script ID of the search.
@@ -2196,7 +2197,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  getScriptId(): string
+  getScriptId(): string;
   
   /**
    * Returns the record type that the search was based on.
@@ -2209,7 +2210,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  getSearchType(): string
+  getSearchType(): string;
   
   /**
    * Runs an on demand search, returning the results.
@@ -2222,7 +2223,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  runSearch(): nlobjSearchResultSet
+  runSearch(): nlobjSearchResultSet;
   
   /**
    * Saves the search created by nlapiCreateSearch(type, filters, columns).
@@ -2237,7 +2238,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  saveSearch(title?: string, scriptId?: string): number
+  saveSearch(title?: string, scriptId?: string): number;
   
   /**
    * Sets the return columns for this search, overwriting any prior columns. If null is passed in it is treated as if it were an empty array and removes any existing columns on the search.
@@ -2251,7 +2252,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  setColumns(columns: nlobjSearchColumn[]): void
+  setColumns(columns: nlobjSearchColumn[]): void;
   
   /**
    * Sets the search filter expression, overwriting any prior filters. If null is passed in, it is treated as if it was an empty array and removes any existing filters on this search.
@@ -2265,7 +2266,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.2
    */
-  setFilterExpression(filterExpression: (string | number | (string | number | (string | number)[])[])[]): void
+  setFilterExpression(filterExpression: (string | number | (string | number | (string | number)[])[])[]): void;
   
   /**
    * Sets the filters for this search, overwriting any prior filters. If null is passed in it is treated as if it were an empty array and removes any existing filters on this search.
@@ -2279,7 +2280,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  setFilters(filters: nlobjSearchFilter[]): void
+  setFilters(filters: nlobjSearchFilter[]): void;
   
   /**
    * Sets whether the search is public or private. By default, all searches created through nlapiCreateSearch(type, filters, columns) are private.
@@ -2293,7 +2294,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  setIsPublic(type: boolean): void
+  setIsPublic(type: boolean): void;
   
   /**
    * Acts like nlapiSetRedirectURL(type, identifier, id, editmode, parameters) but redirects end users to a populated search definition page.
@@ -2306,7 +2307,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  setRedirectURLToSearch(): void
+  setRedirectURLToSearch(): void;
   
   /**
    * Acts like nlapiSetRedirectURL(type, identifier, id, editmode, parameters) but redirects end users to a search results page.
@@ -2319,7 +2320,7 @@ declare interface nlobjSearch {
    *
    * @since 2012.1
    */
-  setRedirectURLToSearchResults(): void
+  setRedirectURLToSearchResults(): void;
 }
 
 /**
@@ -2338,7 +2339,7 @@ declare interface nlobjSearchResultSet {
    *
    * @since 2012.1
    */
-  forEachResult(callback: (result: nlobjSearchResult) => void): void
+  forEachResult(callback: (result: nlobjSearchResult) => void): void;
   
   /**
    * Returns a list of nlobjSearchColumn objects for this result set. This list contains one nlobjSearchColumn object for each result column in the nlobjSearchResult objects returned by this search.
@@ -2351,7 +2352,7 @@ declare interface nlobjSearchResultSet {
    *
    * @since 2012.1
    */
-  getColumns(): nlobjSearchColumn[]
+  getColumns(): nlobjSearchColumn[];
   
   /**
    * Calls the developer-defined callback function for every result in this set. There is a limit of 4000 rows in the result set returned in forEachResult().
@@ -2366,7 +2367,7 @@ declare interface nlobjSearchResultSet {
    *
    * @since 2012.1
    */
-  getResults(start: number, end: number): nlobjSearchResult[]
+  getResults(start: number, end: number): nlobjSearchResult[];
 }
 
 /**
@@ -6430,7 +6431,7 @@ declare interface nlobjSelectOption {
    *
    * @since 2009.2
    */
-  getId(): string
+  getId(): string;
   
   /**
    *  return option text label.
@@ -6441,7 +6442,7 @@ declare interface nlobjSelectOption {
    *
    * @since 2009.2
    */
-  getText(): string
+  getText(): string;
 }
 
 /**
