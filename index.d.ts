@@ -414,15 +414,15 @@ declare function nlapiVoidTransaction(type: string, id: number | string): string
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040351
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
- * @param type - The record type name.
- * @param id - The internal ID for the record.
- * @param field - Field or fields to look up.
+ * @param recordType - The record type name.
+ * @param recordId - The internal ID for the record.
+ * @param fieldId - Field or fields to look up.
  * @param [text] - If set then the display value is returned instead for select fields.
- * @return single value or an Object of field name/value pairs depending on the fields argument.
+ * @return Single value.
  *
  * @since 2008.1
  */
-declare function nlapiLookupField(type: string, id: number | string, field: string, text?: boolean): string;
+declare function nlapiLookupField(recordType: string, recordId: number | string, fieldId: string, text?: boolean): string;
 
 /**
  * Fetch the value of one or more fields on a record. This API uses search to look up the fields and is much
@@ -430,15 +430,15 @@ declare function nlapiLookupField(type: string, id: number | string, field: stri
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040351
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  *
- * @param type - The record type name.
- * @param id - The internal ID for the record.
- * @param fields - Field or fields to look up.
+ * @param recordType - The record type name.
+ * @param recordId - The internal ID for the record.
+ * @param fieldIds - Field or fields to look up.
  * @param [text] - If set then the display value is returned instead for select fields.
- * @return single value or an Object of field name/value pairs depending on the fields argument.
+ * @return Object of field name/value pairs.
  *
  * @since 2008.1
  */
-declare function nlapiLookupField<FieldId extends string>(type: string, id: number | string, fields: FieldId[], text?: boolean): { [key in FieldId]: string };
+declare function nlapiLookupField<FieldId extends string>(recordType: string, recordId: number | string, fieldIds: FieldId[], text?: boolean): { [key in FieldId]: string };
 
 /**
  * Submit the values of a field or set of fields for an existing record.
@@ -446,72 +446,158 @@ declare function nlapiLookupField<FieldId extends string>(type: string, id: numb
  * @governance 10 units for transactions, 2 for custom records, 4 for all other records
  * @restriction only supported for records and fields where DLE (Direct List Editing) is supported
  *
- * @param type - The record type name.
- * @param id - The internal ID for the record.
- * @param fields - Field or fields being updated.
- * @param values - Field value or field values used for updating.
- * @param [doSourcing] - If not set, this argument defaults to false and field sourcing does not occur.
+ * @param recordType - The record type name.
+ * @param recordId - The internal ID for the record.
+ * @param fieldId - Field being updated.
+ * @param value - Field value used for updating.
+ * @param [doSourcing = false] - If not set, this argument defaults to false and field sourcing does not occur.
  *
  * @since 2008.1
  */
-declare function nlapiSubmitField(type: string, id: number | string, fields: string | string[], values: string | string[], doSourcing?: boolean): void;
+declare function nlapiSubmitField(recordType: string, recordId: number | string, fieldId: string, value: string, doSourcing?: boolean): void;
+
+/**
+ * Submit the values of a field or set of fields for an existing record.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3042189
+ * @governance 10 units for transactions, 2 for custom records, 4 for all other records
+ * @restriction only supported for records and fields where DLE (Direct List Editing) is supported
+ *
+ * @param recordType - The record type name.
+ * @param recordId - The internal ID for the record.
+ * @param fieldIds - Fields being updated.
+ * @param values - Field values used for updating.
+ * @param [doSourcing = false] - If not set, this argument defaults to false and field sourcing does not occur.
+ *
+ * @since 2008.1
+ */
+declare function nlapiSubmitField(recordType: string, recordId: number | string, fieldIds: string[], values: string[], doSourcing?: boolean): void;
 
 /**
  * Attach a single record to another with optional properties.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3027757
  * @governance 10 units
  *
- * @param type1 - The record type name being attached
- * @param id1 - The internal ID for the record being attached
- * @param type2 - The record type name being attached to
- * @param id2 - The internal ID for the record being attached to
+ * @param recordType1 - The record type name being attached
+ * @param recordId1 - The internal ID for the record being attached
+ * @param recordType2 - The record type name being attached to
+ * @param recordId2 - The internal ID for the record being attached to
  * @param [attributes] - Object containing name/value pairs used to configure attach operation
  *
  * @since 2008.2
  */
-declare function nlapiAttachRecord(type1: string, id1: number | string, type2: string, id2: number | string, attributes?: Object): void;
+declare function nlapiAttachRecord(recordType1: string, recordId1: number | string, recordType2: string, recordId2: number | string, attributes?: Object): void;
 
 /**
  * Detach a single record from another with optional properties.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3027360.html#bridgehead_N3030101
  * @governance 10 units
  *
- * @param type1 - The record type name being attached
- * @param id1 - The internal ID for the record being attached
- * @param type2 - The record type name being attached to
- * @param id2 - The internal ID for the record being attached to
+ * @param recordType1 - The record type name being attached
+ * @param recordId1 - The internal ID for the record being attached
+ * @param recordType2 - The record type name being attached to
+ * @param recordId2 - The internal ID for the record being attached to
  * @param [attributes] - Object containing name/value pairs used to configure detach operation
  *
  * @since 2008.2
  */
-declare function nlapiDetachRecord(type1: string, id1: number | string, type2: string, id2: number | string, attributes?: Object): void;
+declare function nlapiDetachRecord(recordType1: string, recordId1: number | string, recordType2: string, recordId2: number | string, attributes?: Object): void;
 
 /**
  * Resolve a URL to a resource or object in the system.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3059898
  *
- * @param type - Type specifier for URL: suitelet|tasklink|record|mediaitem
- * @param subtype - Subtype specifier for URL (corresponding to type): scriptid|taskid|recordtype|mediaid
- * @param [id] - Internal ID specifier (sub-subtype corresponding to type): deploymentid|n/a|recordid|n/a
- * @param [pagemode] - String specifier used to configure page (suitelet: external|internal, tasklink|record: edit|view)
+ * @param type - Type specifier for URL
+ * @param recordType - Type of the record
+ * @param [recordId] - Internal ID of the record
+ * @param [pageMode = 'VIEW'] - View or edit mode
  *
  * @since 2007.0
  */
-declare function nlapiResolveURL(type: string, subtype: string, id?: number | string, pagemode?: string): string;
+declare function nlapiResolveURL(
+  type: 'RECORD' | 'record',
+  recordType: string,
+  recordId?: number | string,
+  pageMode?: 'VIEW' | 'EDIT' | 'view' | 'edit',
+): string;
+
+/**
+ * Resolve a URL to a resource or object in the system.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3059898
+ *
+ * @param type - Type specifier for URL
+ * @param scriptId - Internal ID or scriptid of the script
+ * @param deploymentId - Internal ID or scriptid of the deployment
+ * @param [pageMode = 'INTERNAL'] - Internal or externak URL
+ *
+ * @since 2007.0
+ */
+declare function nlapiResolveURL(
+  type: 'SUITELET' | 'RESTLET' | 'suitelet' | 'restlet',
+  scriptId: number | string,
+  deploymentId: number | string,
+  pageMode?: 'INTERNAL' | 'EXTERNAL' | 'internal' | 'external' | boolean,
+): string;
+
+/**
+ * Resolve a URL to a resource or object in the system.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3059898
+ *
+ * @param type - Type specifier for URL
+ * @param taskId - Subtype specifier for URL
+ *
+ * @since 2007.0
+ */
+declare function nlapiResolveURL(type: 'TASKLINK' | 'tasklink', taskId: string): string;
 
 /**
  * Redirect the user to a page. Only valid in the UI on Suitelets and User Events. In Client scripts this will initialize the redirect URL used upon submit.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3060274
  *
- * @param type - Type specifier for URL: suitelet|tasklink|record|mediaitem
- * @param subtype - Subtype specifier for URL (corresponding to type): scriptid|taskid|recordtype|mediaid
- * @param [id] - Internal ID specifier (sub-subtype corresponding to type): deploymentid|n/a|recordid|n/a
- * @param [pagemode] - String specifier used to configure page (suitelet: external|internal, tasklink|record: edit|view)
+ * @param type - Type specifier for URL
+ * @param recordType - Type of the record
+ * @param [recordId] - Internal ID of the record
+ * @param [editMode = false] - View or edit mode
  * @param [parameters] - Object used to specify additional URL parameters as name/value pairs
  *
  * @since 2007.0
  */
-declare function nlapiSetRedirectURL(type: 'RECORD' | 'TASKLINK' | 'SUITELET' | 'EXTERNAL' | 'record' | 'tasklink' | 'suitelet' | 'external', identifier: string, id?: number | string, editmode?: boolean, parameters?: Object): void;
+declare function nlapiSetRedirectURL(type: 'RECORD' | 'record', recordType: string, recordId?: number | string, editMode?: boolean, parameters?: Record<string, string | number>): void;
+
+/**
+ * Redirect the user to a page. Only valid in the UI on Suitelets and User Events. In Client scripts this will initialize the redirect URL used upon submit.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3060274
+ *
+ * @param type - Type specifier for URL
+ * @param scriptId - Internal ID or scriptid of the script
+ * @param deploymentId - Internal ID or scriptid of the deployment
+ * @param [editMode] - View or edit mode
+ * @param [parameters] - Object used to specify additional URL parameters as name/value pairs
+ *
+ * @since 2007.0
+ */
+declare function nlapiSetRedirectURL(type: 'SUITELET' | 'suitelet', scriptId: number | string, deploymentId: number | string, editMode?: boolean, parameters?: Record<string, string | number>): void;
+
+/**
+ * Redirect the user to a page. Only valid in the UI on Suitelets and User Events. In Client scripts this will initialize the redirect URL used upon submit.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3060274
+ *
+ * @param type - Type specifier for URL
+ * @param taskId - ID of the task
+ *
+ * @since 2007.0
+ */
+declare function nlapiSetRedirectURL(type: 'TASKLINK' | 'tasklink', taskId: string): void;
+
+/**
+ * Redirect the user to a page. Only valid in the UI on Suitelets and User Events. In Client scripts this will initialize the redirect URL used upon submit.
+ * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3059035.html#bridgehead_N3060274
+ *
+ * @param type - Type specifier for URL
+ * @param url - External URL
+ *
+ * @since 2007.0
+ */
+declare function nlapiSetRedirectURL(type: 'EXTERNAL' | 'external', url: string): void;
 
 /**
  * Request a URL to an external or internal resource.
