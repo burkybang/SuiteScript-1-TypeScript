@@ -209,20 +209,20 @@ declare function nlapiCopyRecord(type: string, id: number | string, initializeVa
  * @restriction supported in client scripts only
  *
  * @param type - Sublist internal ID
- * @param fldnam - Name of the line item field to enable/disable
+ * @param fieldId - Name of the line item field to enable/disable
  * @param value - If set to true the field is disabled. If set to false it is enabled.
  */
-declare function nlapiDisableLineItemField(type: string, fldnam: string, value: boolean): void;
+declare function nlapiDisableLineItemField(type: string, fieldId: string, value: boolean): void;
 
 /**
  * Sets the field to disabled or enabled based on the value (true or false).
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039396
  * @restriction supported in client scripts only
  *
- * @param fldnam - Name of the line item field to enable/disable
+ * @param fieldId - Name of the line item field to enable/disable
  * @param value - If set to true the field is disabled. If set to false it is enabled.
  */
-declare function nlapiDisableField(fldnam: string, value: boolean): void;
+declare function nlapiDisableField(fieldId: string, value: boolean): void;
 
 /**
  * Loads an existing saved search. The saved search could have been created using the UI or created using nlapiCreateSearch(type, filters, columns) in conjunction with nlobjSearch.saveSearch(title, scriptId).
@@ -343,7 +343,7 @@ declare function nlapiDeleteRecord(type: string, id: number | string): void;
  *
  * @since 2007.0
  */
-declare function nlapiSearchRecord(type: string, id: number | string, filters: nlobjSearchFilter | nlobjSearchFilter[] | (string | number | (string | number | (string | number)[])[])[], columns: nlobjSearchColumn | nlobjSearchColumn[]): nlobjSearchResult[];
+declare function nlapiSearchRecord(type: string, id: number | string, filters: nlobjSearchFilter | nlobjSearchFilter[] | (string | number | (string | number | (string | number)[])[])[], columns: nlobjSearchColumn | nlobjSearchColumn[]): nlobjSearchResult[] | void;
 
 /**
  * Perform a global record search across the system.
@@ -762,36 +762,36 @@ declare function nlapiGetMatrixField(type: string, name: string, column: number)
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044648
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param [linenum] - Line number for sublist field (1-based) and only valid for sublists of type staticlist and list
  *
  * @since 2009.1
  */
-declare function nlapiGetLineItemField(type: string, fldnam: string, linenum?: number): nlobjField;
+declare function nlapiGetLineItemField(type: string, fieldId: string, linenum?: number): nlobjField;
 
 /**
  * Return an nlobjField containing sublist field metadata.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044836
  *
  * @param type - Matrix sublist name
- * @param fldnam - Matrix field name
+ * @param fieldId - Matrix field name
  * @param linenum - Line number (1-based)
  * @param column - Matrix column index (1-based)
  *
  * @since 2009.2
  */
-declare function nlapiGetLineItemMatrixField(type: string, fldnam: string, linenum: number, column: number): nlobjField;
+declare function nlapiGetLineItemMatrixField(type: string, fieldId: string, linenum: number, column: number): nlobjField;
 
 /**
  * Return the value of a field on the current record on a page.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039936
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - The field name
+ * @param fieldId - The field name
  *
  * @since 2005.0
  */
-declare function nlapiGetFieldValue(fldnam: string): string;
+declare function nlapiGetFieldValue(fieldId: string): string;
 
 /**
  * Set the value of a field on the current record on a page.
@@ -799,32 +799,32 @@ declare function nlapiGetFieldValue(fldnam: string): string;
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
- * @param fldnam - The field name
+ * @param fieldId - The field name
  * @param value - Value used to set field
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
  *
  * @since 2005.0
  */
-declare function nlapiSetFieldValue(fldnam: string, value: string, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetFieldValue(fieldId: string, value: string, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Return the display value of a select field's current selection on the current record on a page.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039686
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - The field name
+ * @param fieldId - The field name
  *
  * @since 2005.0
  */
-declare function nlapiGetFieldText(fldnam: string): string;
+declare function nlapiGetFieldText(fieldId: string): string;
 
 /**
  * Set the value of a field on the current record on a page using it's label.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3041236
  * @restriction synchronous arg is only supported in client SuiteScript
  *
- * @param fldnam - The field name
+ * @param fieldId - The field name
  * @param txt - Display name used to lookup field value
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
@@ -832,18 +832,18 @@ declare function nlapiGetFieldText(fldnam: string): string;
  * @since 2009.1
  *
  */
-declare function nlapiSetFieldText(fldnam: string, txt: string, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetFieldText(fieldId: string, txt: string, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Return the values of a multiselect field on the current record on a page.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040092
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - The field name
+ * @param fieldId - The field name
  *
  * @since 2005.0
  */
-declare function nlapiGetFieldValues(fldnam: string): string[];
+declare function nlapiGetFieldValues(fieldId: string): string[];
 
 /**
  * Set the values of a multiselect field on the current record on a page.
@@ -851,25 +851,25 @@ declare function nlapiGetFieldValues(fldnam: string): string[];
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  * @param values - Array of strings containing values for field
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
  *
  * @since 2005.0
  */
-declare function nlapiSetFieldValues(fldnam: string, values: string[], firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetFieldValues(fieldId: string, values: string[], firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Return the values (via display text) of a multiselect field on the current record.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3039830
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  *
  * @since 2009.1
  */
-declare function nlapiGetFieldTexts(fldnam: string): void;
+declare function nlapiGetFieldTexts(fieldId: string): void;
 
 /**
  * Set the values (via display text) of a multiselect field on the current record on a page.
@@ -877,26 +877,26 @@ declare function nlapiGetFieldTexts(fldnam: string): void;
  * @restriction supported in client and user event scripts only.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  * @param texts - Array of strings containing display values for field
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
  *
  * @since 2009.1
  */
-declare function nlapiSetFieldTexts(fldnam: string, texts: string[], firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetFieldTexts(fieldId: string, texts: string[], firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Get the value of a matrix header field
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3047782
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param column - Matrix column index (1-based)
  *
  * @since 2009.2
  */
-declare function nlapiGetMatrixValue(type: string, fldnam: string, column: number): string;
+declare function nlapiGetMatrixValue(type: string, fieldId: string, column: number): string;
 
 /**
  * Set the value of a matrix header field
@@ -904,7 +904,7 @@ declare function nlapiGetMatrixValue(type: string, fldnam: string, column: numbe
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param column - Matrix column index (1-based)
  * @param value - Field value for matrix field
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
@@ -912,7 +912,7 @@ declare function nlapiGetMatrixValue(type: string, fldnam: string, column: numbe
  *
  * @since 2009.2
  */
-declare function nlapiSetMatrixValue(type: string, fldnam: string, column: number, value: string, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetMatrixValue(type: string, fieldId: string, column: number, value: string, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Get the current value of a sublist field on the current record on a page.
@@ -920,12 +920,12 @@ declare function nlapiSetMatrixValue(type: string, fldnam: string, column: numbe
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param column - Matrix column index (1-based)
  *
  * @since 2009.2
  */
-declare function nlapiGetCurrentLineItemMatrixValue(type: string, fldnam: string, column: number): string;
+declare function nlapiGetCurrentLineItemMatrixValue(type: string, fieldId: string, column: number): string;
 
 /**
  * Set the current value of a sublist field on the current record on a page.
@@ -934,7 +934,7 @@ declare function nlapiGetCurrentLineItemMatrixValue(type: string, fldnam: string
  * @restriction synchronous arg is only supported in Client SuiteScript
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param column - Matrix column index (1-based)
  * @param value - Matrix field value
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
@@ -942,7 +942,7 @@ declare function nlapiGetCurrentLineItemMatrixValue(type: string, fldnam: string
  *
  * @since 2009.2
  */
-declare function nlapiSetCurrentLineItemMatrixValue(type: string, fldnam: string, column: number, value: string, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetCurrentLineItemMatrixValue(type: string, fieldId: string, column: number, value: string, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Return the value of a sublist matrix field on the current record on a page.
@@ -950,14 +950,14 @@ declare function nlapiSetCurrentLineItemMatrixValue(type: string, fldnam: string
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  * @param column - Column index (1-based)
  * @param value
  *
  * @since 2009.2
  */
-declare function nlapiGetLineItemMatrixValue(type: string, fldnam: string, linenum: number, column: number): void;
+declare function nlapiGetLineItemMatrixValue(type: string, fieldId: string, linenum: number, column: number): void;
 
 /**
  * Return the value of a sublist field on the current record on a page.
@@ -965,12 +965,12 @@ declare function nlapiGetLineItemMatrixValue(type: string, fldnam: string, linen
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  *
  * @since 2005.0
  */
-declare function nlapiGetLineItemValue(type: string, fldnam: string, linenum: number): string;
+declare function nlapiGetLineItemValue(type: string, fieldId: string, linenum: number): string;
 
 /**
  * Return the values of a multiselect sublist field on the current record on a page.
@@ -978,12 +978,12 @@ declare function nlapiGetLineItemValue(type: string, fldnam: string, linenum: nu
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  *
  * @since 2005.0
  */
-declare function nlapiGetLineItemValues(type: string, fldnam: string, linenum: number): string[];
+declare function nlapiGetLineItemValues(type: string, fieldId: string, linenum: number): string[];
 
 /**
  * Return the value of a sublist field on the current record on a page.
@@ -991,13 +991,13 @@ declare function nlapiGetLineItemValues(type: string, fldnam: string, linenum: n
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  * @param timezone - Value
  *
  * @since 2013.2
  */
-declare function nlapiGetLineItemDateTimeValue(type: string, fldnam: string, linenum: number, timezone: string): string;
+declare function nlapiGetLineItemDateTimeValue(type: string, fieldId: string, linenum: number, timezone: string): string;
 
 /**
  * Set the value of a sublist field on the current record on a page.
@@ -1005,14 +1005,14 @@ declare function nlapiGetLineItemDateTimeValue(type: string, fldnam: string, lin
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  * @param value
  * @retun {void}
  *
  * @since 2005.0
  */
-declare function nlapiSetLineItemValue(type: string, fldnam: string, linenum: number, value: string | number): void;
+declare function nlapiSetLineItemValue(type: string, fieldId: string, linenum: number, value: string | number): void;
 
 /**
  * Set the value of a sublist field on the current record on a page.
@@ -1020,7 +1020,7 @@ declare function nlapiSetLineItemValue(type: string, fldnam: string, linenum: nu
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  * @param dateTime - Datetime
  * @param timezone - Value
@@ -1028,55 +1028,55 @@ declare function nlapiSetLineItemValue(type: string, fldnam: string, linenum: nu
  *
  * @since 2013.2
  */
-declare function nlapiSetLineItemDateTimeValue(type: string, fldnam: string, linenum: number, dateTime: string, timezone: string | number): void;
+declare function nlapiSetLineItemDateTimeValue(type: string, fieldId: string, linenum: number, dateTime: string, timezone: string | number): void;
 
 /**
  * Return the label of a select field's current selection for a particular line.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3045265
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum - Line number (1-based)
  *
  * @since 2005.0
  */
-declare function nlapiGetLineItemText(type: string, fldnam: string, linenum: number): string;
+declare function nlapiGetLineItemText(type: string, fieldId: string, linenum: number): string;
 
 /**
  * Return the 1st line number that a sublist field value appears in
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043659
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param val - The value being queried for in a sublist field
  *
  * @since 2009.2
  */
-declare function nlapiFindLineItemValue(type: string, fldnam: string, val: string): number;
+declare function nlapiFindLineItemValue(type: string, fieldId: string, val: string): number;
 
 /**
  * Return the 1st line number that a matrix field value appears in
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3043473
  *
  * @param type - Sublist name
- * @param fldnam - Matrix field name
+ * @param fieldId - Matrix field name
  * @param column - Matrix column index (1-based)
  * @param val - The value being queried for in a matrix field
  *
  * @since 2009.2
  */
-declare function nlapiFindLineItemMatrixValue(type: string, fldnam: string, column: number, val: string): number;
+declare function nlapiFindLineItemMatrixValue(type: string, fieldId: string, column: number, val: string): number;
 
 /**
  * Return the number of columns for a matrix field
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3047377
  *
  * @param type - Sublist name
- * @param fldnam - Matrix field name
+ * @param fieldId - Matrix field name
  *
  * @since 2009.2
  */
-declare function nlapiGetMatrixCount(type: string, fldnam: string): number;
+declare function nlapiGetMatrixCount(type: string, fieldId: string): number;
 
 /**
  * Return the number of sublists in a sublist on the current record on a page.
@@ -1117,14 +1117,14 @@ declare function nlapiRemoveLineItem(type: string, linenum?: number): void;
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param value - Field value
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
  *
  * @since 2005.0
  */
-declare function nlapiSetCurrentLineItemValue(type: string, fldnam: string, value: string | number, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetCurrentLineItemValue(type: string, fieldId: string, value: string | number, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Set the value of a field on the currently selected line.
@@ -1132,14 +1132,14 @@ declare function nlapiSetCurrentLineItemValue(type: string, fldnam: string, valu
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param values - Field value
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
  *
  * @since 2012.1
  */
-declare function nlapiSetCurrentLineItemValues(type: string, fldnam: string, values: string | number, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetCurrentLineItemValues(type: string, fieldId: string, values: string | number, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Set the value of a field on the currently selected line.
@@ -1147,13 +1147,13 @@ declare function nlapiSetCurrentLineItemValues(type: string, fldnam: string, val
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param value - Field value
  * @param timezone - Value
  *
  * @since 2013.2
  */
-declare function nlapiSetCurrentLineItemDateTimeValue(type: string, fldnam: string, value: string, timezone: string): void;
+declare function nlapiSetCurrentLineItemDateTimeValue(type: string, fieldId: string, value: string, timezone: string): void;
 
 /**
  * Set the value of a field on the currently selected line using it's label.
@@ -1161,59 +1161,59 @@ declare function nlapiSetCurrentLineItemDateTimeValue(type: string, fldnam: stri
  * @restriction synchronous arg is only supported in client SuiteScript
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param txt - String containing display value or search text.
  * @param [firefieldchanged] - If false then the field change event is suppressed (defaults to true)
  * @param [synchronous] - If true then sourcing and field change execution happens synchronously (defaults to false).
  *
  * @since 2005.0
  */
-declare function nlapiSetCurrentLineItemText(type: string, fldnam: string, txt: string, firefieldchanged?: boolean, synchronous?: boolean): void;
+declare function nlapiSetCurrentLineItemText(type: string, fieldId: string, txt: string, firefieldchanged?: boolean, synchronous?: boolean): void;
 
 /**
  * Return the value of a field on the currently selected line.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044247
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  *
  * @since 2005.0
  */
-declare function nlapiGetCurrentLineItemValue(type: string, fldnam: string): string;
+declare function nlapiGetCurrentLineItemValue(type: string, fieldId: string): string;
 
 /**
  * Return the value of a field on the currently selected line.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044377
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  *
  * @since 2012.1
  */
-declare function nlapiGetCurrentLineItemValue(type: string, fldnam: string): string[];
+declare function nlapiGetCurrentLineItemValue(type: string, fieldId: string): string[];
 
 /**
  * Return the value of a field on the currently selected line.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_3745066611.html#bridgehead_3745074470
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param timezone - Value
  *
  * @since 2013.2
  */
-declare function nlapiGetCurrentLineItemDateTimeValue(type: string, fldnam: string, timezone: string): string;
+declare function nlapiGetCurrentLineItemDateTimeValue(type: string, fieldId: string, timezone: string): string;
 
 /**
  * Return the label of a select field's current selection on the currently selected line.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3042487.html#bridgehead_N3044128
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  *
  * @since 2005.0
  */
-declare function nlapiGetCurrentLineItemText(type: string, fldnam: string): string;
+declare function nlapiGetCurrentLineItemText(type: string, fieldId: string): string;
 
 /**
  * Return the line number for the currently selected line.
@@ -1231,23 +1231,23 @@ declare function nlapiGetCurrentLineItemIndex(type: string): number;
  * @restriction Only supported on sublists of type inlineeditor, editor and list (current field only)
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param disable - If true then field is disabled
  * @param linenum - Line number for sublist field (1-based) and only valid for sublists of type list
  *
  * @since 2009.1
  */
-declare function nlapiSetLineItemDisabled(type: string, fldnam: string, disable: boolean, linenum: number): void;
+declare function nlapiSetLineItemDisabled(type: string, fieldId: string, disable: boolean, linenum: number): void;
 
 /**
  * Return field mandatoriness.
  * @see unknown
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  *
  * @since 2009.1
  */
-declare function nlapiGetFieldMandatory(fldnam: string): boolean;
+declare function nlapiGetFieldMandatory(fieldId: string): boolean;
 
 /**
  * Return sublist field mandatoriness.
@@ -1255,22 +1255,22 @@ declare function nlapiGetFieldMandatory(fldnam: string): boolean;
  * @restriction Only supported on sublists of type inlineeditor or editor (current field only)
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  *
  * @since 2009.1
  */
-declare function nlapiGetLineItemMandatory(type: string, fldnam: string): boolean;
+declare function nlapiGetLineItemMandatory(type: string, fieldId: string): boolean;
 
 /**
  * Make a field mandatory.
  * @see unknown
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  * @param mandatory - If true then field is made mandatory
  *
  * @since 2009.1
  */
-declare function nlapiSetFieldMandatory(fldnam: string, mandatory: boolean): void;
+declare function nlapiSetFieldMandatory(fieldId: string, mandatory: boolean): void;
 
 /**
  * Make a sublist field mandatory.
@@ -1278,12 +1278,12 @@ declare function nlapiSetFieldMandatory(fldnam: string, mandatory: boolean): voi
  * @restriction Only supported on sublists of type inlineeditor or editor (current field only)
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param mandatory - If true then field is made mandatory
  *
  * @since 2009.2
  */
-declare function nlapiSetLineItemMandatory(type: string, fldnam: string, mandatory: boolean): void;
+declare function nlapiSetLineItemMandatory(type: string, fieldId: string, mandatory: boolean): void;
 
 /**
  * Select an existing line in a sublist.
@@ -1346,26 +1346,26 @@ declare function nlapiRefreshLineItems(type: string): void;
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040209
  * @restriction Client SuiteScript only
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  * @param value - Internal ID for select option
  * @param text - Display text for select option
  * @param [selected] - If set to true, the selected option will become the default selection. If not set, this argument defaults to false.
  *
  * @since 2008.2
  */
-declare function nlapiInsertSelectOption(fldnam: string, value: string, text: string, selected?: boolean): void;
+declare function nlapiInsertSelectOption(fieldId: string, value: string, text: string, selected?: boolean): void;
 
 /**
  * Removes a select option (or all if value is null) from a scripted select or multiselect field.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3039111.html#bridgehead_N3040585
  * @restriction Client SuiteScript only
  *
- * @param fldnam - Field name
+ * @param fieldId - Field name
  * @param value - Internal ID of select option to remove
  *
  * @since 2008.2
  */
-declare function nlapiRemoveSelectOption(fldnam: string, value: string): void;
+declare function nlapiRemoveSelectOption(fieldId: string, value: string): void;
 
 /**
  * Adds a select option to a scripted select or multiselect sublist field.
@@ -1373,14 +1373,14 @@ declare function nlapiRemoveSelectOption(fldnam: string, value: string): void;
  * @restriction Client SuiteScript only
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param value - Internal ID for select option
  * @param text - Display text for select option
  * @param [selected] - If set to true, the selected option will become the default selection. If not set, this argument defaults to false.
  *
  * @since 2008.2
  */
-declare function nlapiInsertLineItemOption(type: string, fldnam: string, value: string, text: string, selected?: boolean): void;
+declare function nlapiInsertLineItemOption(type: string, fieldId: string, value: string, text: string, selected?: boolean): void;
 
 /**
  * Removes a select option (or all if value is null) from a scripted select or multiselect sublist field.
@@ -1388,12 +1388,12 @@ declare function nlapiInsertLineItemOption(type: string, fldnam: string, value: 
  * @restriction Client SuiteScript only
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param value - Internal ID for select option to remove
  *
  * @since 2008.2
  */
-declare function nlapiRemoveLineItemOption(type: string, fldnam: string, value: string): void;
+declare function nlapiRemoveLineItemOption(type: string, fieldId: string, value: string): void;
 
 /**
  * Returns true if any changes have been made to a sublist.
@@ -1930,12 +1930,12 @@ declare function nlapiTriggerWorkflow(recordtype: string, id: number, workflowid
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiCreateCurrentLineSubrecord(type: string, fldnam: string): nlobjSubrecord;
+declare function nlapiCreateCurrentLineSubrecord(type: string, fieldId: string): nlobjSubrecord;
 
 /**
  * edit a subrecord on a sublist field on the current record on a page.
@@ -1943,12 +1943,12 @@ declare function nlapiCreateCurrentLineSubrecord(type: string, fldnam: string): 
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiEditCurrentLineItemSubrecord(type: string, fldnam: string): nlobjSubrecord;
+declare function nlapiEditCurrentLineItemSubrecord(type: string, fieldId: string): nlobjSubrecord;
 
 /**
  * remove a subrecord on a sublist field on the current record on a page.
@@ -1956,12 +1956,12 @@ declare function nlapiEditCurrentLineItemSubrecord(type: string, fldnam: string)
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @retun {void}
  *
  * @since 2011.2
  */
-declare function nlapiRemoveCurrentLineItemSubrecord(type: string, fldnam: string): void;
+declare function nlapiRemoveCurrentLineItemSubrecord(type: string, fieldId: string): void;
 
 /**
  * view a subrecord on a sublist field on the current record on a page.
@@ -1969,12 +1969,12 @@ declare function nlapiRemoveCurrentLineItemSubrecord(type: string, fldnam: strin
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiViewCurrentLineItemSubrecord(type: string, fldnam: string): void;
+declare function nlapiViewCurrentLineItemSubrecord(type: string, fieldId: string): void;
 
 /**
  * view a subrecord on a sublist field on the current record on a page.
@@ -1982,13 +1982,13 @@ declare function nlapiViewCurrentLineItemSubrecord(type: string, fldnam: string)
  * @restriction supported in client and user event scripts only.
  *
  * @param type - Sublist name
- * @param fldnam - Sublist field name
+ * @param fieldId - Sublist field name
  * @param linenum
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiViewLineItemSubrecord(type: string, fldnam: string, linenum: number): nlobjSubrecord;
+declare function nlapiViewLineItemSubrecord(type: string, fieldId: string, linenum: number): nlobjSubrecord;
 
 /**
  * get a cache object.
@@ -2005,48 +2005,48 @@ declare function nlapiGetCache(name: string): nlobjCache;
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036333
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - Body field name
+ * @param fieldId - Body field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiCreateSubrecord(fldnam: string): nlobjSubrecord;
+declare function nlapiCreateSubrecord(fieldId: string): nlobjSubrecord;
 
 /**
  * edit a subrecord on body field on the current record on a page.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036670
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - Body field name
+ * @param fieldId - Body field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiEditSubrecord(fldnam: string): nlobjSubrecord;
+declare function nlapiEditSubrecord(fieldId: string): nlobjSubrecord;
 
 /**
  * remove a subrecord on body field on the current record on a page.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3036980
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - Body field name
+ * @param fieldId - Body field name
  * @retun {void}
  *
  * @since 2011.2
  */
-declare function nlapiRemoveSubrecord(fldnam: string): void;
+declare function nlapiRemoveSubrecord(fieldId: string): void;
 
 /**
  * view a subrecord on body field on the current record on a page.
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3035888.html#bridgehead_N3038841
  * @restriction supported in client and user event scripts only.
  *
- * @param fldnam - Body field name
+ * @param fieldId - Body field name
  * @retun {nlobjSubrecord}
  *
  * @since 2011.2
  */
-declare function nlapiViewSubrecord(fldnam: string): nlobjSubrecord;
+declare function nlapiViewSubrecord(fieldId: string): nlobjSubrecord;
 
 /**
  * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3111947.html
@@ -2746,7 +2746,7 @@ declare interface nlobjRecord {
    * Return field metadata for field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097358
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {nlobjField}
    *
    * @method
@@ -2754,7 +2754,7 @@ declare interface nlobjRecord {
    *
    * @since 2009.1
    */
-  getField(fldnam: string): nlobjField;
+  getField(fieldId: string): nlobjField;
   
   /**
    * Return sublist metadata for sublist.
@@ -2776,7 +2776,7 @@ declare interface nlobjRecord {
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099409
    *
    * @param type - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @param column - Matrix column (1-based)
    * @return {nlobjField}
    *
@@ -2785,14 +2785,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getMatrixField(type: string, fldnam: string, column: number): nlobjField;
+  getMatrixField(type: string, fieldId: string, column: number): nlobjField;
   
   /**
    * Return metadata for sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098202
    *
    * @param type - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param [linenum] - Line number (1-based). If empty, the current sublist field is returned. only settable for sublists of type list
    * @return {nlobjField}
    *
@@ -2801,14 +2801,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getLineItemField(type: string, fldnam: string, linenum?: number): nlobjField;
+  getLineItemField(type: string, fieldId: string, linenum?: number): nlobjField;
   
   /**
    * Return metadata for sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098360
    *
    * @param type - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @param linenum - Line number
    * @param column - Matrix column (1-based)
    * @return {nlobjField}
@@ -2818,13 +2818,13 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getLineItemMatrixField(type: string, fldnam: string, linenum: number, column: number): nlobjField;
+  getLineItemMatrixField(type: string, fieldId: string, linenum: number, column: number): nlobjField;
   
   /**
    * Set the value of a field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102523
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param value - Field value
    * @return {void}
    *
@@ -2833,13 +2833,13 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  setFieldValue(fldnam: string, value: string | number): void;
+  setFieldValue(fieldId: string, value: string | number): void;
   
   /**
    * Set the values of a multi-select field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102622
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param values - String array containing field values
    *
    * @method
@@ -2847,13 +2847,13 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  setFieldValues(fldnam: string, values: (string | number)[]): void;
+  setFieldValues(fieldId: string, values: (string | number)[]): void;
   
   /**
    * Return the value of a field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097800
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string}
    *
    * @method
@@ -2861,13 +2861,13 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  getFieldValue(fldnam: string): string;
+  getFieldValue(fieldId: string): string;
   
   /**
    * Return the selected values of a multi-select field as an Array.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097930
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string[]}
    *
    * @method
@@ -2875,14 +2875,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  getFieldValues(fldnam: string): string[];
+  getFieldValues(fieldId: string): string[];
   
   /**
    * Set the value (via display value) of a select field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102242
    * @restriction only supported for select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param text - Field display value
    * @return {void}
    *
@@ -2891,14 +2891,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.2
    */
-  setFieldText(fldnam: string, text: string): void;
+  setFieldText(fieldId: string, text: string): void;
   
   /**
    * Set the values (via display values) of a multi-select field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102373
    * @restriction only supported for multi-select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param texts - Array of field display values
    * @return {void}
    *
@@ -2907,14 +2907,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.2
    */
-  setFieldTexts(fldnam: string, texts: string[]): void;
+  setFieldTexts(fieldId: string, texts: string[]): void;
   
   /**
    * Return the display value for a select field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097475
    * @restriction only supported for select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string}
    *
    * @method
@@ -2922,14 +2922,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.2
    */
-  getFieldText(fldnam: string): string;
+  getFieldText(fieldId: string): string;
   
   /**
    * Return the selected display values of a multi-select field as an Array.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097637
    * @restriction only supported for multi-select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string[]}
    *
    * @method
@@ -2937,14 +2937,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.2
    */
-  getFieldTexts(fldnam: string): string[];
+  getFieldTexts(fieldId: string): string[];
   
   /**
    * Get the value of a matrix header field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3100718
    *
    * @param type - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @param column - Matrix column index (1-based)
    * @return {string}
    *
@@ -2953,14 +2953,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getMatrixValue(type: string, fldnam: string, column: number): string;
+  getMatrixValue(type: string, fieldId: string, column: number): string;
   
   /**
    * Set the value of a matrix header field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3103246
    *
    * @param type - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @param column - Matrix column index (1-based)
    * @param value - Field value
    * @return {void}
@@ -2970,7 +2970,7 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  setMatrixValue(type: string, fldnam: string, column: number, value: string): void;
+  setMatrixValue(type: string, fieldId: string, column: number, value: string): void;
   
   /**
    * Return an Array of all field names on the record.
@@ -3004,7 +3004,7 @@ declare interface nlobjRecord {
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102723
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param linenum - Line number (1-based)
    * @param value - Sublist field value
    * @return {void}
@@ -3014,14 +3014,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  setLineItemValue(group: string, fldnam: string, linenum: number, value: string): void;
+  setLineItemValue(group: string, fieldId: string, linenum: number, value: string): void;
   
   /**
    * Set the value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751504655
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param linenum - Line number (1-based)
    * @param dateTime - Datetime value
    * @param timezone - Value
@@ -3032,14 +3032,14 @@ declare interface nlobjRecord {
    *
    * @since 2013.2
    */
-  setLineItemDateTimeValue(group: string, fldnam: string, linenum: number, dateTime: string, timezone: string | number): void;
+  setLineItemDateTimeValue(group: string, fieldId: string, linenum: number, dateTime: string, timezone: string | number): void;
   
   /**
    * Return the value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098928
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param linenum - Line number (1-based)
    * @return {string}
    *
@@ -3048,7 +3048,7 @@ declare interface nlobjRecord {
    *
    * @since 2008.1
    */
-  getLineItemValue(group: string, fldnam: string, linenum: number): string;
+  getLineItemValue(group: string, fieldId: string, linenum: number): string;
   
   /**
    * Return the values of a multiselect sublist field.
@@ -3056,7 +3056,7 @@ declare interface nlobjRecord {
    * @restriction Server SuiteScript only
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param linenum - Line number (1-based)
    * @return {string[]}
    *
@@ -3065,14 +3065,14 @@ declare interface nlobjRecord {
    *
    * @since 2012.1
    */
-  getLineItemValues(group: string, fldnam: string, linenum: number): string[];
+  getLineItemValues(group: string, fieldId: string, linenum: number): string[];
   
   /**
    * Return the value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099101
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param linenum - Line number (1-based)
    * @param timezone - Value
    * @return {string}
@@ -3082,14 +3082,14 @@ declare interface nlobjRecord {
    *
    * @since 2013.2
    */
-  getLineItemDateTimeValue(group: string, fldnam: string, linenum: number, timezone: string | number): string;
+  getLineItemDateTimeValue(group: string, fieldId: string, linenum: number, timezone: string | number): string;
   
   /**
    * Return the text value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3098730
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param linenum - Line number (1-based)
    * @return {string}
    *
@@ -3098,14 +3098,14 @@ declare interface nlobjRecord {
    *
    * @since 2008.2
    */
-  getLineItemText(group: string, fldnam: string, linenum: number): string;
+  getLineItemText(group: string, fieldId: string, linenum: number): string;
   
   /**
    * Set the current value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3102048
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param value - Sublist field value
    * @return {void}
    *
@@ -3114,7 +3114,7 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  setCurrentLineItemValue(group: string, fldnam: string, value: string | number): void;
+  setCurrentLineItemValue(group: string, fieldId: string, value: string | number): void;
   
   /**
    * Set the current text of a sublist field.
@@ -3123,7 +3123,7 @@ declare interface nlobjRecord {
    * @see unknown
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param text - Sublist field text
    * @return {void}
    *
@@ -3133,14 +3133,14 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   
-  // setCurrentLineItemText(group: string, fldnam: string, text: string): void;
+  // setCurrentLineItemText(group: string, fieldId: string, text: string): void;
   
   /**
    * Return the current value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3946493892
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @return {string}
    *
    * @method
@@ -3148,7 +3148,7 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getCurrentLineItemValue(group: string, fldnam: string): string;
+  getCurrentLineItemValue(group: string, fieldId: string): string;
   
   /**
    * Return the current values of a multiselect sublist field.
@@ -3156,7 +3156,7 @@ declare interface nlobjRecord {
    * @restriction Server SuiteScript only
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @return {string[]}
    *
    * @method
@@ -3164,14 +3164,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getCurrentLineItemValues(group: string, fldnam: string): string[];
+  getCurrentLineItemValues(group: string, fieldId: string): string[];
   
   /**
    * Set the current value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751502141
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param value - Sublist field value
    * @param timezone - Value
    * @return {void}
@@ -3181,14 +3181,14 @@ declare interface nlobjRecord {
    *
    * @since 2013.2
    */
-  setCurrentLineItemDateTimeValue(group: string, fldnam: string, value: string, timezone: string | number): void;
+  setCurrentLineItemDateTimeValue(group: string, fieldId: string, value: string, timezone: string | number): void;
   
   /**
    * Return the current value of a sublist field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751240027
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param timezone - Value
    * @return {string}
    *
@@ -3197,7 +3197,7 @@ declare interface nlobjRecord {
    *
    * @since 2013.2
    */
-  getCurrentLineItemDateTimeValue(group: string, fldnam: string, timezone: string | number): string;
+  getCurrentLineItemDateTimeValue(group: string, fieldId: string, timezone: string | number): string;
   
   /**
    * Return the current display value of a sublist field.
@@ -3205,7 +3205,7 @@ declare interface nlobjRecord {
    * @see unknown
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @return {string}
    *
    * @method
@@ -3214,14 +3214,14 @@ declare interface nlobjRecord {
    * @since 2009.2
    */
   
-  // getCurrentLineItemText(group: string, fldnam: string): string;
+  // getCurrentLineItemText(group: string, fieldId: string): string;
   
   /**
    * Set the current value of a sublist matrix field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3101871
    *
    * @param group - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @param column - Matrix field column index (1-based)
    * @param value - Matrix field value
    * @return {void}
@@ -3231,14 +3231,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  setCurrentLineItemMatrixValue(group: string, fldnam: string, column: number, value: string): void;
+  setCurrentLineItemMatrixValue(group: string, fieldId: string, column: number, value: string): void;
   
   /**
    * Return the current value of a sublist matrix field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3097186
    *
    * @param group - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @param column - Matrix field column index (1-based)
    * @return {string}
    *
@@ -3247,14 +3247,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getCurrentLineItemMatrixValue(group: string, fldnam: string, column: number): string;
+  getCurrentLineItemMatrixValue(group: string, fieldId: string, column: number): string;
   
   /**
    * Return the number of columns for a matrix field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3099247
    *
    * @param group - Matrix sublist name
-   * @param fldnam - Matrix field name
+   * @param fieldId - Matrix field name
    * @return {number}
    *
    * @method
@@ -3262,7 +3262,7 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  getMatrixCount(group: string, fldnam: string): number;
+  getMatrixCount(group: string, fieldId: string): number;
   
   /**
    * Return the number of lines in a sublist.
@@ -3283,7 +3283,7 @@ declare interface nlobjRecord {
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096783
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param value - Sublist field value
    * @return {number}
    *
@@ -3292,14 +3292,14 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  findLineItemValue(group: string, fldnam: string, value: string | number): number;
+  findLineItemValue(group: string, fieldId: string, value: string | number): number;
   
   /**
    * Return line number for 1st occurence of field value in a sublist column.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_N3096610
    *
    * @param group - Sublist name
-   * @param fldnam - Sublist field name
+   * @param fieldId - Sublist field name
    * @param column - Matrix column index (1-based)
    * @param value - Matrix field value
    * @return {number}
@@ -3309,7 +3309,7 @@ declare interface nlobjRecord {
    *
    * @since 2009.2
    */
-  findLineItemMatrixValue(group: string, fldnam: string, column: number, value: string | number): number;
+  findLineItemMatrixValue(group: string, fieldId: string, column: number, value: string | number): number;
   
   /**
    * Insert a new line into a sublist.
@@ -3387,7 +3387,7 @@ declare interface nlobjRecord {
    * set the value of a field.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751503301
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param value - Field value
    * @return {void}
    *
@@ -3396,14 +3396,14 @@ declare interface nlobjRecord {
    *
    * @since 20013.2
    */
-  setDateTimeValue(fldnam: string, value: string, timezone: string): void;
+  setDateTimeValue(fieldId: string, value: string, timezone: string): void;
   
   /**
    * Return the value of a field on the current record on a page.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3094136.html#bridgehead_3751498025
    * @restriction supported in client and user event scripts only.
    *
-   * @param fldnam - The field name
+   * @param fieldId - The field name
    * @param timezone - Olson value
    * @return {string}
    *
@@ -3412,7 +3412,7 @@ declare interface nlobjRecord {
    *
    * @since 2013.2
    */
-  getDateTimeValue(fldnam: string, timezone: string): string;
+  getDateTimeValue(fieldId: string, timezone: string): string;
   
   /**
    * Create a subrecord from a body field on the parent record.
@@ -3614,7 +3614,7 @@ declare interface nlobjConfiguration {
   /**
    * return field metadata for field.
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {nlobjField}
    *
    * @method
@@ -3622,12 +3622,12 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  getField(fldnam: string): nlobjField;
+  getField(fieldId: string): nlobjField;
   
   /**
    * set the value of a field.
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param value - Field value
    * @return {void}
    *
@@ -3636,13 +3636,13 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  setFieldValue(fldnam: string, value: string): void;
+  setFieldValue(fieldId: string, value: string): void;
   
   /**
    * Set the values of a multi-select field.
    * @restriction only supported for multi-select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param values - Field values
    * @return {void}
    *
@@ -3651,12 +3651,12 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  setFieldValues(fldnam: string, values: string[]): void;
+  setFieldValues(fieldId: string, values: string[]): void;
   
   /**
    * return the value of a field.
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string}
    *
    * @method
@@ -3664,13 +3664,13 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  getFieldValue(fldnam: string): string;
+  getFieldValue(fieldId: string): string;
   
   /**
    * return the selected values of a multi-select field as an Array.
    * @restriction only supported for multi-select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string[]}
    *
    * @method
@@ -3678,13 +3678,13 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  getFieldValues(fldnam: string): string[];
+  getFieldValues(fieldId: string): string[];
   
   /**
    * set the value (via display value) of a field.
    * @restriction only supported for select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param text - Field display text
    * @return {void}
    *
@@ -3693,13 +3693,13 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  setFieldText(fldnam: string, text: string): void;
+  setFieldText(fieldId: string, text: string): void;
   
   /**
    * set the values (via display values) of a multi-select field.
    * @restriction only supported for multi-select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @param texts - Array of field display text values
    * @return {void}
    *
@@ -3708,13 +3708,13 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  setFieldTexts(fldnam: string, texts: string[]): void;
+  setFieldTexts(fieldId: string, texts: string[]): void;
   
   /**
    * return the text value of a field.
    * @restriction only supported for select fields
    *
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string}
    *
    * @method
@@ -3722,11 +3722,11 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  getFieldText(fldnam: string): string;
+  getFieldText(fieldId: string): string;
   
   /**
    * return the selected text values of a multi-select field as an Array.
-   * @param fldnam - Field name
+   * @param fieldId - Field name
    * @return {string[]}
    *
    * @method
@@ -3734,7 +3734,7 @@ declare interface nlobjConfiguration {
    *
    * @since 2009.2
    */
-  getFieldTexts(fldnam: string): void;
+  getFieldTexts(fieldId: string): void;
   
   /**
    * return an Array of all field names on the record.
@@ -3973,14 +3973,14 @@ declare interface nlobjSearchFilter {
   /**
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3120926
    *
-   * @param fldnam
+   * @param fieldId
    * @param join
    * @param operator
    * @param [value1]
    * @param [value2]
    * @return {nlobjSearchFilter}
    */
-  new(fldnam: string, join: string, operator: 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within', value1?: string | string[] | number | Date, value2?: string | Date): nlobjSearchFilter;
+  new(fieldId: string, join: string, operator: 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within', value1?: string | string[] | number | Date, value2?: string | Date): nlobjSearchFilter;
   
   /**
    * Return the name of this search filter.
@@ -4080,13 +4080,13 @@ declare class nlobjSearchFilter {
   /**
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3120682.html#bridgehead_N3120926
    *
-   * @param fldnam
+   * @param fieldId
    * @param join
    * @param operator
    * @param [value1]
    * @param [value2]
    */
-  constructor(fldnam: string, join: string, operator: 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within', value1?: string | string[] | number | Date, value2?: string | Date);
+  constructor(fieldId: string, join: string, operator: 'after' | 'allof' | 'any' | 'anyof' | 'before' | 'between' | 'contains' | 'doesnotcontain' | 'doesnotstartwith' | 'equalto' | 'greaterthan' | 'greaterthanorequalto' | 'haskeywords' | 'is' | 'isempty' | 'isnot' | 'isnotempty' | 'lessthan' | 'lessthanorequalto' | 'noneof' | 'notafter' | 'notallof' | 'notbefore' | 'notbetween' | 'notequalto' | 'notgreaterthan' | 'notgreaterthanorequalto' | 'notlessthan' | 'notlessthanorequalto' | 'noton' | 'notonorafter' | 'notonorbefore' | 'notwithin' | 'on' | 'onorafter' | 'onorbefore' | 'startswith' | 'within', value1?: string | string[] | number | Date, value2?: string | Date);
 }
 
 /**
@@ -4104,12 +4104,12 @@ declare interface nlobjSearchColumn {
   
   /**
    *
-   * @param fldnam
+   * @param fieldId
    * @param [join]
    * @param [summary]
    * @return
    */
-  new(fldnam: string, join?: string, summary?: string): nlobjSearchColumn;
+  new(fieldId: string, join?: string, summary?: string): nlobjSearchColumn;
   
   /**
    * return the name of this search column.
@@ -4236,7 +4236,7 @@ declare interface nlobjSearchColumn {
    * return nlobjSearchColumn for which the minimal or maximal value should be found when returning the nlobjSearchColumn value.
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3117719.html#bridgehead_N3120540
    *
-   * @param fldnam - The name of the search column for which the minimal or maximal value should be found
+   * @param fieldId - The name of the search column for which the minimal or maximal value should be found
    * @param join - The join id for this search column
    * @return {nlobjSearchColumn}
    *
@@ -4245,11 +4245,11 @@ declare interface nlobjSearchColumn {
    *
    * @since 2012.1
    */
-  setWhenOrderedBy(fldnam: string, join: string): nlobjSearchColumn;
+  setWhenOrderedBy(fieldId: string, join: string): nlobjSearchColumn;
 }
 
 declare class nlobjSearchColumn {
-  constructor(fldnam: string, join?: string, summary?: string);
+  constructor(fieldId: string, join?: string, summary?: string);
 }
 
 /**
@@ -4280,7 +4280,7 @@ declare interface nlobjSearchResult {
   
   /**
    * return the value for a return column specified by name, join ID, and summary type.
-   * @param fldnam - The name of the search column
+   * @param fieldId - The name of the search column
    * @return {string}
    *
    * @method
@@ -4288,11 +4288,23 @@ declare interface nlobjSearchResult {
    *
    * @since 2008.1
    */
-  getValue(fldnam: string | nlobjSearchColumn): string;
+  getValue(fieldId: string): string;
   
   /**
    * return the value for a return column specified by name, join ID, and summary type.
-   * @param fldnam - The name of the search column
+   * @param column - The name of the search column
+   * @return {string}
+   *
+   * @method
+   * @memberOf nlobjSearchResult
+   *
+   * @since 2008.1
+   */
+  getValue(column: nlobjSearchColumn): string;
+  
+  /**
+   * return the value for a return column specified by name, join ID, and summary type.
+   * @param fieldId - The name of the search column
    * @param join - The join ID for the search column
    * @param [summary] - Summary type specified for this column
    * @return {string}
@@ -4302,11 +4314,11 @@ declare interface nlobjSearchResult {
    *
    * @since 2008.1
    */
-  getValue(fldnam: string, join: string, summary?: string): string;
+  getValue(fieldId: string, join: string, summary?: string): string;
   
   /**
    * return the text value of this return column if it's a select field.
-   * @param fldnam - The name of the search column
+   * @param fieldId - The name of the search column
    * @return {string}
    *
    * @method
@@ -4314,11 +4326,11 @@ declare interface nlobjSearchResult {
    *
    * @since 2008.1
    */
-  getText(fldnam: string | nlobjSearchColumn): string;
+  getText(fieldId: string | nlobjSearchColumn): string;
   
   /**
    * return the text value of this return column if it's a select field.
-   * @param fldnam - The name of the search column
+   * @param fieldId - The name of the search column
    * @param join - The join ID for the search column
    * @param [summary] - Summary type specified for this column
    * @return {string}
@@ -4328,7 +4340,7 @@ declare interface nlobjSearchResult {
    *
    * @since 2008.1
    */
-  getText(fldnam: string, join: string, summary?: string): string;
+  getText(fieldId: string, join: string, summary?: string): string;
   
   /**
    * return an array of all nlobjSearchColumn objects returned in this search.
@@ -6584,7 +6596,7 @@ declare interface nlobjSubList {
    * designate a field on sublist that must be unique across all lines (only supported on sublists of type inlineeditor, editor).
    * @see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N3161033.html#bridgehead_N3162943
    *
-   * @param fldnam - The name of a field on this sublist whose value must be unique across all lines
+   * @param fieldId - The name of a field on this sublist whose value must be unique across all lines
    * @return {nlobjField}
    *
    * @method
@@ -6592,7 +6604,7 @@ declare interface nlobjSubList {
    *
    * @since 2009.2
    */
-  setUniqueField(fldnam: string): nlobjField;
+  setUniqueField(fieldId: string): nlobjField;
   
   /**
    * add a button to this sublist.
